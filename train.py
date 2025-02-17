@@ -1,6 +1,6 @@
 from ultralytics import YOLO
 
-model = YOLO(f"train/train2/weights/best.pt")
+model = YOLO(f"yolo11m.pt")
 
 """
 To disable sleep for Macbooks:
@@ -20,9 +20,9 @@ results = model.train(
     name="train3",
     epochs=5, 
     patience=3,
-    batch=8,
+    batch=32,
     save_period=1,
-    imgsz=896,
+    imgsz=1024,
     cache="ram",
     project="train",
     exist_ok=True,
@@ -33,10 +33,9 @@ results = model.train(
     freeze=10, # freeze the backbone
     plots=True,
     rect=True,
-    conf=0.4, # the confidence threshold
+    conf=0.25, # the confidence threshold
     max_det=73, # The maximum number of annotations (.txt file) for an image was 73
     save_txt=True,
-    save_conf=True,
     show_boxes=True,
     optimize=True,
     simplify=True,
@@ -46,15 +45,14 @@ results = model.train(
     fraction=0.1,
     dropout=0.001, # due to training on a smaller dataset
     deterministic=False,
-    int8=True,
-    cos_lr=True,
-    lr0=0.0005,
+    # cos_lr=True,
+    lr0=0.001,
     cls=1,
 
     # Augmentation variables
     copy_paste=0.3,
     box=10,
-    mixup=0.2,
+    mixup=0.3,
     mosaic=1,
 )
 
