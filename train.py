@@ -50,7 +50,6 @@ results = model.train(
     cos_lr=True,
     lr0=0.0005,
     cls=1,
-    box=10,
 
     # Augmentation variables
     copy_paste=0.3,
