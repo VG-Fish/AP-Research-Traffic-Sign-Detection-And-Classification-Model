@@ -10,8 +10,10 @@ sudo pmset -b disablesleep 1
 To enable sleep:
 sudo pmset -b sleep 5
 sudo pmset -b disablesleep 0
-"""
 
+To purge RAM memory:
+sudo purge
+"""
 
 # Second training
 results = model.train(
@@ -20,7 +22,7 @@ results = model.train(
     name="train3",
     epochs=5, 
     patience=3,
-    batch=32,
+    batch=4,
     save_period=1,
     imgsz=1024,
     cache="ram",
@@ -39,7 +41,6 @@ results = model.train(
     show_boxes=True,
     optimize=True,
     simplify=True,
-    half=True,
     dynamic=True,
     multi_scale=True,
     fraction=0.1,
