@@ -1,9 +1,9 @@
 from ultralytics import YOLO
 
-model = YOLO(f"yolo11m.pt")
+model = YOLO(f"yolo11n.pt")
 
 """
-To disable sleep for Macbooks:
+To disable sleep:
 sudo pmset -b sleep 0
 sudo pmset -b disablesleep 1
 
@@ -13,6 +13,22 @@ sudo pmset -b disablesleep 0
 
 To purge RAM memory:
 sudo purge
+
+To disable CPU throttling:
+sudo pmset -a lidwake 0
+sudo pmset -a disablesleep 1
+
+To keep the macbook awake:
+caffeinate -i -d -m -u -t VALUE
+
+To get GPU usage:
+sudo powermetrics --samplers gpu_power
+
+To get memory usage:
+vm_stat
+
+To increase open file limit:
+ulimit -n 100000
 """
 
 # Second training
@@ -20,9 +36,9 @@ results = model.train(
     # resume=True,
     data="mapillary.yaml",
     name="train3",
-    epochs=5, 
+    epochs=2, 
     patience=3,
-    batch=4,
+    batch=16,
     save_period=1,
     imgsz=1024,
     cache="ram",
@@ -46,15 +62,15 @@ results = model.train(
     fraction=0.1,
     dropout=0.001, # due to training on a smaller dataset
     deterministic=False,
-    # cos_lr=True,
+    cos_lr=True,
     lr0=0.001,
     cls=1,
 
     # Augmentation variables
-    copy_paste=0.3,
-    box=10,
-    mixup=0.3,
-    mosaic=1,
+    # copy_paste=0.3,
+    # box=10,
+    # mixup=0.3,
+    # mosaic=1,
 )
 
 val_data = model.val()
