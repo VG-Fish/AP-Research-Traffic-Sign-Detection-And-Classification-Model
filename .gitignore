@@ -2,3 +2,4 @@ mapillary_dataset/
 mtsd_v2_fully_annotated/
 train/
 YOLO11/
+*.pt
