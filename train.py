@@ -1,4 +1,5 @@
 from ultralytics import YOLO
+import torch
 
 """
 To disable sleep:
@@ -31,9 +32,11 @@ ulimit -n 100000
 
 model = YOLO(f"yolo11m.pt")
 
-def clear_cache(trainer):
-    trainer._clear_memory()
+def clear_cache(_):
+    torch.mps.empty_cache()
+
 model.add_callback("on_train_batch_start", clear_cache)
+model.add_callback("on_val_batch_start", clear_cache)
 
 # Second training
 results = model.train(
@@ -58,14 +61,15 @@ results = model.train(
     max_det=73, # The maximum number of annotations for an image was 73
     show_boxes=True,
     multi_scale=True,
-    fraction=0.001,
+    fraction=0.1,
     dropout=0.05, # due to training on a smaller dataset
     deterministic=False,
     cos_lr=True,
     workers=16,
     save_json=True,
     lr0=0.0001,
-    lrf=0.01
+    lrf=0.01,
+    cache=True,
 
     # Augmentation variables
     # copy_paste=0.3,
