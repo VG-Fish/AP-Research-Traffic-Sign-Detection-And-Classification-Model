@@ -1,6 +1,5 @@
 from ultralytics import YOLO
-
-model = YOLO(f"yolo11n.pt")
+import torch
 
 """
 To disable sleep:
@@ -31,6 +30,12 @@ To increase open file limit:
 ulimit -n 100000
 """
 
+model = YOLO(f"yolo11n.pt")
+
+def clear_cache(trainer):
+    trainer._clear_memory()
+model.add_callback("on_train_batch_start", clear_cache)
+
 # Second training
 results = model.train(
     # resume=True,
@@ -38,33 +43,28 @@ results = model.train(
     name="train3",
     epochs=2, 
     patience=3,
-    batch=16,
+    batch=-1,
     save_period=1,
-    imgsz=1024,
-    cache="ram",
+    imgsz=896,
     project="train",
     exist_ok=True,
     optimizer="AdamW",
     device="mps",
-    amp=True,
+    amp=True, # mixed precision training
     single_cls=True,
     freeze=10, # freeze the backbone
     plots=True,
     rect=True,
     conf=0.25, # the confidence threshold
-    max_det=73, # The maximum number of annotations (.txt file) for an image was 73
-    save_txt=True,
+    max_det=73, # The maximum number of annotations for an image was 73
     show_boxes=True,
-    optimize=True,
-    simplify=True,
-    dynamic=True,
     multi_scale=True,
     fraction=0.1,
     dropout=0.001, # due to training on a smaller dataset
     deterministic=False,
     cos_lr=True,
-    lr0=0.001,
-    cls=1,
+    workers=16,
+    save_json=True,
 
     # Augmentation variables
     # copy_paste=0.3,
