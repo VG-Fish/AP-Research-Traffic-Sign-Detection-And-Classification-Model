@@ -30,7 +30,7 @@ To increase open file limit:
 ulimit -n 100000
 """
 
-model = YOLO(f"yolo11m.pt")
+model = YOLO(f"train/train3/weights/best.pt")
 
 def clear_cache(_):
     torch.mps.empty_cache()
@@ -42,7 +42,7 @@ model.add_callback("on_val_batch_start", clear_cache)
 results = model.train(
     # resume=True,
     data="mapillary.yaml",
-    name="train3",
+    name="train4",
     epochs=2, 
     patience=3,
     batch=16,
@@ -77,7 +77,3 @@ results = model.train(
     # mixup=0.3,
     # mosaic=1,
 )
-
-val_data = model.val()
-with open("train/train3/val_results.txt", "w") as f:
-    f.write(val_data)
