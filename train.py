@@ -30,7 +30,7 @@ To increase open file limit:
 ulimit -n 100000
 """
 
-model = YOLO(f"train/train3/weights/best.pt")
+model = YOLO(f"yolo11n.pt")
 
 def clear_cache(_):
     torch.mps.empty_cache()
@@ -42,12 +42,12 @@ model.add_callback("on_val_batch_start", clear_cache)
 results = model.train(
     # resume=True,
     data="mapillary.yaml",
-    name="train4",
-    epochs=8, 
+    name="benchmark",
+    epochs=3,
     patience=3,
-    batch=16,
+    batch=32,
     save_period=1,
-    imgsz=896,
+    imgsz=640,
     project="train",
     exist_ok=True,
     optimizer="AdamW",
@@ -56,24 +56,20 @@ results = model.train(
     single_cls=True,
     freeze=10, # freeze the backbone
     plots=True,
-    rect=True,
-    conf=0.25, # the confidence threshold
     max_det=73, # The maximum number of annotations for an image was 73
     show_boxes=True,
-    multi_scale=True,
+    # multi_scale=True,
     fraction=0.1,
-    dropout=0.05, # due to training on a smaller dataset
-    deterministic=False,
-    cos_lr=True,
-    workers=16,
+    # dropout=0.01, # due to training on a smaller dataset
+    # cos_lr=True,
     save_json=True,
-    lr0=0.0001,
-    lrf=0.01,
-    cache=True,
+    agnostic_nms=True, # due to having one class
+    augment=True,
+    conf=0.3,
 
     # Augmentation variables
-    # copy_paste=0.3,
-    # box=10,
-    # mixup=0.3,
-    # mosaic=1,
+    copy_paste=0.3,
+    box=10,
+    mixup=0.3,
+    mosaic=1,
 )
