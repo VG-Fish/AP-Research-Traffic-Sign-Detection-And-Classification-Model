@@ -42,8 +42,8 @@ model.add_callback("on_val_batch_start", clear_cache)
 results = model.train(
     # resume=True,
     data="mapillary.yaml",
-    name="benchmark",
-    epochs=3,
+    name="train5",
+    epochs=30,
     patience=3,
     batch=32,
     save_period=1,
@@ -54,22 +54,21 @@ results = model.train(
     device="mps",
     amp=True, # mixed precision training
     single_cls=True,
-    freeze=10, # freeze the backbone
+    freeze=5, # freeze apart of the backbone
     plots=True,
     max_det=73, # The maximum number of annotations for an image was 73
     show_boxes=True,
-    # multi_scale=True,
-    fraction=0.1,
-    # dropout=0.01, # due to training on a smaller dataset
-    # cos_lr=True,
+    multi_scale=True,
+    fraction=0.5,
+    cos_lr=True,
     save_json=True,
-    agnostic_nms=True, # due to having one class
     augment=True,
-    conf=0.3,
+    conf=0.1,
+    cls=0.6, # default is 0.5, this increase is to improve recall
+    seed=0,
 
     # Augmentation variables
-    copy_paste=0.3,
-    box=10,
-    mixup=0.3,
-    mosaic=1,
+    copy_paste=0.5,
+    mixup=0.3, # blends two images into one
+    mosaic=1.0, # combines four images into one for complex scene understanding
 )
