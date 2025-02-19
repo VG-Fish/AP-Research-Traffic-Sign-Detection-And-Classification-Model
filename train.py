@@ -1,5 +1,5 @@
 from ultralytics import YOLO
-import torch
+import torch, gc
 
 """
 To disable sleep:
@@ -34,6 +34,7 @@ model = YOLO(f"yolo11m.pt")
 
 def clear_cache(_):
     torch.mps.empty_cache()
+    gc.collect()
 
 model.add_callback("on_train_batch_start", clear_cache)
 model.add_callback("on_val_batch_start", clear_cache)
