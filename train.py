@@ -1,5 +1,5 @@
 from ultralytics import YOLO
-import torch, gc
+import torch
 
 """
 To disable sleep:
@@ -30,22 +30,22 @@ To increase open file limit:
 ulimit -n 100000
 """
 
-model = YOLO(f"yolo11m.pt")
+model = YOLO("train/benchmark_0-9/weights/best.pt")
 
 def clear_cache(_):
     torch.mps.empty_cache()
-    gc.collect()
 
 model.add_callback("on_train_batch_start", clear_cache)
 model.add_callback("on_val_batch_start", clear_cache)
 
 # Second training
 results = model.train(
+    resume=True,
     data="mapillary.yaml",
-    name="train5",
-    epochs=10,
+    name="benchmark_10-25",
+    epochs=25,
     patience=3,
-    batch=42,
+    batch=64,
     save_period=1,
     imgsz=640,
     project="train",
@@ -53,21 +53,18 @@ results = model.train(
     optimizer="AdamW",
     device="mps",
     amp=True, # mixed precision training
-    freeze=5, # freeze apart of the backbone
     plots=True,
-    max_det=73, # The maximum number of annotations for an image was 73
+    max_det=73, # The max number of annotations for an image is 73
     show_boxes=True,
-    # multi_scale=True,
-    fraction=0.5,
-    cos_lr=True,
+    cos_lr=True, # Learning rate oscillates for better convergence
     save_json=True,
     augment=True,
-    conf=0.1,
-    cls=0.6, # default is 0.5, this increase is to improve recall
     seed=16,
-
-    # Augmentation variables
-    copy_paste=0.5,
-    mixup=0.3, # blends two images into one
-    mosaic=1.0, # combines four images into one for complex scene understanding
+    val=False,
 )
+
+print("\n"*10)
+print(results)
+
+res = model.val()
+print(res)

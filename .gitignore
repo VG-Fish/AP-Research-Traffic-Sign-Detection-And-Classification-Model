@@ -4,3 +4,5 @@ train/
 YOLO11/
 *.pt
 train_tuning/
+runs/
+metrics.txt
