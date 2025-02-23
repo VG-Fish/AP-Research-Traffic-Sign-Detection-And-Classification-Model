@@ -6,3 +6,4 @@ YOLO11/
 train_tuning/
 runs/
 metrics.txt
+num_classes.txt
