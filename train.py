@@ -30,7 +30,7 @@ To increase open file limit:
 ulimit -n 100000
 """
 
-model = YOLO("train/benchmark_0-9/weights/best.pt")
+model = YOLO("yolo11n.pt")
 
 def clear_cache(_):
     torch.mps.empty_cache()
@@ -40,18 +40,17 @@ model.add_callback("on_val_batch_start", clear_cache)
 
 # Second training
 results = model.train(
-    resume=True,
     data="mapillary.yaml",
-    name="benchmark_10-25",
+    project="train",
+    name="benchmark",
     epochs=25,
+    device="mps",
     patience=3,
     batch=64,
     save_period=1,
     imgsz=640,
-    project="train",
     exist_ok=True,
     optimizer="AdamW",
-    device="mps",
     amp=True, # mixed precision training
     plots=True,
     max_det=73, # The max number of annotations for an image is 73
