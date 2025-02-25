@@ -1,6 +1,5 @@
 from pathlib import Path
 from json import load
-from pprint import pprint
 
 directory = "mtsd_v2_fully_annotated/annotations"
 files = Path(directory).glob("*.json")
