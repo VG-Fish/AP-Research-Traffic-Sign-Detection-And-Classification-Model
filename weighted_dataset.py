@@ -1,6 +1,7 @@
 from ultralytics.data.dataset import YOLODataset
 import numpy as np
-
+from collections import Counter
+from pprint import pprint
 class YOLOWeightedDataset(YOLODataset):
     def __init__(self, *args, mode="train", **kwargs):
         """
@@ -17,11 +18,14 @@ class YOLOWeightedDataset(YOLODataset):
         # You can also specify weights manually instead
         self.count_instances()
         class_weights = np.sum(self.counts) / self.counts
-        self.agg_func = np.mean
+        self.agg_func = self.to_safe_agg(np.mean)
 
         self.class_weights = np.array(class_weights)
         self.weights = self.calculate_weights()
         self.probabilities = self.calculate_probabilities()
+    
+    def to_safe_agg(self, func):
+        return lambda x: np.mean(np.abs(func(x)))
 
     def count_instances(self):
         """
@@ -47,6 +51,7 @@ class YOLOWeightedDataset(YOLODataset):
         Returns:
             list: A list of aggregated weights corresponding to each label.
         """
+        self.agg_func = self.to_safe_agg(self.agg_func)
         weights = []
         for label in self.labels:
             traffic_sign_class_ids = label['cls'].reshape(-1).astype(int)
@@ -84,3 +89,42 @@ class YOLOWeightedDataset(YOLODataset):
 
         index = np.random.choice(len(self.labels), p=self.probabilities)
         return self.transforms(self.get_image_and_label(index))
+
+    def verify_class_balance(self, num_samples=1000):
+        """
+        Verifies whether the __getitem__ method in the YOLOWeightedDataset class returns a balanced class output.
+
+        Args:
+            dataset: An instance of YOLOWeightedDataset.
+            num_samples: Number of samples to draw from the dataset.
+
+        Returns:
+            class_counts: A dictionary containing the class counts.
+        """
+        all_labels = []
+        num_samples = min(len(self.labels), num_samples)
+
+        if self.train_mode:
+            choices = np.random.choice(len(self.labels), size=num_samples, p=self.probabilities)
+        else:
+            choices = np.random.choice(len(self.labels), size=num_samples, replace=False)
+
+        for i in choices:
+            label = self.labels[i]["cls"]
+            all_labels.extend(label.reshape(-1).astype(int))
+
+        class_counts = Counter(all_labels)
+        return class_counts
+    
+    def evaluate_balance(self, num_samples=1000):
+        """Evaluates current weighting strategy"""
+        class_counts = self.verify_class_balance(num_samples)
+        # Calculate balance metrics
+        counts = np.array([class_counts.get(i, 0) for i in range(len(self.data["names"]))])
+        non_zero = counts[counts > 0]
+        metrics = {
+            'max_min_ratio': np.max(non_zero) / np.min(non_zero) if len(non_zero) > 1 else float('inf'),
+            'std_normalized': np.std(non_zero) / np.mean(non_zero) if len(non_zero) > 0 else float('inf'),
+            'zero_classes': np.sum(counts == 0)
+        }
+        return class_counts, metrics
