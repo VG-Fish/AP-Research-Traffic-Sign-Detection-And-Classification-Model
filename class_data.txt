@@ -1,0 +1,16 @@
+Minority Sign Bounds
+Bound: 0.1, Number of Images: 29389
+Bound: 0.5, Number of Images: 15787
+Bound: 0.75, Number of Images: 7078
+Bound: 1.0, Number of Images: 5844
+
+Majority Sign Bounds
+Bound: 2, Number of Images: 26264
+Bound: 4, Number of Images: 9336
+Bound: 8, Number of Images: 1705
+Bound: 12, Number of Images: 395
+Bound: 16, Number of Images: 102
+Bound: 20, Number of Images: 30
+Bound: 30, Number of Images: 1
+
+Number of background images: 128

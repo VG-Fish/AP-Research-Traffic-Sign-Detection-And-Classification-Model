@@ -1,7 +1,6 @@
 from pathlib import Path
 from json import load
-from os import makedirs, remove
-from os.path import exists
+from os import makedirs
 from bisect import bisect_left
 
 directory: str = "mtsd_v2_fully_annotated/annotations" # the directory containing all of the image annotations in JSON format.

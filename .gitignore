@@ -9,3 +9,4 @@ metrics.txt
 num_classes.txt
 __pycache__/
 class_information.json
+balanced_augmented_mapillary_dataset/

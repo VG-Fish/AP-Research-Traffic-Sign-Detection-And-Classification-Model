@@ -1,63 +1,44 @@
-from pathlib import Path
-from json import load, dump
+from json import load
+from typing import Dict, Any
+from os import makedirs
 
-directory = "mtsd_v2_fully_annotated/annotations"
-files = Path(directory).glob("*.json")
-minority_sign_percents = {
-    0.1: [],
-    1.00: [],
+"""
+Get X random images from images with the {minority, majority, background} class presence of Y.
+You can also define the train/val/test format too.
+"""
+SPLITS: Dict[str, Dict[int, float] | int] = {
+    "minority": {
+        0.5: 200,
+        0.75: 460,
+        1.0: 1070,
+    },
+    "majority": {
+        4: 200,
+        12: 50,
+        16: 50,
+        20: 30,
+    },
+    "background": 40,
+    "train": 0.8,
+    "val": 0.2,
+    "test": 0.1,
 }
-majority_sign_percents = {
-    12: [],
-    16: [],
-    20: [],
-    30: [],
-}
-background_images = []
+"""
+The parent directory you want to save to.
+"""
+DATASET_DIRECTORY = "balanced_augmented_mapillary_dataset"
 
-for file in files:
-    with open(file, "r") as f:
-        data = load(f)
-        if data["ispano"]:
-            continue
+with open("class_information.json", "r") as f:
+    contents: Dict[str, Any] = load(f)
 
-        objects = data["objects"]
-        num_signs = len(objects)
-        if num_signs == 0:
-            background_images.append(str(file))
-            continue
-        counter = 0
+def create_directories(exist_ok: bool = False) -> None:
+    directories = ["train", "val", "test"]
+    for directory in directories:
+        makedirs(f"{DATASET_DIRECTORY}/{directory}/images", exist_ok=exist_ok)
+        makedirs(f"{DATASET_DIRECTORY}/{directory}/labels", exist_ok=exist_ok)
 
-        for sign in objects:
-            name = sign["label"]
-            if name != "other-sign":
-                counter += 1
-        
-        minority_sign_percent = counter / num_signs
-        for bound, images in minority_sign_percents.items():
-            if minority_sign_percent >= bound:
-                images.append((str(file), minority_sign_percent))
-        
-        majority_sign_percent = num_signs / counter if counter != 0 else num_signs
-        for bound, images in majority_sign_percents.items():
-            if majority_sign_percent >= bound:
-                images.append((str(file), majority_sign_percent))
+def main() -> None:
+    create_directories(True)
 
-output_data = {
-    "minority_class_bounds": {str(bound): images for bound, images in minority_sign_percents.items()},
-    "majority_class_bounds": {str(bound): images for bound, images in majority_sign_percents.items()},
-    "background_images": background_images
-}
-
-with open("class_information.json", "w") as f:
-    dump(output_data, f, indent=2)
-
-print("Minority Sign Bounds")
-for bound, images in minority_sign_percents.items():
-    print(f"Bound: {bound}, Number of Images: {len(images)}")
-
-print("\nMajority Sign Bounds")
-for bound, images in majority_sign_percents.items():
-    print(f"Bound: {bound}, Number of Images: {len(images)}")
-
-print(f"Number of background images: {len(background_images)}")
+if __name__ == "__main__":
+    main()
