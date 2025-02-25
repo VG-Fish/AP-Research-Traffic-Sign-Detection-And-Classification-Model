@@ -134,7 +134,7 @@ except KeyboardInterrupt:
         model.trainer.train_loader.dataset.train_mode = True
         weighted_counts = verify_class_balance(model.trainer.train_loader.dataset, num_samples=100_000)
         # pprint(weighted_counts)
-        pprint(model.trainer.train_loader.dataset.evaluate_balance())
+        pprint(model.trainer.train_loader.dataset.evaluate_balance()[1])
 
         # Get class counts in default mode
         model.trainer.train_loader.dataset.train_mode = False
@@ -144,13 +144,8 @@ except KeyboardInterrupt:
         plot_class_balance(weighted_counts, default_counts, set(model.trainer.train_loader.dataset.data["names"].values()))
     
     funcs = [
-        lambda x: x ** 10,
-        lambda x: x ** 20,
-        lambda x: x ** 5,
-        lambda x: x ** 3,
-        lambda x: x ** 2,
-        lambda x: x ** 1.5,
-        lambda x: x ** 0.5,
+        lambda x: np.min,
+        np.sum,
     ]
     for idx, func in enumerate(funcs):
         model.trainer.train_loader.dataset.agg_func = func

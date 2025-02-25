@@ -17,15 +17,30 @@ class YOLOWeightedDataset(YOLODataset):
 
         # You can also specify weights manually instead
         self.count_instances()
+        self.create_class_indices()
         class_weights = np.sum(self.counts) / self.counts
-        self.agg_func = self.to_safe_agg(np.mean)
+        self.agg_func = np.mean
 
-        self.class_weights = np.array(class_weights)
+        self.class_weights = np.log1p(np.sum(self.counts)) / np.log1p(self.counts)
+        self.class_weights = np.clip(self.class_weights, a_min=np.percentile(class_weights, 20), a_max=np.percentile(self.class_weights, 90))
         self.weights = self.calculate_weights()
         self.probabilities = self.calculate_probabilities()
+
+        def softmax(x, temp=1.0):
+            x = np.array(x) / np.max(x)  # Normalize to prevent overflow
+            exp_x = np.exp(x / temp)
+            return exp_x / np.sum(exp_x)
+
+        self.probabilities = softmax(self.weights, temp=0.5)
+
+        self.strict_sampling_prob = 0.5
     
     def to_safe_agg(self, func):
         return lambda x: np.mean(np.abs(func(x)))
+    
+    def create_class_indices(self):
+        """Create a list of valid class indices."""
+        self.valid_classes = [i for i, count in enumerate(self.counts) if count > 0]
 
     def count_instances(self):
         """
@@ -35,12 +50,19 @@ class YOLOWeightedDataset(YOLODataset):
             dict: A dict containing the counts for each class.
         """
         self.counts = [0] * len(self.data["names"])
-        for label in self.labels:
+        self.class_to_images = {i: [] for i in range(len(self.data["names"]))}
+
+        for idx, label in enumerate(self.labels):
             traffic_sign_class_ids = label['cls'].reshape(-1).astype(int)
             for id in traffic_sign_class_ids:
                 self.counts[id] += 1
+                self.class_to_images[id].append(idx)
 
         self.counts = np.array(self.counts)
+        # Handle empty classes
+        for class_id in range(len(self.counts)):
+            if len(self.class_to_images[class_id]) == 0:
+                print(f"Warning: Class {class_id} has no examples")
         # To prevent divide by zero errors
         self.counts = np.where(self.counts == 0, 1, self.counts)
 
@@ -87,10 +109,21 @@ class YOLOWeightedDataset(YOLODataset):
         if not self.train_mode:
             return self.transforms(self.get_image_and_label(index))
 
+        if self.strict_sampling_prob > np.random.random():
+            selected_class = np.random.choice(self.valid_classes)
+            if self.class_to_images[selected_class]:
+                image_index = np.random.choice(self.class_to_images[selected_class])
+            else:
+                image_index = np.random.choice(len(self.labels), p=self.probabilities)
+        else:
+            image_index = np.random.choice(len(self.labels), p=self.probabilities)
+            
+        return self.transforms(self.get_image_and_label(image_index))
+    
         index = np.random.choice(len(self.labels), p=self.probabilities)
         return self.transforms(self.get_image_and_label(index))
 
-    def verify_class_balance(self, num_samples=1000):
+    def verify_class_balance(self, num_samples=100000):
         """
         Verifies whether the __getitem__ method in the YOLOWeightedDataset class returns a balanced class output.
 
