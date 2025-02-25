@@ -1,6 +1,5 @@
 from pathlib import Path
 from json import load, dump
-import pprint as pp
 
 directory = "mtsd_v2_fully_annotated/annotations"
 files = Path(directory).glob("*.json")
@@ -8,11 +7,20 @@ minority_sign_percents = {
     0.1: [],
     1.00: [],
 }
+majority_sign_percents = {
+    12: [],
+    16: [],
+    20: [],
+    30: [],
+}
 background_images = []
 
 for file in files:
     with open(file, "r") as f:
         data = load(f)
+        if data["ispano"]:
+            continue
+
         objects = data["objects"]
         num_signs = len(objects)
         if num_signs == 0:
@@ -28,18 +36,28 @@ for file in files:
         minority_sign_percent = counter / num_signs
         for bound, images in minority_sign_percents.items():
             if minority_sign_percent >= bound:
-                images.append(str(file))
+                images.append((str(file), minority_sign_percent))
+        
+        majority_sign_percent = num_signs / counter if counter != 0 else num_signs
+        for bound, images in majority_sign_percents.items():
+            if majority_sign_percent >= bound:
+                images.append((str(file), majority_sign_percent))
 
 output_data = {
     "minority_class_bounds": {str(bound): images for bound, images in minority_sign_percents.items()},
+    "majority_class_bounds": {str(bound): images for bound, images in majority_sign_percents.items()},
     "background_images": background_images
 }
 
-# Write the entire dictionary as JSON to the file
-with open("minority_class_bounds.json", "w") as f:
+with open("class_information.json", "w") as f:
     dump(output_data, f, indent=2)
 
-# Print summary information
+print("Minority Sign Bounds")
 for bound, images in minority_sign_percents.items():
     print(f"Bound: {bound}, Number of Images: {len(images)}")
+
+print("\nMajority Sign Bounds")
+for bound, images in majority_sign_percents.items():
+    print(f"Bound: {bound}, Number of Images: {len(images)}")
+
 print(f"Number of background images: {len(background_images)}")

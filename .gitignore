@@ -8,4 +8,4 @@ runs/
 metrics.txt
 num_classes.txt
 __pycache__/
-minority_class_bounds.json
+class_information.json
