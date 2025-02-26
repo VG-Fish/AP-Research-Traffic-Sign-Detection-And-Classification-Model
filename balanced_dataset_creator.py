@@ -58,19 +58,32 @@ def upload_data(data: Dict[str, Any], dataset_splits: Dict[str, int], type: str)
             counter = 0
             while counter < num_images:
                 rand_img = choice(minority_data)
-                if rand_img in used_images:
-                    used_images.add(rand_img)
-                    continue
-
+                while True and bound / amount > 0.6:
+                    rand_img = choice(minority_data)
+                    if rand_img not in used_images:
+                        used_images.add(rand_img)
+                        break
                 # trash, hacky, monkey-patching code
-                if directory != "test":
-                    source_path = f"{join(f'{MAPILLARY_DATASET_DIRECTORY}/train/images', rand_img)}.jpg"
-                    destination_path = f"{join(f'{BALANCED_DATASET_DIRECTORY}/{directory}/images', rand_img)}.jpg"
+                source_img_path = f"{join(f'{MAPILLARY_DATASET_DIRECTORY}/train/images', rand_img)}.jpg"
+                destination_img_path = f"{join(f'{BALANCED_DATASET_DIRECTORY}/{directory}/images', rand_img)}.jpg"
+                try:
+                    copy(abspath(source_img_path), abspath(destination_img_path))
+                    source_label_path = f"{join(f'{MAPILLARY_DATASET_DIRECTORY}/train/labels', rand_img)}.txt"
+                    destination_label_path = f"{join(f'{BALANCED_DATASET_DIRECTORY}/{directory}/labels', rand_img)}.txt"
+                    copy(abspath(source_label_path), abspath(destination_label_path))
+                except FileNotFoundError:
                     try:
-                        copy(abspath(source_path), abspath(destination_path))
+                        source_img_path = f"{join(f'{MAPILLARY_DATASET_DIRECTORY}/val/images', rand_img)}.jpg"
+                        copy(abspath(source_img_path), abspath(destination_img_path))
+                        source_label_path = f"{join(f'{MAPILLARY_DATASET_DIRECTORY}/val/labels', rand_img)}.txt"
+                        destination_label_path = f"{join(f'{BALANCED_DATASET_DIRECTORY}/{directory}/labels', rand_img)}.txt"
+                        copy(abspath(source_label_path), abspath(destination_label_path))
                     except FileNotFoundError:
-                        source_path = f"{join(f'{MAPILLARY_DATASET_DIRECTORY}/val/images', rand_img)}.jpg"
-                        copy(abspath(source_path), abspath(destination_path))
+                        try:
+                            source_img_path = f"{join(f'{MAPILLARY_DATASET_DIRECTORY}/test/images', rand_img)}.jpg"
+                            copy(abspath(source_img_path), abspath(destination_img_path))
+                        except FileNotFoundError:
+                            continue
                 counter += 1
 
 def create_dataset() -> None:
@@ -89,6 +102,7 @@ def create_dataset() -> None:
     data = load_data()
     upload_data(data, dataset_splits, "minority")
     upload_data(data, dataset_splits, "majority")
+    rmtree(f"{BALANCED_DATASET_DIRECTORY}/test/labels")
 
 
 def main() -> None:
