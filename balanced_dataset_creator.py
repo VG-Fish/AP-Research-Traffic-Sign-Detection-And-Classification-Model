@@ -13,18 +13,12 @@ You can also define the train/val/test format too.
 # Adds up to 4,000 images.
 SPLITS: Dict[str, Dict[int, float] | int | float] = {
     "minority": {
-        0.5: 400,
-        0.75: 920,
-        1.0: 2140,
+        1.0: 5050,
     },
     "majority": {
-        2: 130,
-        4: 200,
-        12: 50,
-        16: 50,
         20: 30,
     },
-    "background": 80,
+    "background": 20,
     "train": 0.7,
     "val": 0.2,
     "test": 0.1,

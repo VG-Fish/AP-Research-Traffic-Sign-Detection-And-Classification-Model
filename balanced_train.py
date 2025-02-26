@@ -30,7 +30,7 @@ To increase open file limit:
 ulimit -n 100000
 """
 
-model = YOLO("yolo11n-p2.yaml")
+model = YOLO("yolo11n.pt")
 
 def clear_cache(_):
     torch.mps.empty_cache()
@@ -45,7 +45,6 @@ results = model.train(
     project="train",
     name="balanced_dataset",
     epochs=25,
-    val=False,
     device="mps",
     patience=3,
     batch=32,
