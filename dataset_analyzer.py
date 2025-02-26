@@ -29,7 +29,7 @@ for file in files:
         objects = data["objects"]
         num_signs = len(objects)
         if num_signs == 0:
-            background_images.append(str(file))
+            background_images.append(file.stem)
             continue
         counter = 0
 
@@ -41,21 +41,19 @@ for file in files:
         minority_sign_percent = counter / num_signs
         for bound, images in minority_sign_percents.items():
             if minority_sign_percent >= bound:
-                images.append((str(file), minority_sign_percent))
+                images.append(file.stem)
         
         majority_sign_percent = num_signs / counter if counter != 0 else num_signs
         for bound, images in majority_sign_percents.items():
             if majority_sign_percent >= bound:
-                images.append((str(file), majority_sign_percent))
+                images.append(file.stem)
 
 output_data = {
     "minority_class_bounds": {
-        str(bound): {"image_paths": images, "num_images": len(images)}
-        for bound, images in minority_sign_percents.items()
+        str(bound): images for bound, images in minority_sign_percents.items()
     },
     "majority_class_bounds": {
-        str(bound): {"image_paths": images, "num_images": len(images)}
-        for bound, images in majority_sign_percents.items()
+        str(bound): images for bound, images in majority_sign_percents.items()
     },
     "background_images": background_images
 }
