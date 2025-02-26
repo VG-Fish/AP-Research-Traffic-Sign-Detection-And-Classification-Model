@@ -2,8 +2,9 @@ from json import load
 from typing import Dict, Any, Set
 from os import makedirs
 from os.path import join, abspath
-from random import choice
+from random import choice, sample
 from shutil import copy, rmtree
+from balanced_dataset_verifier import verify_dataset
 
 """
 Get X random images from images with the {minority, majority, background} class presence of Y.
@@ -102,12 +103,14 @@ def create_dataset() -> None:
     data = load_data()
     upload_data(data, dataset_splits, "minority")
     upload_data(data, dataset_splits, "majority")
+    # I manually added background images
     rmtree(f"{BALANCED_DATASET_DIRECTORY}/test/labels")
 
 
 def main() -> None:
     create_directories(True)
     create_dataset()
+    verify_dataset()
 
 if __name__ == "__main__":
     main()
