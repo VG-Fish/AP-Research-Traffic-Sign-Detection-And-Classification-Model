@@ -1,65 +1,45 @@
 -------------------------
 Minority Sign Bounds
-Bound: 0.1
-Number of train images: 10433.
-Number of val images: 1494.
-Number of test images: 867.
--------------------------
-Bound: 0.25
-Number of train images: 5254.
-Number of val images: 798.
-Number of test images: 834.
--------------------------
 Bound: 0.5
-Number of train images: 11337.
-Number of val images: 1651.
-Number of test images: 879.
+Number of train images: 26398.
+Number of val images: 3846.
+Number of test images: 1343.
 -------------------------
 Bound: 0.75
-Number of train images: 3743.
-Number of val images: 526.
-Number of test images: 871.
+Number of train images: 3654.
+Number of val images: 522.
+Number of test images: 1290.
 -------------------------
 Bound: 0.9
-Number of train images: 514.
-Number of val images: 87.
-Number of test images: 869.
+Number of train images: 509.
+Number of val images: 86.
+Number of test images: 1299.
 -------------------------
 Bound: 1.0
-Number of train images: 5204.
-Number of val images: 777.
-Number of test images: 887.
+Number of train images: 5103.
+Number of val images: 766.
+Number of test images: 1322.
 -------------------------
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 -------------------------
 Majority Sign Bounds
-Bound: 0.1
-Number of train images: 5212.
-Number of val images: 777.
-Number of test images: 904.
--------------------------
-Bound: 0.25
-Number of train images: 1081.
-Number of val images: 168.
-Number of test images: 903.
--------------------------
 Bound: 0.5
-Number of train images: 7787.
-Number of val images: 1122.
-Number of test images: 889.
+Number of train images: 13768.
+Number of val images: 2027.
+Number of test images: 1349.
 -------------------------
 Bound: 0.75
-Number of train images: 8358.
-Number of val images: 1226.
-Number of test images: 887.
+Number of train images: 8157.
+Number of val images: 1203.
+Number of test images: 1387.
 -------------------------
 Bound: 0.9
-Number of train images: 3793.
-Number of val images: 567.
-Number of test images: 889.
+Number of train images: 3714.
+Number of val images: 548.
+Number of test images: 1297.
 -------------------------
 Bound: 1.0
-Number of train images: 10269.
-Number of val images: 1468.
-Number of test images: 906.
+Number of train images: 10021.
+Number of val images: 1440.
+Number of test images: 1303.
 -------------------------

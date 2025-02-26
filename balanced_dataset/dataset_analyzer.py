@@ -6,13 +6,20 @@ import numpy as np
 DIRECTORY = "mtsd_v2_fully_annotated"
 OUTPUT_DIR = "balanced_dataset"
 IGNORE_PANORAMAS = True
-MINORITY_SIGN_PERCENTS = {0.1, 0.25, 0.5, 0.75, 0.9, 1.0}
-MAJORITY_SIGN_PERCENTS = {0.1, 0.25, 0.5, 0.75, 0.9, 1.0}
 
+MINORITY_SIGN_PERCENTS = {0.5, 0.75, 0.9, 1.0}
+MAJORITY_SIGN_PERCENTS = {0.5, 0.75, 0.9, 1.0}
 minority_sign_percents = {i: {"train": [], "val": [], "test": []} for i in sorted(MINORITY_SIGN_PERCENTS)}
 majority_sign_percents = {i: {"train": [], "val": [], "test": []} for i in sorted(MAJORITY_SIGN_PERCENTS)}
 
 background_images = []
+
+classes_to_images = dict()
+
+def add_classes_to_image(file_name, annotation):
+    is_panorama = annotation["ispano"]
+    for sign in annotation["objects"]:
+        classes_to_images.setdefault(sign["label"], []).append((file_name, is_panorama))
 
 def insert_files(directory):
     with open(f"{DIRECTORY}/splits/{directory}.txt", "r") as f:
@@ -21,8 +28,10 @@ def insert_files(directory):
     for file_name in file_names:
         with open(f"{DIRECTORY}/annotations/{file_name}.json") as f:
             data = load(f)
+            add_classes_to_image(file_name, data)
+
             # Ignore panoramas
-            if data["ispano"] and not IGNORE_PANORAMAS:
+            if IGNORE_PANORAMAS and data["ispano"]:
                 continue
 
             # Note down background images
@@ -95,12 +104,9 @@ insert_files("val")
 insert_test_and_background_files()
 
 output_data = {
-    "minority_class_bounds": {
-        str(bound): images for bound, images in minority_sign_percents.items()
-    },
-    "majority_class_bounds": {
-        str(bound): images for bound, images in majority_sign_percents.items()
-    },
+    "minority_class_bounds": minority_sign_percents,
+    "majority_class_bounds": majority_sign_percents,
+    "classes_to_images": classes_to_images
 }
 
 with open(f"{OUTPUT_DIR}/class_information.json", "w") as f:
