@@ -1,16 +1,65 @@
+-------------------------
 Minority Sign Bounds
-Bound: 0.1, Number of Images: 31118
-Bound: 0.25, Number of Images: 26783
-Bound: 0.5, Number of Images: 17179
-Bound: 0.75, Number of Images: 8318
-Bound: 1.0, Number of Images: 6956
-
+Bound: 0.1
+Number of train images: 10433.
+Number of val images: 1494.
+Number of test images: 867.
+-------------------------
+Bound: 0.25
+Number of train images: 5254.
+Number of val images: 798.
+Number of test images: 834.
+-------------------------
+Bound: 0.5
+Number of train images: 11337.
+Number of val images: 1651.
+Number of test images: 879.
+-------------------------
+Bound: 0.75
+Number of train images: 3743.
+Number of val images: 526.
+Number of test images: 871.
+-------------------------
+Bound: 0.9
+Number of train images: 514.
+Number of val images: 87.
+Number of test images: 869.
+-------------------------
+Bound: 1.0
+Number of train images: 5204.
+Number of val images: 777.
+Number of test images: 887.
+-------------------------
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+-------------------------
 Majority Sign Bounds
-Bound: 2, Number of Images: 27745
-Bound: 4, Number of Images: 10397
-Bound: 8, Number of Images: 2655
-Bound: 12, Number of Images: 1287
-Bound: 16, Number of Images: 1011
-Bound: 20, Number of Images: 909
-
-Number of background images: 131
+Bound: 0.1
+Number of train images: 5212.
+Number of val images: 777.
+Number of test images: 904.
+-------------------------
+Bound: 0.25
+Number of train images: 1081.
+Number of val images: 168.
+Number of test images: 903.
+-------------------------
+Bound: 0.5
+Number of train images: 7787.
+Number of val images: 1122.
+Number of test images: 889.
+-------------------------
+Bound: 0.75
+Number of train images: 8358.
+Number of val images: 1226.
+Number of test images: 887.
+-------------------------
+Bound: 0.9
+Number of train images: 3793.
+Number of val images: 567.
+Number of test images: 889.
+-------------------------
+Bound: 1.0
+Number of train images: 10269.
+Number of val images: 1468.
+Number of test images: 906.
+-------------------------
