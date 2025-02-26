@@ -58,7 +58,7 @@ def upload_data(data: Dict[str, Any], dataset_splits: Dict[str, int], type: str)
             counter = 0
             while counter < num_images:
                 rand_img = choice(minority_data)
-                while True and bound / amount > 0.6:
+                while True and bound / amount < 0.5:
                     rand_img = choice(minority_data)
                     if rand_img not in used_images:
                         used_images.add(rand_img)
@@ -94,7 +94,7 @@ def create_dataset() -> None:
     }
 
     # To test if the given data is valid.
-    assert abs(sum(dataset_splits.values()) - 1.0) <= 1e-5, "Your division for train, val, and test doesn't equal one."
+    assert abs(sum(dataset_splits.values()) - 1.0) <= 1e-5, "Your dataset division for train, val, and test doesn't equal one."
     assert SPLITS.get("majority", False), "Define your majority class image data."
     assert SPLITS.get("minority", False), "Define your minority class image data."
     assert SPLITS.get("background", False), "Define your background image data."
