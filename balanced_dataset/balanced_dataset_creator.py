@@ -4,7 +4,7 @@ from os import makedirs
 from os.path import join, abspath
 from random import choice, sample
 from shutil import copy, rmtree
-from balanced_dataset_verifier import verify_dataset
+from balanced_dataset.balanced_dataset_verifier import verify_dataset
 
 """
 Get X random images from images with the {minority, majority, background} class presence of Y.

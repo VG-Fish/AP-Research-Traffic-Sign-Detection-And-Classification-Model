@@ -30,7 +30,7 @@ To increase open file limit:
 ulimit -n 100000
 """
 
-model = YOLO("yolo11n.pt")
+model = YOLO("models/yolo11n.pt")
 
 def clear_cache(_):
     torch.mps.empty_cache()
@@ -38,15 +38,14 @@ def clear_cache(_):
 model.add_callback("on_train_batch_start", clear_cache)
 model.add_callback("on_val_batch_start", clear_cache)
 
-
 results = model.train(
     # Train Variables
     data="balanced_mapillary.yaml",
     project="train",
-    name="balanced_dataset",
-    epochs=25,
+    name="balanced_dataset_p2",
+    epochs=100,
     device="mps",
-    patience=3,
+    patience=10,
     batch=32,
     save_period=1,
     imgsz=640,
@@ -60,11 +59,16 @@ results = model.train(
     save_json=True,
     augment=True,
     seed=16,
+    conf=0.01,
+    iou=0.6,
+    rect=True,
+    multi_scale=True,
 
     # Augmentation Variables
+    mosaic=1.0,
     mixup=0.5,
     copy_paste=0.5,
-    copy_paste_mode="mixup",
     degrees=22.5,
-    shear=5,
+    shear=2,
+    perspective=0.001,
 )
