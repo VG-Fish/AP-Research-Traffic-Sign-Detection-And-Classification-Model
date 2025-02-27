@@ -1,7 +1,5 @@
 from json import load, dump
-from pprint import pprint as pp
 from random import choices, choice
-import numpy as np
 
 DIRECTORY = "mtsd_v2_fully_annotated"
 OUTPUT_DIR = "balanced_dataset"
@@ -11,7 +9,7 @@ IGNORE_PANORAMAS = True
 MINORITY_SIGN_PERCENTS = {1.0}
 MINORITY_SIGN_LIMIT = 0.85
 
-MAJORITY_SIGN_PERCENTS = {0.5, 0.75, 0.9, 1.0}
+MAJORITY_SIGN_PERCENTS = {}
 MAJORITY_SIGN_LIMIT = 0.4
 
 background_images = []
@@ -60,13 +58,13 @@ def insert_files(directory):
                     add_classes_to_image(directory, file_name, data, f"{bound}-minority")
                     break
 
-            # majority_sign_percent = 1 - minority_sign_percent
-            # if majority_sign_percent < MAJORITY_SIGN_LIMIT:
-            #     continue
-            # for bound in MAJORITY_SIGN_PERCENTS:
-            #     if bound >= majority_sign_percent:
-            #         add_classes_to_image(directory, file_name, data, f"{bound}-majority")
-            #         break
+            majority_sign_percent = 1 - minority_sign_percent
+            if majority_sign_percent < MAJORITY_SIGN_LIMIT:
+                continue
+            for bound in MAJORITY_SIGN_PERCENTS:
+                if bound >= majority_sign_percent:
+                    add_classes_to_image(directory, file_name, data, f"{bound}-majority")
+                    break
 
 def insert_background_files():
     # Insert background images
@@ -84,6 +82,9 @@ def insert_background_files():
         
         classes_to_images[rand_class][rand_bound][directory].add(file_name)
         counter += 1
+    
+    with open(f"{OUTPUT_DIR}/background_images_names.json", "w") as f:
+        dump({"background_images": background_images}, f, indent=2)
 
 insert_files("train")
 insert_files("val")

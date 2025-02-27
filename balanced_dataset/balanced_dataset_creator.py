@@ -75,7 +75,7 @@ def upload_data(data: Dict[str, Any], directory: str) -> None:
             apply_augmentations_and_save(images, directory)
         counter += 1
 
-    print("\n" * 5)
+    print("\n" * 3)
 
 def upload_test():
     source_directory = abspath(f"{MAPILLARY_DATASET_DIRECTORY}/test/images")
