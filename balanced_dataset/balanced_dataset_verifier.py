@@ -1,12 +1,11 @@
 from os import listdir
 
-def verify_dataset():
-    DATASET = "balanced_mapillary_dataset"
+def verify_dataset(DIRECTORY):
     total_image_amount = 0
 
     for directory in ["train", "val"]:
-        images = sorted(listdir(f"{DATASET}/{directory}/images"))
-        labels = sorted(listdir(f"{DATASET}/{directory}/labels"))
+        images = sorted(listdir(f"{DIRECTORY}/{directory}/images"))
+        labels = sorted(listdir(f"{DIRECTORY}/{directory}/labels"))
 
         try:
             assert len(images) == len(labels)
@@ -23,5 +22,7 @@ def verify_dataset():
         
         total_image_amount += len(labels)
 
-    total_image_amount += len(listdir(f"{DATASET}/test/images"))
+    total_image_amount += len(listdir(f"{DIRECTORY}/test/images"))
     print(total_image_amount)
+
+verify_dataset("balanced_augmented_mapillary_dataset")

@@ -2,9 +2,9 @@ from json import load
 from typing import Dict, Any, List
 from os import makedirs, link
 from os.path import abspath, exists, samefile
-from random import choices
+from random import choices, sample
 from shutil import copy2, rmtree, copytree
-from balanced_dataset_verifier import verify_dataset
+# from balanced_dataset_verifier import verify_dataset
 
 SPLITS: Dict[str, int | float] = {
     "amount_per_class": 25,
@@ -19,14 +19,18 @@ The parent directory you want to save to.
 BALANCED_DATASET_DIRECTORY = "balanced_augmented_mapillary_dataset"
 MAPILLARY_DATASET_DIRECTORY = "mapillary_dataset"
 DATASET_INFORMATION_PATH = "balanced_dataset/dataset_information.json"
+UPLOADED_TEST = True
 
 def create_directories(exist_ok: bool = False) -> None:
-    directories = ["train", "val", "test"]
+    directories = ["train", "val"]
     for directory in directories:
         if exists(f"{BALANCED_DATASET_DIRECTORY}/{directory}"):
             rmtree(f"{BALANCED_DATASET_DIRECTORY}/{directory}")
         makedirs(f"{BALANCED_DATASET_DIRECTORY}/{directory}/images", exist_ok=exist_ok)
         makedirs(f"{BALANCED_DATASET_DIRECTORY}/{directory}/labels", exist_ok=exist_ok)
+    
+    if not UPLOADED_TEST:
+        makedirs(f"{BALANCED_DATASET_DIRECTORY}/{directory}/test/images", exist_ok=True)
 
 def load_data() -> Dict[str, Any]:
      # Get all the data
@@ -58,22 +62,24 @@ def apply_augmentations_and_save(image_paths: List[str], directory: str) -> None
                     copy2(core_label, new_label)
 
 def upload_data(data: Dict[str, Any], directory: str) -> None:
-    amount = SPLITS["amount_per_class"]
+    amount_per_class = SPLITS["amount_per_class"]
+    target_amount = int(SPLITS[directory] * amount_per_class)
     amount_of_classes = len(data.keys())
 
-    counter = 0
-    for traffic_sign_class, info in data.items():
-        print(round(counter / amount_of_classes, 2), traffic_sign_class)
-        current_amount = int(SPLITS[directory] * amount)
-        random_bounds = choices(list(info.keys()), k=current_amount)
-        for random_bound in random_bounds:
-            current_bound_dict = info[random_bound]
-            image_directory = current_bound_dict.get(directory, False)
-            if not image_directory:
-                break
-            images = choices(image_directory, k=current_amount)
-            apply_augmentations_and_save(images, directory)
-        counter += 1
+    for counter, (traffic_sign_class, info) in enumerate(data.items(), start=0):
+
+        available_images = []
+        for bound_dict in info.values():
+            if directory in bound_dict:
+                available_images.extend(bound_dict[directory])
+        
+        if len(available_images) <= target_amount:
+            selected_images = available_images
+        else:
+            selected_images = sample(available_images, target_amount)
+        
+        apply_augmentations_and_save(selected_images, directory)
+        print(f"{round(counter / amount_of_classes * 100, 2):02f}%: {traffic_sign_class = }, Number of images = {len(selected_images)}")
 
     print("\n" * 3)
 
@@ -100,17 +106,14 @@ def create_dataset() -> None:
     print("Finished uploading val data.")
 
     print("Uploading test data.")
-    UPLOADED_TEST = True
     if not UPLOADED_TEST:
         upload_test()
     print("Finished uploading test data.")
 
-    rmtree(f"{BALANCED_DATASET_DIRECTORY}/test/labels")
-
 def main() -> None:
     create_directories(True)
     create_dataset()
-    # verify_dataset()
+    # verify_dataset(BALANCED_DATASET_DIRECTORY)
 
 if __name__ == "__main__":
     main()
