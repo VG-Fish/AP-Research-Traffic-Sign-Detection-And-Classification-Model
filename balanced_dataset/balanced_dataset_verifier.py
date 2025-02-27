@@ -24,5 +24,3 @@ def verify_dataset(DIRECTORY):
 
     total_image_amount += len(listdir(f"{DIRECTORY}/test/images"))
     print(total_image_amount)
-
-verify_dataset("balanced_augmented_mapillary_dataset")
