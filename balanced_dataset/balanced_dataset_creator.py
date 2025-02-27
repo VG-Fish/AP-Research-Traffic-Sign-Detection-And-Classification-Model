@@ -26,7 +26,7 @@ SPLITS: Dict[str, Dict[int, float] | int | float] = {
 """
 The parent directory you want to save to.
 """
-BALANCED_DATASET_DIRECTORY = "balanced_augmented_mapillary_dataset"
+BALANCED_DATASET_DIRECTORY = "balanced_mapillary_dataset"
 MAPILLARY_DATASET_DIRECTORY = "mapillary_dataset"
 
 def create_directories(exist_ok: bool = False) -> None:

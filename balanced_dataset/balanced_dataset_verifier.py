@@ -1,7 +1,7 @@
 from os import listdir
 
 def verify_dataset():
-    DATASET = "balanced_augmented_mapillary_dataset"
+    DATASET = "balanced_mapillary_dataset"
     total_image_amount = 0
 
     for directory in ["train", "val"]:

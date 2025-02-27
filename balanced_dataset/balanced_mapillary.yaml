@@ -1,4 +1,4 @@
-path: "../balanced_augmented_mapillary_dataset"
+path: "../balanced_mapillary_dataset"
 train: train/images
 val: val/images
 test: test/images

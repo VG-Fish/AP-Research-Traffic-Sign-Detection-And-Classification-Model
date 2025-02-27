@@ -16,10 +16,12 @@ background_images = []
 
 classes_to_images = dict()
 
-def add_classes_to_image(file_name, annotation):
-    is_panorama = annotation["ispano"]
+def add_classes_to_image(directory, file_name, annotation):
     for sign in annotation["objects"]:
-        classes_to_images.setdefault(sign["label"], []).append((file_name, is_panorama))
+        classes_to_images \
+            .setdefault(sign["label"], {}) \
+            .setdefault(directory, []) \
+            .append(file_name)
 
 def insert_files(directory):
     with open(f"{DIRECTORY}/splits/{directory}.txt", "r") as f:
@@ -28,11 +30,12 @@ def insert_files(directory):
     for file_name in file_names:
         with open(f"{DIRECTORY}/annotations/{file_name}.json") as f:
             data = load(f)
-            add_classes_to_image(file_name, data)
 
             # Ignore panoramas
             if IGNORE_PANORAMAS and data["ispano"]:
                 continue
+
+            add_classes_to_image(directory, file_name, data)
 
             # Note down background images
             objects = data["objects"]
@@ -64,17 +67,7 @@ def insert_test_and_background_files():
     with open(f"{DIRECTORY}/splits/test.txt", "r") as f:
         file_names = f.read().splitlines()
     
-    probability_calculations = dict()
-    num_files = len(file_names) + len(background_images)
-    total_num_images = num_files
-
-    for bound, info in minority_sign_percents.items():
-        num_images = sum([len(x) for x in info.values()])
-        probability_calculations[bound] = num_images
-        total_num_images += num_images
-        
-    probability_calculations = {bound: num_images / total_num_images for bound, num_images in probability_calculations.items()}
-    
+    num_files = len(file_names)
     random_minority_bounds = choices(list(MINORITY_SIGN_PERCENTS), k=num_files)
     random_majority_bounds = choices(list(MAJORITY_SIGN_PERCENTS), k=num_files)
     random_bounds = np.random.random(num_files)
