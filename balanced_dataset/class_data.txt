@@ -1,46 +1,7086 @@
 -------------------------
-Minority Sign Bounds
-Bound: 0.5
-Number of train images: 26396.
-Number of val images: 3848.
-Number of test images: 1356.
--------------------------
-Bound: 0.75
-Number of train images: 3653.
-Number of val images: 518.
-Number of test images: 1352.
--------------------------
-Bound: 0.9
-Number of train images: 509.
-Number of val images: 84.
-Number of test images: 1264.
--------------------------
-Bound: 1.0
-Number of train images: 5101.
-Number of val images: 764.
-Number of test images: 1310.
--------------------------
+warning--traffic-merges-right--g1:
 
+Bound: 0.5-majority
+Number of images: 47.
+
+Bound: 0.5-minority
+Number of images: 62.
+
+Bound: 0.75-majority
+Number of images: 26.
+
+Bound: 0.75-minority
+Number of images: 39.
+
+Bound: 1.0-minority
+Number of images: 60.
 
 -------------------------
-Majority Sign Bounds
-Bound: 0.5
-Number of train images: 13767.
-Number of val images: 2033.
-Number of test images: 1323.
+warning--added-lane-right--g1:
+
+Bound: 0.5-majority
+Number of images: 8.
+
+Bound: 0.5-minority
+Number of images: 6.
+
+Bound: 0.75-majority
+Number of images: 3.
+
+Bound: 0.75-minority
+Number of images: 11.
+
+Bound: 1.0-minority
+Number of images: 1.
+
 -------------------------
-Bound: 0.75
-Number of train images: 8156.
-Number of val images: 1208.
-Number of test images: 1310.
+warning--playground--g1:
+
+Bound: 0.5-majority
+Number of images: 7.
+
+Bound: 0.5-minority
+Number of images: 8.
+
+Bound: 0.75-majority
+Number of images: 2.
+
+Bound: 0.75-minority
+Number of images: 3.
+
+Bound: 1.0-minority
+Number of images: 16.
+
 -------------------------
-Bound: 0.9
-Number of train images: 3719.
-Number of val images: 548.
-Number of test images: 1339.
+other-sign:
+
+Bound: 0.5-majority
+Number of images: 13807.
+
+Bound: 0.5-minority
+Number of images: 20668.
+
+Bound: 0.75-majority
+Number of images: 11392.
+
+Bound: 0.75-minority
+Number of images: 9096.
+
+Bound: 1.0-minority
+Number of images: 689.
+
 -------------------------
-Bound: 1.0
-Number of train images: 10018.
-Number of val images: 1444.
-Number of test images: 1332.
+regulatory--no-stopping--g15:
+
+Bound: 0.5-majority
+Number of images: 266.
+
+Bound: 0.5-minority
+Number of images: 340.
+
+Bound: 0.75-majority
+Number of images: 174.
+
+Bound: 0.75-minority
+Number of images: 284.
+
+Bound: 1.0-minority
+Number of images: 161.
+
 -------------------------
+regulatory--priority-road--g4:
+
+Bound: 0.5-majority
+Number of images: 281.
+
+Bound: 0.5-minority
+Number of images: 345.
+
+Bound: 0.75-majority
+Number of images: 193.
+
+Bound: 0.75-minority
+Number of images: 278.
+
+Bound: 1.0-minority
+Number of images: 130.
+
+-------------------------
+information--parking--g1:
+
+Bound: 0.5-majority
+Number of images: 357.
+
+Bound: 0.5-minority
+Number of images: 466.
+
+Bound: 0.75-majority
+Number of images: 246.
+
+Bound: 0.75-minority
+Number of images: 309.
+
+Bound: 1.0-minority
+Number of images: 154.
+
+-------------------------
+complementary--turn-right--g2:
+
+Bound: 0.5-majority
+Number of images: 19.
+
+Bound: 0.5-minority
+Number of images: 26.
+
+Bound: 0.75-majority
+Number of images: 19.
+
+Bound: 0.75-minority
+Number of images: 21.
+
+Bound: 1.0-minority
+Number of images: 6.
+
+-------------------------
+warning--pedestrian-stumble-train--g1:
+
+Bound: 0.5-majority
+Number of images: 3.
+
+Bound: 0.5-minority
+Number of images: 5.
+
+Bound: 0.75-majority
+Number of images: 3.
+
+Bound: 0.75-minority
+Number of images: 4.
+
+Bound: 1.0-minority
+Number of images: 3.
+
+-------------------------
+regulatory--pedestrians-only--g1:
+
+Bound: 0.5-majority
+Number of images: 54.
+
+Bound: 0.5-minority
+Number of images: 55.
+
+Bound: 0.75-majority
+Number of images: 26.
+
+Bound: 0.75-minority
+Number of images: 44.
+
+Bound: 1.0-minority
+Number of images: 17.
+
+-------------------------
+regulatory--no-entry--g1:
+
+Bound: 0.5-majority
+Number of images: 432.
+
+Bound: 0.5-minority
+Number of images: 516.
+
+Bound: 0.75-majority
+Number of images: 293.
+
+Bound: 0.75-minority
+Number of images: 508.
+
+Bound: 1.0-minority
+Number of images: 252.
+
+-------------------------
+regulatory--one-way-straight--g1:
+
+Bound: 0.5-majority
+Number of images: 114.
+
+Bound: 0.5-minority
+Number of images: 132.
+
+Bound: 0.75-majority
+Number of images: 78.
+
+Bound: 0.75-minority
+Number of images: 118.
+
+Bound: 1.0-minority
+Number of images: 54.
+
+-------------------------
+regulatory--reversible-lanes--g2:
+
+Bound: 0.5-majority
+Number of images: 25.
+
+Bound: 0.5-minority
+Number of images: 30.
+
+Bound: 0.75-majority
+Number of images: 12.
+
+Bound: 0.75-minority
+Number of images: 20.
+
+Bound: 1.0-minority
+Number of images: 29.
+
+-------------------------
+regulatory--turn-left--g2:
+
+Bound: 0.5-majority
+Number of images: 39.
+
+Bound: 0.5-minority
+Number of images: 63.
+
+Bound: 0.75-majority
+Number of images: 41.
+
+Bound: 0.75-minority
+Number of images: 55.
+
+Bound: 1.0-minority
+Number of images: 19.
+
+-------------------------
+regulatory--no-parking--g2:
+
+Bound: 0.5-majority
+Number of images: 117.
+
+Bound: 0.5-minority
+Number of images: 165.
+
+Bound: 0.75-majority
+Number of images: 78.
+
+Bound: 0.75-minority
+Number of images: 86.
+
+Bound: 1.0-minority
+Number of images: 83.
+
+-------------------------
+regulatory--one-way-right--g1:
+
+Bound: 0.5-majority
+Number of images: 55.
+
+Bound: 0.5-minority
+Number of images: 70.
+
+Bound: 0.75-majority
+Number of images: 37.
+
+Bound: 0.75-minority
+Number of images: 51.
+
+Bound: 1.0-minority
+Number of images: 28.
+
+-------------------------
+regulatory--one-way-left--g1:
+
+Bound: 0.5-majority
+Number of images: 70.
+
+Bound: 0.5-minority
+Number of images: 104.
+
+Bound: 0.75-majority
+Number of images: 61.
+
+Bound: 0.75-minority
+Number of images: 73.
+
+Bound: 1.0-minority
+Number of images: 44.
+
+-------------------------
+regulatory--maximum-speed-limit-55--g2:
+
+Bound: 0.5-majority
+Number of images: 29.
+
+Bound: 0.5-minority
+Number of images: 31.
+
+Bound: 0.75-majority
+Number of images: 10.
+
+Bound: 0.75-minority
+Number of images: 23.
+
+Bound: 1.0-minority
+Number of images: 40.
+
+-------------------------
+information--pedestrians-crossing--g1:
+
+Bound: 0.5-majority
+Number of images: 509.
+
+Bound: 0.5-minority
+Number of images: 505.
+
+Bound: 0.75-majority
+Number of images: 269.
+
+Bound: 0.75-minority
+Number of images: 752.
+
+Bound: 1.0-minority
+Number of images: 421.
+
+-------------------------
+regulatory--stop--g1:
+
+Bound: 0.5-majority
+Number of images: 322.
+
+Bound: 0.5-minority
+Number of images: 356.
+
+Bound: 0.75-majority
+Number of images: 171.
+
+Bound: 0.75-minority
+Number of images: 334.
+
+Bound: 1.0-minority
+Number of images: 200.
+
+-------------------------
+regulatory--no-right-turn--g1:
+
+Bound: 0.5-majority
+Number of images: 71.
+
+Bound: 0.5-minority
+Number of images: 77.
+
+Bound: 0.75-majority
+Number of images: 44.
+
+Bound: 0.75-minority
+Number of images: 93.
+
+Bound: 1.0-minority
+Number of images: 27.
+
+-------------------------
+information--tram-bus-stop--g2:
+
+Bound: 0.5-majority
+Number of images: 71.
+
+Bound: 0.5-minority
+Number of images: 80.
+
+Bound: 0.75-majority
+Number of images: 43.
+
+Bound: 0.75-minority
+Number of images: 84.
+
+Bound: 1.0-minority
+Number of images: 80.
+
+-------------------------
+regulatory--turn-right-ahead--g1:
+
+Bound: 0.5-majority
+Number of images: 42.
+
+Bound: 0.5-minority
+Number of images: 39.
+
+Bound: 0.75-majority
+Number of images: 30.
+
+Bound: 0.75-minority
+Number of images: 66.
+
+Bound: 1.0-minority
+Number of images: 16.
+
+-------------------------
+regulatory--no-overtaking--g1:
+
+Bound: 0.5-majority
+Number of images: 58.
+
+Bound: 0.5-minority
+Number of images: 86.
+
+Bound: 0.75-majority
+Number of images: 52.
+
+Bound: 0.75-minority
+Number of images: 73.
+
+Bound: 1.0-minority
+Number of images: 42.
+
+-------------------------
+regulatory--height-limit--g1:
+
+Bound: 0.5-majority
+Number of images: 90.
+
+Bound: 0.5-minority
+Number of images: 108.
+
+Bound: 0.75-majority
+Number of images: 67.
+
+Bound: 0.75-minority
+Number of images: 137.
+
+Bound: 1.0-minority
+Number of images: 52.
+
+-------------------------
+regulatory--yield--g1:
+
+Bound: 0.5-majority
+Number of images: 594.
+
+Bound: 0.5-minority
+Number of images: 727.
+
+Bound: 0.75-majority
+Number of images: 441.
+
+Bound: 0.75-minority
+Number of images: 700.
+
+Bound: 1.0-minority
+Number of images: 325.
+
+-------------------------
+warning--domestic-animals--g3:
+
+Bound: 0.5-majority
+Number of images: 16.
+
+Bound: 0.5-minority
+Number of images: 17.
+
+Bound: 0.75-minority
+Number of images: 4.
+
+Bound: 1.0-minority
+Number of images: 19.
+
+-------------------------
+warning--traffic-merges-left--g1:
+
+Bound: 0.5-majority
+Number of images: 20.
+
+Bound: 0.5-minority
+Number of images: 19.
+
+Bound: 0.75-majority
+Number of images: 7.
+
+Bound: 0.75-minority
+Number of images: 20.
+
+Bound: 1.0-minority
+Number of images: 22.
+
+-------------------------
+regulatory--keep-right--g1:
+
+Bound: 0.5-majority
+Number of images: 274.
+
+Bound: 0.5-minority
+Number of images: 344.
+
+Bound: 0.75-majority
+Number of images: 224.
+
+Bound: 0.75-minority
+Number of images: 310.
+
+Bound: 1.0-minority
+Number of images: 102.
+
+-------------------------
+complementary--priority-route-at-intersection--g1:
+
+Bound: 0.5-majority
+Number of images: 10.
+
+Bound: 0.5-minority
+Number of images: 8.
+
+Bound: 0.75-majority
+Number of images: 4.
+
+Bound: 0.75-minority
+Number of images: 10.
+
+Bound: 1.0-minority
+Number of images: 5.
+
+-------------------------
+warning--texts--g1:
+
+Bound: 0.5-majority
+Number of images: 27.
+
+Bound: 0.5-minority
+Number of images: 29.
+
+Bound: 0.75-majority
+Number of images: 8.
+
+Bound: 0.75-minority
+Number of images: 15.
+
+Bound: 1.0-minority
+Number of images: 100.
+
+-------------------------
+complementary--maximum-speed-limit-20--g1:
+
+Bound: 0.5-majority
+Number of images: 29.
+
+Bound: 0.5-minority
+Number of images: 28.
+
+Bound: 0.75-majority
+Number of images: 7.
+
+Bound: 0.75-minority
+Number of images: 24.
+
+Bound: 1.0-minority
+Number of images: 44.
+
+-------------------------
+information--disabled-persons--g1:
+
+Bound: 0.5-majority
+Number of images: 59.
+
+Bound: 0.5-minority
+Number of images: 68.
+
+Bound: 0.75-majority
+Number of images: 26.
+
+Bound: 0.75-minority
+Number of images: 55.
+
+Bound: 1.0-minority
+Number of images: 33.
+
+-------------------------
+warning--crossroads--g1:
+
+Bound: 0.5-majority
+Number of images: 46.
+
+Bound: 0.5-minority
+Number of images: 49.
+
+Bound: 0.75-majority
+Number of images: 18.
+
+Bound: 0.75-minority
+Number of images: 35.
+
+Bound: 1.0-minority
+Number of images: 45.
+
+-------------------------
+regulatory--no-parking--g1:
+
+Bound: 0.5-majority
+Number of images: 300.
+
+Bound: 0.5-minority
+Number of images: 339.
+
+Bound: 0.75-majority
+Number of images: 156.
+
+Bound: 0.75-minority
+Number of images: 288.
+
+Bound: 1.0-minority
+Number of images: 148.
+
+-------------------------
+warning--roadworks--g1:
+
+Bound: 0.5-majority
+Number of images: 79.
+
+Bound: 0.5-minority
+Number of images: 86.
+
+Bound: 0.75-majority
+Number of images: 46.
+
+Bound: 0.75-minority
+Number of images: 101.
+
+Bound: 1.0-minority
+Number of images: 49.
+
+-------------------------
+complementary--turn-left--g2:
+
+Bound: 0.5-majority
+Number of images: 25.
+
+Bound: 0.5-minority
+Number of images: 28.
+
+Bound: 0.75-majority
+Number of images: 24.
+
+Bound: 0.75-minority
+Number of images: 32.
+
+Bound: 1.0-minority
+Number of images: 9.
+
+-------------------------
+warning--double-curve-first-right--g1:
+
+Bound: 0.5-majority
+Number of images: 30.
+
+Bound: 0.5-minority
+Number of images: 28.
+
+Bound: 0.75-majority
+Number of images: 7.
+
+Bound: 0.75-minority
+Number of images: 23.
+
+Bound: 1.0-minority
+Number of images: 68.
+
+-------------------------
+regulatory--turn-left-ahead--g1:
+
+Bound: 0.5-majority
+Number of images: 18.
+
+Bound: 0.5-minority
+Number of images: 19.
+
+Bound: 0.75-majority
+Number of images: 12.
+
+Bound: 0.75-minority
+Number of images: 25.
+
+Bound: 1.0-minority
+Number of images: 8.
+
+-------------------------
+regulatory--no-heavy-goods-vehicles--g1:
+
+Bound: 0.5-majority
+Number of images: 90.
+
+Bound: 0.5-minority
+Number of images: 88.
+
+Bound: 0.75-majority
+Number of images: 41.
+
+Bound: 0.75-minority
+Number of images: 92.
+
+Bound: 1.0-minority
+Number of images: 33.
+
+-------------------------
+regulatory--no-motor-vehicles-except-motorcycles--g1:
+
+Bound: 0.5-majority
+Number of images: 8.
+
+Bound: 0.5-minority
+Number of images: 13.
+
+Bound: 0.75-majority
+Number of images: 8.
+
+Bound: 0.75-minority
+Number of images: 10.
+
+Bound: 1.0-minority
+Number of images: 12.
+
+-------------------------
+regulatory--maximum-speed-limit-30--g1:
+
+Bound: 0.5-majority
+Number of images: 163.
+
+Bound: 0.5-minority
+Number of images: 210.
+
+Bound: 0.75-majority
+Number of images: 104.
+
+Bound: 0.75-minority
+Number of images: 188.
+
+Bound: 1.0-minority
+Number of images: 131.
+
+-------------------------
+regulatory--no-motorcycles--g1:
+
+Bound: 0.5-majority
+Number of images: 18.
+
+Bound: 0.5-minority
+Number of images: 25.
+
+Bound: 0.75-majority
+Number of images: 16.
+
+Bound: 0.75-minority
+Number of images: 22.
+
+Bound: 1.0-minority
+Number of images: 6.
+
+-------------------------
+complementary--chevron-left--g2:
+
+Bound: 0.5-majority
+Number of images: 75.
+
+Bound: 0.5-minority
+Number of images: 51.
+
+Bound: 0.75-majority
+Number of images: 21.
+
+Bound: 0.75-minority
+Number of images: 86.
+
+Bound: 1.0-minority
+Number of images: 104.
+
+-------------------------
+information--end-of-motorway--g1:
+
+Bound: 0.5-majority
+Number of images: 20.
+
+Bound: 0.5-minority
+Number of images: 30.
+
+Bound: 0.75-majority
+Number of images: 18.
+
+Bound: 0.75-minority
+Number of images: 25.
+
+Bound: 1.0-minority
+Number of images: 17.
+
+-------------------------
+regulatory--maximum-speed-limit-50--g1:
+
+Bound: 0.5-majority
+Number of images: 165.
+
+Bound: 0.5-minority
+Number of images: 188.
+
+Bound: 0.75-majority
+Number of images: 95.
+
+Bound: 0.75-minority
+Number of images: 158.
+
+Bound: 1.0-minority
+Number of images: 94.
+
+-------------------------
+warning--texts--g3:
+
+Bound: 0.5-majority
+Number of images: 41.
+
+Bound: 0.5-minority
+Number of images: 56.
+
+Bound: 0.75-majority
+Number of images: 21.
+
+Bound: 0.75-minority
+Number of images: 27.
+
+Bound: 1.0-minority
+Number of images: 24.
+
+-------------------------
+warning--junction-with-a-side-road-acute-left--g1:
+
+Bound: 0.5-majority
+Number of images: 35.
+
+Bound: 0.5-minority
+Number of images: 42.
+
+Bound: 0.75-majority
+Number of images: 8.
+
+Bound: 0.75-minority
+Number of images: 11.
+
+Bound: 1.0-minority
+Number of images: 45.
+
+-------------------------
+regulatory--no-heavy-goods-vehicles--g2:
+
+Bound: 0.5-majority
+Number of images: 96.
+
+Bound: 0.5-minority
+Number of images: 111.
+
+Bound: 0.75-majority
+Number of images: 42.
+
+Bound: 0.75-minority
+Number of images: 75.
+
+Bound: 1.0-minority
+Number of images: 44.
+
+-------------------------
+regulatory--maximum-speed-limit-10--g1:
+
+Bound: 0.5-majority
+Number of images: 23.
+
+Bound: 0.5-minority
+Number of images: 26.
+
+Bound: 0.75-majority
+Number of images: 17.
+
+Bound: 0.75-minority
+Number of images: 33.
+
+Bound: 1.0-minority
+Number of images: 14.
+
+-------------------------
+regulatory--roundabout--g1:
+
+Bound: 0.5-majority
+Number of images: 101.
+
+Bound: 0.5-minority
+Number of images: 108.
+
+Bound: 0.75-majority
+Number of images: 63.
+
+Bound: 0.75-minority
+Number of images: 130.
+
+Bound: 1.0-minority
+Number of images: 73.
+
+-------------------------
+warning--texts--g2:
+
+Bound: 0.5-majority
+Number of images: 58.
+
+Bound: 0.5-minority
+Number of images: 64.
+
+Bound: 0.75-majority
+Number of images: 27.
+
+Bound: 0.75-minority
+Number of images: 60.
+
+Bound: 1.0-minority
+Number of images: 51.
+
+-------------------------
+warning--pedestrians-crossing--g4:
+
+Bound: 0.5-majority
+Number of images: 276.
+
+Bound: 0.5-minority
+Number of images: 302.
+
+Bound: 0.75-majority
+Number of images: 143.
+
+Bound: 0.75-minority
+Number of images: 300.
+
+Bound: 1.0-minority
+Number of images: 195.
+
+-------------------------
+complementary--keep-left--g1:
+
+Bound: 0.5-majority
+Number of images: 98.
+
+Bound: 0.5-minority
+Number of images: 93.
+
+Bound: 0.75-majority
+Number of images: 52.
+
+Bound: 0.75-minority
+Number of images: 121.
+
+Bound: 1.0-minority
+Number of images: 46.
+
+-------------------------
+regulatory--no-parking--g5:
+
+Bound: 0.5-majority
+Number of images: 148.
+
+Bound: 0.5-minority
+Number of images: 156.
+
+Bound: 0.75-majority
+Number of images: 67.
+
+Bound: 0.75-minority
+Number of images: 158.
+
+Bound: 1.0-minority
+Number of images: 99.
+
+-------------------------
+complementary--obstacle-delineator--g2:
+
+Bound: 0.5-majority
+Number of images: 91.
+
+Bound: 0.5-minority
+Number of images: 105.
+
+Bound: 0.75-majority
+Number of images: 53.
+
+Bound: 0.75-minority
+Number of images: 108.
+
+Bound: 1.0-minority
+Number of images: 58.
+
+-------------------------
+regulatory--keep-left--g1:
+
+Bound: 0.5-majority
+Number of images: 133.
+
+Bound: 0.5-minority
+Number of images: 134.
+
+Bound: 0.75-majority
+Number of images: 62.
+
+Bound: 0.75-minority
+Number of images: 108.
+
+Bound: 1.0-minority
+Number of images: 50.
+
+-------------------------
+warning--railroad-crossing-without-barriers--g4:
+
+Bound: 0.5-majority
+Number of images: 58.
+
+Bound: 0.5-minority
+Number of images: 60.
+
+Bound: 0.75-majority
+Number of images: 6.
+
+Bound: 0.75-minority
+Number of images: 16.
+
+Bound: 1.0-minority
+Number of images: 20.
+
+-------------------------
+complementary--chevron-left--g1:
+
+Bound: 0.5-majority
+Number of images: 287.
+
+Bound: 0.5-minority
+Number of images: 266.
+
+Bound: 0.75-majority
+Number of images: 132.
+
+Bound: 0.75-minority
+Number of images: 556.
+
+Bound: 1.0-minority
+Number of images: 761.
+
+-------------------------
+regulatory--end-of-prohibition--g1:
+
+Bound: 0.5-majority
+Number of images: 12.
+
+Bound: 0.5-minority
+Number of images: 19.
+
+Bound: 0.75-majority
+Number of images: 14.
+
+Bound: 0.75-minority
+Number of images: 20.
+
+Bound: 1.0-minority
+Number of images: 16.
+
+-------------------------
+warning--roundabout--g1:
+
+Bound: 0.5-majority
+Number of images: 26.
+
+Bound: 0.5-minority
+Number of images: 32.
+
+Bound: 0.75-majority
+Number of images: 16.
+
+Bound: 0.75-minority
+Number of images: 36.
+
+Bound: 1.0-minority
+Number of images: 40.
+
+-------------------------
+complementary--obstacle-delineator--g1:
+
+Bound: 0.5-majority
+Number of images: 44.
+
+Bound: 0.5-minority
+Number of images: 45.
+
+Bound: 0.75-majority
+Number of images: 21.
+
+Bound: 0.75-minority
+Number of images: 45.
+
+Bound: 1.0-minority
+Number of images: 13.
+
+-------------------------
+regulatory--maximum-speed-limit-45--g1:
+
+Bound: 0.5-majority
+Number of images: 14.
+
+Bound: 0.5-minority
+Number of images: 17.
+
+Bound: 0.75-majority
+Number of images: 4.
+
+Bound: 0.75-minority
+Number of images: 5.
+
+Bound: 1.0-minority
+Number of images: 10.
+
+-------------------------
+regulatory--weight-limit--g1:
+
+Bound: 0.5-majority
+Number of images: 54.
+
+Bound: 0.5-minority
+Number of images: 62.
+
+Bound: 0.75-majority
+Number of images: 24.
+
+Bound: 0.75-minority
+Number of images: 47.
+
+Bound: 1.0-minority
+Number of images: 26.
+
+-------------------------
+regulatory--go-straight--g1:
+
+Bound: 0.5-majority
+Number of images: 123.
+
+Bound: 0.5-minority
+Number of images: 137.
+
+Bound: 0.75-majority
+Number of images: 71.
+
+Bound: 0.75-minority
+Number of images: 134.
+
+Bound: 1.0-minority
+Number of images: 55.
+
+-------------------------
+information--road-bump--g1:
+
+Bound: 0.5-majority
+Number of images: 21.
+
+Bound: 0.5-minority
+Number of images: 21.
+
+Bound: 0.75-majority
+Number of images: 9.
+
+Bound: 0.75-minority
+Number of images: 36.
+
+Bound: 1.0-minority
+Number of images: 31.
+
+-------------------------
+warning--children--g1:
+
+Bound: 0.5-majority
+Number of images: 59.
+
+Bound: 0.5-minority
+Number of images: 59.
+
+Bound: 0.75-majority
+Number of images: 18.
+
+Bound: 0.75-minority
+Number of images: 52.
+
+Bound: 1.0-minority
+Number of images: 64.
+
+-------------------------
+regulatory--maximum-speed-limit-40--g1:
+
+Bound: 0.5-majority
+Number of images: 241.
+
+Bound: 0.5-minority
+Number of images: 255.
+
+Bound: 0.75-majority
+Number of images: 98.
+
+Bound: 0.75-minority
+Number of images: 253.
+
+Bound: 1.0-minority
+Number of images: 192.
+
+-------------------------
+warning--other-danger--g1:
+
+Bound: 0.5-majority
+Number of images: 90.
+
+Bound: 0.5-minority
+Number of images: 110.
+
+Bound: 0.75-majority
+Number of images: 49.
+
+Bound: 0.75-minority
+Number of images: 89.
+
+Bound: 1.0-minority
+Number of images: 33.
+
+-------------------------
+regulatory--no-buses--g3:
+
+Bound: 0.5-majority
+Number of images: 13.
+
+Bound: 0.5-minority
+Number of images: 20.
+
+Bound: 0.75-majority
+Number of images: 10.
+
+Bound: 0.75-minority
+Number of images: 7.
+
+Bound: 1.0-minority
+Number of images: 4.
+
+-------------------------
+regulatory--no-heavy-goods-vehicles--g4:
+
+Bound: 0.5-majority
+Number of images: 72.
+
+Bound: 0.5-minority
+Number of images: 97.
+
+Bound: 0.75-majority
+Number of images: 36.
+
+Bound: 0.75-minority
+Number of images: 64.
+
+Bound: 1.0-minority
+Number of images: 29.
+
+-------------------------
+complementary--chevron-right-unsure--g6:
+
+Bound: 0.5-majority
+Number of images: 51.
+
+Bound: 0.5-minority
+Number of images: 63.
+
+Bound: 0.75-majority
+Number of images: 33.
+
+Bound: 0.75-minority
+Number of images: 72.
+
+Bound: 1.0-minority
+Number of images: 54.
+
+-------------------------
+complementary--chevron-right--g5:
+
+Bound: 0.5-majority
+Number of images: 76.
+
+Bound: 0.5-minority
+Number of images: 69.
+
+Bound: 0.75-majority
+Number of images: 42.
+
+Bound: 0.75-minority
+Number of images: 135.
+
+Bound: 1.0-minority
+Number of images: 65.
+
+-------------------------
+complementary--chevron-right--g1:
+
+Bound: 0.5-majority
+Number of images: 301.
+
+Bound: 0.5-minority
+Number of images: 292.
+
+Bound: 0.75-majority
+Number of images: 176.
+
+Bound: 0.75-minority
+Number of images: 558.
+
+Bound: 1.0-minority
+Number of images: 651.
+
+-------------------------
+information--stairs--g1:
+
+Bound: 0.5-majority
+Number of images: 5.
+
+Bound: 0.5-minority
+Number of images: 8.
+
+Bound: 0.75-majority
+Number of images: 6.
+
+Bound: 0.75-minority
+Number of images: 6.
+
+Bound: 1.0-minority
+Number of images: 2.
+
+-------------------------
+warning--curve-right--g1:
+
+Bound: 0.5-majority
+Number of images: 44.
+
+Bound: 0.5-minority
+Number of images: 51.
+
+Bound: 0.75-majority
+Number of images: 17.
+
+Bound: 0.75-minority
+Number of images: 35.
+
+Bound: 1.0-minority
+Number of images: 136.
+
+-------------------------
+complementary--pass-right--g1:
+
+Bound: 0.5-majority
+Number of images: 20.
+
+Bound: 0.5-minority
+Number of images: 19.
+
+Bound: 0.75-majority
+Number of images: 5.
+
+Bound: 0.75-minority
+Number of images: 17.
+
+Bound: 1.0-minority
+Number of images: 9.
+
+-------------------------
+complementary--chevron-right--g4:
+
+Bound: 0.5-majority
+Number of images: 11.
+
+Bound: 0.5-minority
+Number of images: 9.
+
+Bound: 0.75-majority
+Number of images: 2.
+
+Bound: 0.75-minority
+Number of images: 17.
+
+Bound: 1.0-minority
+Number of images: 34.
+
+-------------------------
+warning--t-roads--g1:
+
+Bound: 0.5-majority
+Number of images: 13.
+
+Bound: 0.5-minority
+Number of images: 14.
+
+Bound: 0.75-majority
+Number of images: 2.
+
+Bound: 0.75-minority
+Number of images: 3.
+
+Bound: 1.0-minority
+Number of images: 14.
+
+-------------------------
+warning--junction-with-a-side-road-perpendicular-right--g3:
+
+Bound: 0.5-majority
+Number of images: 46.
+
+Bound: 0.5-minority
+Number of images: 40.
+
+Bound: 0.75-majority
+Number of images: 5.
+
+Bound: 0.75-minority
+Number of images: 32.
+
+Bound: 1.0-minority
+Number of images: 50.
+
+-------------------------
+regulatory--no-hawkers--g1:
+
+Bound: 0.5-majority
+Number of images: 3.
+
+Bound: 0.5-minority
+Number of images: 4.
+
+Bound: 0.75-majority
+Number of images: 1.
+
+Bound: 1.0-minority
+Number of images: 6.
+
+-------------------------
+complementary--extent-of-prohibition-area-both-direction--g1:
+
+Bound: 0.5-majority
+Number of images: 28.
+
+Bound: 0.5-minority
+Number of images: 39.
+
+Bound: 0.75-majority
+Number of images: 22.
+
+Bound: 0.75-minority
+Number of images: 27.
+
+Bound: 1.0-minority
+Number of images: 10.
+
+-------------------------
+warning--t-roads--g2:
+
+Bound: 0.5-majority
+Number of images: 7.
+
+Bound: 0.5-minority
+Number of images: 13.
+
+Bound: 0.75-majority
+Number of images: 7.
+
+Bound: 0.75-minority
+Number of images: 8.
+
+Bound: 1.0-minority
+Number of images: 14.
+
+-------------------------
+regulatory--turn-left--g1:
+
+Bound: 0.5-majority
+Number of images: 40.
+
+Bound: 0.5-minority
+Number of images: 37.
+
+Bound: 0.75-majority
+Number of images: 20.
+
+Bound: 0.75-minority
+Number of images: 48.
+
+Bound: 1.0-minority
+Number of images: 37.
+
+-------------------------
+regulatory--turn-left--g3:
+
+Bound: 0.5-majority
+Number of images: 23.
+
+Bound: 0.5-minority
+Number of images: 24.
+
+Bound: 0.75-majority
+Number of images: 13.
+
+Bound: 0.75-minority
+Number of images: 32.
+
+Bound: 1.0-minority
+Number of images: 22.
+
+-------------------------
+information--parking--g3:
+
+Bound: 0.5-majority
+Number of images: 72.
+
+Bound: 0.5-minority
+Number of images: 93.
+
+Bound: 0.75-majority
+Number of images: 50.
+
+Bound: 0.75-minority
+Number of images: 67.
+
+Bound: 1.0-minority
+Number of images: 21.
+
+-------------------------
+regulatory--turn-right--g2:
+
+Bound: 0.5-majority
+Number of images: 17.
+
+Bound: 0.5-minority
+Number of images: 17.
+
+Bound: 0.75-majority
+Number of images: 10.
+
+Bound: 0.75-minority
+Number of images: 28.
+
+Bound: 1.0-minority
+Number of images: 22.
+
+-------------------------
+regulatory--shared-path-pedestrians-and-bicycles--g1:
+
+Bound: 0.5-majority
+Number of images: 61.
+
+Bound: 0.5-minority
+Number of images: 66.
+
+Bound: 0.75-majority
+Number of images: 37.
+
+Bound: 0.75-minority
+Number of images: 56.
+
+Bound: 1.0-minority
+Number of images: 17.
+
+-------------------------
+regulatory--no-overtaking--g5:
+
+Bound: 0.5-majority
+Number of images: 74.
+
+Bound: 0.5-minority
+Number of images: 83.
+
+Bound: 0.75-majority
+Number of images: 19.
+
+Bound: 0.75-minority
+Number of images: 54.
+
+Bound: 1.0-minority
+Number of images: 194.
+
+-------------------------
+warning--double-curve-first-left--g1:
+
+Bound: 0.5-majority
+Number of images: 16.
+
+Bound: 0.5-minority
+Number of images: 18.
+
+Bound: 0.75-majority
+Number of images: 5.
+
+Bound: 0.75-minority
+Number of images: 26.
+
+Bound: 1.0-minority
+Number of images: 41.
+
+-------------------------
+regulatory--keep-right--g4:
+
+Bound: 0.5-majority
+Number of images: 113.
+
+Bound: 0.5-minority
+Number of images: 162.
+
+Bound: 0.75-majority
+Number of images: 103.
+
+Bound: 0.75-minority
+Number of images: 102.
+
+Bound: 1.0-minority
+Number of images: 27.
+
+-------------------------
+regulatory--go-straight-or-turn-left--g2:
+
+Bound: 0.5-majority
+Number of images: 17.
+
+Bound: 0.5-minority
+Number of images: 19.
+
+Bound: 0.75-majority
+Number of images: 10.
+
+Bound: 0.75-minority
+Number of images: 13.
+
+Bound: 1.0-minority
+Number of images: 7.
+
+-------------------------
+regulatory--turn-right--g3:
+
+Bound: 0.5-majority
+Number of images: 26.
+
+Bound: 0.5-minority
+Number of images: 32.
+
+Bound: 0.75-majority
+Number of images: 15.
+
+Bound: 0.75-minority
+Number of images: 31.
+
+Bound: 1.0-minority
+Number of images: 9.
+
+-------------------------
+information--interstate-route--g1:
+
+Bound: 0.5-majority
+Number of images: 9.
+
+Bound: 0.5-minority
+Number of images: 9.
+
+Bound: 0.75-majority
+Number of images: 2.
+
+Bound: 0.75-minority
+Number of images: 3.
+
+-------------------------
+regulatory--lane-control--g1:
+
+Bound: 0.5-majority
+Number of images: 21.
+
+Bound: 0.5-minority
+Number of images: 38.
+
+Bound: 0.75-majority
+Number of images: 23.
+
+Bound: 0.75-minority
+Number of images: 11.
+
+Bound: 1.0-minority
+Number of images: 3.
+
+-------------------------
+warning--road-bump--g2:
+
+Bound: 0.5-majority
+Number of images: 118.
+
+Bound: 0.5-minority
+Number of images: 113.
+
+Bound: 0.75-majority
+Number of images: 35.
+
+Bound: 0.75-minority
+Number of images: 122.
+
+Bound: 1.0-minority
+Number of images: 189.
+
+-------------------------
+warning--roadworks--g3:
+
+Bound: 0.5-majority
+Number of images: 25.
+
+Bound: 0.5-minority
+Number of images: 33.
+
+Bound: 0.75-majority
+Number of images: 15.
+
+Bound: 0.75-minority
+Number of images: 15.
+
+Bound: 1.0-minority
+Number of images: 19.
+
+-------------------------
+regulatory--one-way-left--g3:
+
+Bound: 0.5-majority
+Number of images: 75.
+
+Bound: 0.5-minority
+Number of images: 85.
+
+Bound: 0.75-majority
+Number of images: 58.
+
+Bound: 0.75-minority
+Number of images: 84.
+
+Bound: 1.0-minority
+Number of images: 44.
+
+-------------------------
+warning--narrow-bridge--g1:
+
+Bound: 0.5-majority
+Number of images: 44.
+
+Bound: 0.5-minority
+Number of images: 48.
+
+Bound: 0.75-majority
+Number of images: 10.
+
+Bound: 0.75-minority
+Number of images: 24.
+
+Bound: 1.0-minority
+Number of images: 79.
+
+-------------------------
+complementary--maximum-speed-limit-50--g1:
+
+Bound: 0.5-majority
+Number of images: 1.
+
+Bound: 0.5-minority
+Number of images: 3.
+
+Bound: 0.75-majority
+Number of images: 2.
+
+Bound: 0.75-minority
+Number of images: 9.
+
+Bound: 1.0-minority
+Number of images: 4.
+
+-------------------------
+warning--curve-left--g2:
+
+Bound: 0.5-majority
+Number of images: 119.
+
+Bound: 0.5-minority
+Number of images: 138.
+
+Bound: 0.75-majority
+Number of images: 37.
+
+Bound: 0.75-minority
+Number of images: 82.
+
+Bound: 1.0-minority
+Number of images: 241.
+
+-------------------------
+regulatory--maximum-speed-limit-60--g1:
+
+Bound: 0.5-majority
+Number of images: 160.
+
+Bound: 0.5-minority
+Number of images: 194.
+
+Bound: 0.75-majority
+Number of images: 73.
+
+Bound: 0.75-minority
+Number of images: 129.
+
+Bound: 1.0-minority
+Number of images: 121.
+
+-------------------------
+information--dead-end--g1:
+
+Bound: 0.5-majority
+Number of images: 37.
+
+Bound: 0.5-minority
+Number of images: 39.
+
+Bound: 0.75-majority
+Number of images: 17.
+
+Bound: 0.75-minority
+Number of images: 33.
+
+Bound: 1.0-minority
+Number of images: 22.
+
+-------------------------
+complementary--maximum-speed-limit-55--g1:
+
+Bound: 0.5-majority
+Number of images: 9.
+
+Bound: 0.5-minority
+Number of images: 14.
+
+Bound: 0.75-majority
+Number of images: 5.
+
+Bound: 0.75-minority
+Number of images: 17.
+
+Bound: 1.0-minority
+Number of images: 36.
+
+-------------------------
+regulatory--no-u-turn--g3:
+
+Bound: 0.5-majority
+Number of images: 35.
+
+Bound: 0.5-minority
+Number of images: 35.
+
+Bound: 0.75-majority
+Number of images: 7.
+
+Bound: 0.75-minority
+Number of images: 31.
+
+Bound: 1.0-minority
+Number of images: 18.
+
+-------------------------
+regulatory--no-right-turn--g2:
+
+Bound: 0.5-majority
+Number of images: 19.
+
+Bound: 0.5-minority
+Number of images: 19.
+
+Bound: 0.75-majority
+Number of images: 13.
+
+Bound: 0.75-minority
+Number of images: 30.
+
+Bound: 1.0-minority
+Number of images: 12.
+
+-------------------------
+regulatory--keep-left--g2:
+
+Bound: 0.5-majority
+Number of images: 26.
+
+Bound: 0.5-minority
+Number of images: 29.
+
+Bound: 0.75-majority
+Number of images: 15.
+
+Bound: 0.75-minority
+Number of images: 35.
+
+Bound: 1.0-minority
+Number of images: 17.
+
+-------------------------
+regulatory--no-stopping--g5:
+
+Bound: 0.5-majority
+Number of images: 44.
+
+Bound: 0.5-minority
+Number of images: 39.
+
+Bound: 0.75-majority
+Number of images: 10.
+
+Bound: 0.75-minority
+Number of images: 39.
+
+Bound: 1.0-minority
+Number of images: 30.
+
+-------------------------
+warning--roadworks--g2:
+
+Bound: 0.5-majority
+Number of images: 12.
+
+Bound: 0.5-minority
+Number of images: 19.
+
+Bound: 0.75-majority
+Number of images: 9.
+
+Bound: 0.75-minority
+Number of images: 9.
+
+Bound: 1.0-minority
+Number of images: 8.
+
+-------------------------
+complementary--go-right--g1:
+
+Bound: 0.5-majority
+Number of images: 67.
+
+Bound: 0.5-minority
+Number of images: 97.
+
+Bound: 0.75-majority
+Number of images: 65.
+
+Bound: 0.75-minority
+Number of images: 68.
+
+Bound: 1.0-minority
+Number of images: 29.
+
+-------------------------
+regulatory--go-straight-or-turn-left--g3:
+
+Bound: 0.5-majority
+Number of images: 25.
+
+Bound: 0.5-minority
+Number of images: 28.
+
+Bound: 0.75-majority
+Number of images: 11.
+
+Bound: 0.75-minority
+Number of images: 28.
+
+Bound: 1.0-minority
+Number of images: 31.
+
+-------------------------
+regulatory--turn-right-ahead--g2:
+
+Bound: 0.5-majority
+Number of images: 12.
+
+Bound: 0.5-minority
+Number of images: 12.
+
+Bound: 0.75-majority
+Number of images: 5.
+
+Bound: 0.75-minority
+Number of images: 10.
+
+Bound: 1.0-minority
+Number of images: 6.
+
+-------------------------
+regulatory--no-stopping--g2:
+
+Bound: 0.5-majority
+Number of images: 82.
+
+Bound: 0.5-minority
+Number of images: 95.
+
+Bound: 0.75-majority
+Number of images: 52.
+
+Bound: 0.75-minority
+Number of images: 83.
+
+Bound: 1.0-minority
+Number of images: 72.
+
+-------------------------
+regulatory--give-way-to-oncoming-traffic--g1:
+
+Bound: 0.5-majority
+Number of images: 23.
+
+Bound: 0.5-minority
+Number of images: 24.
+
+Bound: 0.75-majority
+Number of images: 6.
+
+Bound: 0.75-minority
+Number of images: 21.
+
+Bound: 1.0-minority
+Number of images: 14.
+
+-------------------------
+warning--children--g2:
+
+Bound: 0.5-majority
+Number of images: 97.
+
+Bound: 0.5-minority
+Number of images: 102.
+
+Bound: 0.75-majority
+Number of images: 25.
+
+Bound: 0.75-minority
+Number of images: 60.
+
+Bound: 1.0-minority
+Number of images: 98.
+
+-------------------------
+warning--road-bump--g1:
+
+Bound: 0.5-majority
+Number of images: 103.
+
+Bound: 0.5-minority
+Number of images: 114.
+
+Bound: 0.75-majority
+Number of images: 45.
+
+Bound: 0.75-minority
+Number of images: 111.
+
+Bound: 1.0-minority
+Number of images: 104.
+
+-------------------------
+complementary--chevron-left--g3:
+
+Bound: 0.5-majority
+Number of images: 64.
+
+Bound: 0.5-minority
+Number of images: 52.
+
+Bound: 0.75-majority
+Number of images: 21.
+
+Bound: 0.75-minority
+Number of images: 76.
+
+Bound: 1.0-minority
+Number of images: 52.
+
+-------------------------
+regulatory--no-overtaking--g2:
+
+Bound: 0.5-majority
+Number of images: 52.
+
+Bound: 0.5-minority
+Number of images: 54.
+
+Bound: 0.75-majority
+Number of images: 18.
+
+Bound: 0.75-minority
+Number of images: 59.
+
+Bound: 1.0-minority
+Number of images: 59.
+
+-------------------------
+regulatory--no-turns--g1:
+
+Bound: 0.5-majority
+Number of images: 6.
+
+Bound: 0.5-minority
+Number of images: 7.
+
+Bound: 0.75-majority
+Number of images: 5.
+
+Bound: 0.75-minority
+Number of images: 10.
+
+Bound: 1.0-minority
+Number of images: 3.
+
+-------------------------
+regulatory--no-turn-on-red--g3:
+
+Bound: 0.5-majority
+Number of images: 11.
+
+Bound: 0.5-minority
+Number of images: 19.
+
+Bound: 0.75-majority
+Number of images: 13.
+
+Bound: 0.75-minority
+Number of images: 6.
+
+Bound: 1.0-minority
+Number of images: 6.
+
+-------------------------
+regulatory--no-parking-or-no-stopping--g2:
+
+Bound: 0.5-majority
+Number of images: 26.
+
+Bound: 0.5-minority
+Number of images: 28.
+
+Bound: 0.75-majority
+Number of images: 11.
+
+Bound: 0.75-minority
+Number of images: 21.
+
+Bound: 1.0-minority
+Number of images: 15.
+
+-------------------------
+regulatory--stop-here-on-red-or-flashing-light--g2:
+
+Bound: 0.5-majority
+Number of images: 11.
+
+Bound: 0.5-minority
+Number of images: 13.
+
+Bound: 0.75-majority
+Number of images: 7.
+
+Bound: 0.75-minority
+Number of images: 11.
+
+-------------------------
+regulatory--maximum-speed-limit-25--g2:
+
+Bound: 0.5-majority
+Number of images: 52.
+
+Bound: 0.5-minority
+Number of images: 59.
+
+Bound: 0.75-majority
+Number of images: 28.
+
+Bound: 0.75-minority
+Number of images: 36.
+
+Bound: 1.0-minority
+Number of images: 26.
+
+-------------------------
+warning--school-zone--g2:
+
+Bound: 0.5-majority
+Number of images: 68.
+
+Bound: 0.5-minority
+Number of images: 69.
+
+Bound: 0.75-majority
+Number of images: 30.
+
+Bound: 0.75-minority
+Number of images: 58.
+
+Bound: 1.0-minority
+Number of images: 20.
+
+-------------------------
+regulatory--wrong-way--g1:
+
+Bound: 0.5-majority
+Number of images: 18.
+
+Bound: 0.5-minority
+Number of images: 20.
+
+Bound: 0.75-majority
+Number of images: 9.
+
+Bound: 0.75-minority
+Number of images: 15.
+
+Bound: 1.0-minority
+Number of images: 15.
+
+-------------------------
+regulatory--no-stopping--g8:
+
+Bound: 0.5-majority
+Number of images: 17.
+
+Bound: 0.5-minority
+Number of images: 14.
+
+Bound: 0.75-majority
+Number of images: 1.
+
+Bound: 0.75-minority
+Number of images: 12.
+
+Bound: 1.0-minority
+Number of images: 10.
+
+-------------------------
+complementary--distance--g1:
+
+Bound: 0.5-majority
+Number of images: 46.
+
+Bound: 0.5-minority
+Number of images: 41.
+
+Bound: 0.75-majority
+Number of images: 13.
+
+Bound: 0.75-minority
+Number of images: 62.
+
+Bound: 1.0-minority
+Number of images: 44.
+
+-------------------------
+warning--junction-with-a-side-road-perpendicular-left--g3:
+
+Bound: 0.5-majority
+Number of images: 24.
+
+Bound: 0.5-minority
+Number of images: 27.
+
+Bound: 0.75-majority
+Number of images: 7.
+
+Bound: 0.75-minority
+Number of images: 22.
+
+Bound: 1.0-minority
+Number of images: 46.
+
+-------------------------
+warning--emergency-vehicles--g1:
+
+Bound: 0.5-majority
+Number of images: 17.
+
+Bound: 0.5-minority
+Number of images: 17.
+
+Bound: 0.75-majority
+Number of images: 4.
+
+Bound: 0.75-minority
+Number of images: 12.
+
+Bound: 1.0-minority
+Number of images: 24.
+
+-------------------------
+warning--kangaloo-crossing--g1:
+
+Bound: 0.5-majority
+Number of images: 37.
+
+Bound: 0.5-minority
+Number of images: 41.
+
+Bound: 0.75-majority
+Number of images: 7.
+
+Bound: 0.75-minority
+Number of images: 12.
+
+Bound: 1.0-minority
+Number of images: 35.
+
+-------------------------
+complementary--maximum-speed-limit-30--g1:
+
+Bound: 0.5-majority
+Number of images: 35.
+
+Bound: 0.5-minority
+Number of images: 25.
+
+Bound: 0.75-majority
+Number of images: 2.
+
+Bound: 0.75-minority
+Number of images: 35.
+
+Bound: 1.0-minority
+Number of images: 41.
+
+-------------------------
+warning--turn-right--g1:
+
+Bound: 0.5-majority
+Number of images: 49.
+
+Bound: 0.5-minority
+Number of images: 54.
+
+Bound: 0.75-majority
+Number of images: 17.
+
+Bound: 0.75-minority
+Number of images: 34.
+
+Bound: 1.0-minority
+Number of images: 83.
+
+-------------------------
+warning--junction-with-a-side-road-perpendicular-right--g1:
+
+Bound: 0.5-majority
+Number of images: 78.
+
+Bound: 0.5-minority
+Number of images: 76.
+
+Bound: 0.75-majority
+Number of images: 21.
+
+Bound: 0.75-minority
+Number of images: 49.
+
+Bound: 1.0-minority
+Number of images: 98.
+
+-------------------------
+regulatory--priority-over-oncoming-vehicles--g1:
+
+Bound: 0.5-majority
+Number of images: 20.
+
+Bound: 0.5-minority
+Number of images: 28.
+
+Bound: 0.75-majority
+Number of images: 12.
+
+Bound: 0.75-minority
+Number of images: 23.
+
+Bound: 1.0-minority
+Number of images: 35.
+
+-------------------------
+information--pedestrians-crossing--g2:
+
+Bound: 0.5-majority
+Number of images: 15.
+
+Bound: 0.5-minority
+Number of images: 18.
+
+Bound: 0.75-majority
+Number of images: 9.
+
+Bound: 0.75-minority
+Number of images: 24.
+
+Bound: 1.0-minority
+Number of images: 13.
+
+-------------------------
+information--parking--g5:
+
+Bound: 0.5-majority
+Number of images: 50.
+
+Bound: 0.5-minority
+Number of images: 54.
+
+Bound: 0.75-majority
+Number of images: 29.
+
+Bound: 0.75-minority
+Number of images: 40.
+
+Bound: 1.0-minority
+Number of images: 19.
+
+-------------------------
+information--children--g1:
+
+Bound: 0.5-majority
+Number of images: 16.
+
+Bound: 0.5-minority
+Number of images: 16.
+
+Bound: 0.75-majority
+Number of images: 2.
+
+Bound: 0.75-minority
+Number of images: 17.
+
+Bound: 1.0-minority
+Number of images: 22.
+
+-------------------------
+warning--wild-animals--g4:
+
+Bound: 0.5-majority
+Number of images: 10.
+
+Bound: 0.5-minority
+Number of images: 8.
+
+Bound: 0.75-majority
+Number of images: 2.
+
+Bound: 0.75-minority
+Number of images: 7.
+
+Bound: 1.0-minority
+Number of images: 8.
+
+-------------------------
+regulatory--no-overtaking--g4:
+
+Bound: 0.5-majority
+Number of images: 9.
+
+Bound: 0.5-minority
+Number of images: 7.
+
+Bound: 0.75-majority
+Number of images: 1.
+
+Bound: 0.75-minority
+Number of images: 9.
+
+Bound: 1.0-minority
+Number of images: 24.
+
+-------------------------
+regulatory--passing-lane-ahead--g1:
+
+Bound: 0.5-majority
+Number of images: 6.
+
+Bound: 0.5-minority
+Number of images: 10.
+
+Bound: 0.75-majority
+Number of images: 7.
+
+Bound: 0.75-minority
+Number of images: 7.
+
+Bound: 1.0-minority
+Number of images: 13.
+
+-------------------------
+information--airport--g1:
+
+Bound: 0.5-majority
+Number of images: 5.
+
+Bound: 0.5-minority
+Number of images: 11.
+
+Bound: 0.75-majority
+Number of images: 6.
+
+-------------------------
+information--limited-access-road--g1:
+
+Bound: 0.5-majority
+Number of images: 41.
+
+Bound: 0.5-minority
+Number of images: 30.
+
+Bound: 0.75-majority
+Number of images: 9.
+
+Bound: 0.75-minority
+Number of images: 37.
+
+Bound: 1.0-minority
+Number of images: 10.
+
+-------------------------
+regulatory--no-motor-vehicles-except-motorcycles--g2:
+
+Bound: 0.5-majority
+Number of images: 25.
+
+Bound: 0.5-minority
+Number of images: 40.
+
+Bound: 0.75-majority
+Number of images: 17.
+
+Bound: 0.75-minority
+Number of images: 17.
+
+Bound: 1.0-minority
+Number of images: 18.
+
+-------------------------
+information--safety-area--g2:
+
+Bound: 0.5-majority
+Number of images: 19.
+
+Bound: 0.5-minority
+Number of images: 16.
+
+Bound: 0.75-minority
+Number of images: 6.
+
+Bound: 1.0-minority
+Number of images: 39.
+
+-------------------------
+warning--curve-right--g2:
+
+Bound: 0.5-majority
+Number of images: 102.
+
+Bound: 0.5-minority
+Number of images: 112.
+
+Bound: 0.75-majority
+Number of images: 32.
+
+Bound: 0.75-minority
+Number of images: 82.
+
+Bound: 1.0-minority
+Number of images: 170.
+
+-------------------------
+regulatory--maximum-speed-limit-100--g1:
+
+Bound: 0.5-majority
+Number of images: 43.
+
+Bound: 0.5-minority
+Number of images: 58.
+
+Bound: 0.75-majority
+Number of images: 28.
+
+Bound: 0.75-minority
+Number of images: 39.
+
+Bound: 1.0-minority
+Number of images: 22.
+
+-------------------------
+warning--roadworks--g4:
+
+Bound: 0.5-majority
+Number of images: 19.
+
+Bound: 0.5-minority
+Number of images: 19.
+
+Bound: 0.75-majority
+Number of images: 3.
+
+Bound: 0.75-minority
+Number of images: 15.
+
+Bound: 1.0-minority
+Number of images: 16.
+
+-------------------------
+complementary--trucks--g1:
+
+Bound: 0.5-majority
+Number of images: 28.
+
+Bound: 0.5-minority
+Number of images: 27.
+
+Bound: 0.75-majority
+Number of images: 11.
+
+Bound: 0.75-minority
+Number of images: 38.
+
+Bound: 1.0-minority
+Number of images: 15.
+
+-------------------------
+regulatory--go-straight--g3:
+
+Bound: 0.5-majority
+Number of images: 17.
+
+Bound: 0.5-minority
+Number of images: 26.
+
+Bound: 0.75-majority
+Number of images: 17.
+
+Bound: 0.75-minority
+Number of images: 15.
+
+Bound: 1.0-minority
+Number of images: 5.
+
+-------------------------
+warning--divided-highway-ends--g2:
+
+Bound: 0.5-majority
+Number of images: 29.
+
+Bound: 0.5-minority
+Number of images: 30.
+
+Bound: 0.75-majority
+Number of images: 9.
+
+Bound: 0.75-minority
+Number of images: 27.
+
+Bound: 1.0-minority
+Number of images: 40.
+
+-------------------------
+warning--pass-left-or-right--g2:
+
+Bound: 0.5-majority
+Number of images: 33.
+
+Bound: 0.5-minority
+Number of images: 36.
+
+Bound: 0.75-majority
+Number of images: 18.
+
+Bound: 0.75-minority
+Number of images: 26.
+
+Bound: 1.0-minority
+Number of images: 10.
+
+-------------------------
+regulatory--one-way-right--g3:
+
+Bound: 0.5-majority
+Number of images: 59.
+
+Bound: 0.5-minority
+Number of images: 78.
+
+Bound: 0.75-majority
+Number of images: 52.
+
+Bound: 0.75-minority
+Number of images: 57.
+
+Bound: 1.0-minority
+Number of images: 34.
+
+-------------------------
+regulatory--maximum-speed-limit-20--g1:
+
+Bound: 0.5-majority
+Number of images: 45.
+
+Bound: 0.5-minority
+Number of images: 65.
+
+Bound: 0.75-majority
+Number of images: 36.
+
+Bound: 0.75-minority
+Number of images: 53.
+
+Bound: 1.0-minority
+Number of images: 48.
+
+-------------------------
+warning--road-narrows--g1:
+
+Bound: 0.5-majority
+Number of images: 19.
+
+Bound: 0.5-minority
+Number of images: 21.
+
+Bound: 0.75-majority
+Number of images: 7.
+
+Bound: 0.75-minority
+Number of images: 29.
+
+Bound: 1.0-minority
+Number of images: 36.
+
+-------------------------
+warning--road-narrows-left--g1:
+
+Bound: 0.5-majority
+Number of images: 16.
+
+Bound: 0.5-minority
+Number of images: 19.
+
+Bound: 0.75-majority
+Number of images: 12.
+
+Bound: 0.75-minority
+Number of images: 16.
+
+Bound: 1.0-minority
+Number of images: 14.
+
+-------------------------
+complementary--accident-area--g3:
+
+Bound: 0.5-majority
+Number of images: 1.
+
+Bound: 0.5-minority
+Number of images: 2.
+
+Bound: 0.75-majority
+Number of images: 2.
+
+Bound: 0.75-minority
+Number of images: 8.
+
+Bound: 1.0-minority
+Number of images: 1.
+
+-------------------------
+regulatory--maximum-speed-limit-70--g1:
+
+Bound: 0.5-majority
+Number of images: 74.
+
+Bound: 0.5-minority
+Number of images: 73.
+
+Bound: 0.75-majority
+Number of images: 35.
+
+Bound: 0.75-minority
+Number of images: 98.
+
+Bound: 1.0-minority
+Number of images: 62.
+
+-------------------------
+warning--trucks-crossing--g1:
+
+Bound: 0.5-majority
+Number of images: 34.
+
+Bound: 0.5-minority
+Number of images: 33.
+
+Bound: 0.75-majority
+Number of images: 5.
+
+Bound: 0.75-minority
+Number of images: 22.
+
+Bound: 1.0-minority
+Number of images: 45.
+
+-------------------------
+regulatory--bicycles-only--g1:
+
+Bound: 0.5-majority
+Number of images: 65.
+
+Bound: 0.5-minority
+Number of images: 87.
+
+Bound: 0.75-majority
+Number of images: 54.
+
+Bound: 0.75-minority
+Number of images: 67.
+
+Bound: 1.0-minority
+Number of images: 30.
+
+-------------------------
+warning--pedestrians-crossing--g1:
+
+Bound: 0.5-majority
+Number of images: 68.
+
+Bound: 0.5-minority
+Number of images: 80.
+
+Bound: 0.75-majority
+Number of images: 29.
+
+Bound: 0.75-minority
+Number of images: 65.
+
+Bound: 1.0-minority
+Number of images: 73.
+
+-------------------------
+complementary--maximum-speed-limit-70--g1:
+
+Bound: 0.5-majority
+Number of images: 6.
+
+Bound: 0.5-minority
+Number of images: 6.
+
+Bound: 0.75-majority
+Number of images: 1.
+
+Bound: 0.75-minority
+Number of images: 9.
+
+Bound: 1.0-minority
+Number of images: 36.
+
+-------------------------
+warning--slippery-road-surface--g2:
+
+Bound: 0.5-majority
+Number of images: 77.
+
+Bound: 0.5-minority
+Number of images: 78.
+
+Bound: 0.75-majority
+Number of images: 17.
+
+Bound: 0.75-minority
+Number of images: 40.
+
+Bound: 1.0-minority
+Number of images: 38.
+
+-------------------------
+warning--winding-road-first-right--g1:
+
+Bound: 0.5-majority
+Number of images: 33.
+
+Bound: 0.5-minority
+Number of images: 33.
+
+Bound: 0.75-majority
+Number of images: 4.
+
+Bound: 0.75-minority
+Number of images: 18.
+
+Bound: 1.0-minority
+Number of images: 59.
+
+-------------------------
+warning--curve-left--g1:
+
+Bound: 0.5-majority
+Number of images: 49.
+
+Bound: 0.5-minority
+Number of images: 57.
+
+Bound: 0.75-majority
+Number of images: 16.
+
+Bound: 0.75-minority
+Number of images: 35.
+
+Bound: 1.0-minority
+Number of images: 107.
+
+-------------------------
+warning--domestic-animals--g1:
+
+Bound: 0.5-majority
+Number of images: 11.
+
+Bound: 0.5-minority
+Number of images: 12.
+
+Bound: 0.75-majority
+Number of images: 2.
+
+Bound: 0.75-minority
+Number of images: 5.
+
+Bound: 1.0-minority
+Number of images: 25.
+
+-------------------------
+warning--road-narrows-right--g2:
+
+Bound: 0.5-majority
+Number of images: 26.
+
+Bound: 0.5-minority
+Number of images: 24.
+
+Bound: 0.75-majority
+Number of images: 10.
+
+Bound: 0.75-minority
+Number of images: 33.
+
+Bound: 1.0-minority
+Number of images: 13.
+
+-------------------------
+regulatory--keep-right--g6:
+
+Bound: 0.5-majority
+Number of images: 18.
+
+Bound: 0.5-minority
+Number of images: 15.
+
+Bound: 0.75-majority
+Number of images: 1.
+
+Bound: 0.75-minority
+Number of images: 16.
+
+Bound: 1.0-minority
+Number of images: 19.
+
+-------------------------
+information--living-street--g1:
+
+Bound: 0.5-majority
+Number of images: 17.
+
+Bound: 0.5-minority
+Number of images: 23.
+
+Bound: 0.75-majority
+Number of images: 11.
+
+Bound: 0.75-minority
+Number of images: 20.
+
+Bound: 1.0-minority
+Number of images: 14.
+
+-------------------------
+complementary--tow-away-zone--g1:
+
+Bound: 0.5-majority
+Number of images: 31.
+
+Bound: 0.5-minority
+Number of images: 54.
+
+Bound: 0.75-majority
+Number of images: 33.
+
+Bound: 0.75-minority
+Number of images: 47.
+
+Bound: 1.0-minority
+Number of images: 17.
+
+-------------------------
+regulatory--one-way-left--g2:
+
+Bound: 0.5-majority
+Number of images: 21.
+
+Bound: 0.5-minority
+Number of images: 37.
+
+Bound: 0.75-majority
+Number of images: 21.
+
+Bound: 0.75-minority
+Number of images: 22.
+
+Bound: 1.0-minority
+Number of images: 25.
+
+-------------------------
+regulatory--triple-lanes-turn-left-center-lane--g1:
+
+Bound: 0.5-majority
+Number of images: 8.
+
+Bound: 0.5-minority
+Number of images: 13.
+
+Bound: 0.75-majority
+Number of images: 6.
+
+Bound: 0.75-minority
+Number of images: 7.
+
+Bound: 1.0-minority
+Number of images: 9.
+
+-------------------------
+complementary--distance--g3:
+
+Bound: 0.5-majority
+Number of images: 78.
+
+Bound: 0.5-minority
+Number of images: 79.
+
+Bound: 0.75-majority
+Number of images: 31.
+
+Bound: 0.75-minority
+Number of images: 84.
+
+Bound: 1.0-minority
+Number of images: 78.
+
+-------------------------
+regulatory--maximum-speed-limit-90--g1:
+
+Bound: 0.5-majority
+Number of images: 82.
+
+Bound: 0.5-minority
+Number of images: 81.
+
+Bound: 0.75-majority
+Number of images: 28.
+
+Bound: 0.75-minority
+Number of images: 64.
+
+Bound: 1.0-minority
+Number of images: 52.
+
+-------------------------
+warning--double-curve-first-right--g2:
+
+Bound: 0.5-majority
+Number of images: 18.
+
+Bound: 0.5-minority
+Number of images: 22.
+
+Bound: 0.75-majority
+Number of images: 7.
+
+Bound: 0.75-minority
+Number of images: 17.
+
+Bound: 1.0-minority
+Number of images: 54.
+
+-------------------------
+complementary--maximum-speed-limit-45--g1:
+
+Bound: 0.5-majority
+Number of images: 23.
+
+Bound: 0.5-minority
+Number of images: 26.
+
+Bound: 0.75-majority
+Number of images: 9.
+
+Bound: 0.75-minority
+Number of images: 24.
+
+Bound: 1.0-minority
+Number of images: 65.
+
+-------------------------
+warning--turn-left--g1:
+
+Bound: 0.5-majority
+Number of images: 23.
+
+Bound: 0.5-minority
+Number of images: 21.
+
+Bound: 0.75-majority
+Number of images: 8.
+
+Bound: 0.75-minority
+Number of images: 29.
+
+Bound: 1.0-minority
+Number of images: 43.
+
+-------------------------
+regulatory--maximum-speed-limit-80--g1:
+
+Bound: 0.5-majority
+Number of images: 113.
+
+Bound: 0.5-minority
+Number of images: 129.
+
+Bound: 0.75-majority
+Number of images: 52.
+
+Bound: 0.75-minority
+Number of images: 110.
+
+Bound: 1.0-minority
+Number of images: 75.
+
+-------------------------
+complementary--maximum-speed-limit-75--g1:
+
+Bound: 0.5-majority
+Number of images: 4.
+
+Bound: 0.5-minority
+Number of images: 9.
+
+Bound: 0.75-majority
+Number of images: 5.
+
+Bound: 0.75-minority
+Number of images: 9.
+
+Bound: 1.0-minority
+Number of images: 35.
+
+-------------------------
+warning--road-narrows-left--g2:
+
+Bound: 0.5-majority
+Number of images: 30.
+
+Bound: 0.5-minority
+Number of images: 30.
+
+Bound: 0.75-majority
+Number of images: 13.
+
+Bound: 0.75-minority
+Number of images: 33.
+
+Bound: 1.0-minority
+Number of images: 17.
+
+-------------------------
+regulatory--radar-enforced--g1:
+
+Bound: 0.5-majority
+Number of images: 25.
+
+Bound: 0.5-minority
+Number of images: 22.
+
+Bound: 0.75-majority
+Number of images: 6.
+
+Bound: 0.75-minority
+Number of images: 30.
+
+Bound: 1.0-minority
+Number of images: 21.
+
+-------------------------
+warning--traffic-merges-right--g2:
+
+Bound: 0.5-majority
+Number of images: 36.
+
+Bound: 0.5-minority
+Number of images: 42.
+
+Bound: 0.75-majority
+Number of images: 16.
+
+Bound: 0.75-minority
+Number of images: 23.
+
+Bound: 1.0-minority
+Number of images: 25.
+
+-------------------------
+regulatory--stop--g10:
+
+Bound: 0.5-majority
+Number of images: 11.
+
+Bound: 0.5-minority
+Number of images: 12.
+
+Bound: 0.75-majority
+Number of images: 3.
+
+Bound: 0.75-minority
+Number of images: 14.
+
+Bound: 1.0-minority
+Number of images: 9.
+
+-------------------------
+regulatory--go-straight-or-turn-left--g1:
+
+Bound: 0.5-majority
+Number of images: 44.
+
+Bound: 0.5-minority
+Number of images: 48.
+
+Bound: 0.75-majority
+Number of images: 19.
+
+Bound: 0.75-minority
+Number of images: 44.
+
+Bound: 1.0-minority
+Number of images: 21.
+
+-------------------------
+regulatory--maximum-speed-limit-120--g1:
+
+Bound: 0.5-majority
+Number of images: 19.
+
+Bound: 0.5-minority
+Number of images: 37.
+
+Bound: 0.75-majority
+Number of images: 23.
+
+Bound: 0.75-minority
+Number of images: 14.
+
+Bound: 1.0-minority
+Number of images: 13.
+
+-------------------------
+complementary--chevron-right--g3:
+
+Bound: 0.5-majority
+Number of images: 69.
+
+Bound: 0.5-minority
+Number of images: 60.
+
+Bound: 0.75-majority
+Number of images: 25.
+
+Bound: 0.75-minority
+Number of images: 83.
+
+Bound: 1.0-minority
+Number of images: 60.
+
+-------------------------
+regulatory--end-of-maximum-speed-limit-70--g2:
+
+Bound: 0.5-majority
+Number of images: 12.
+
+Bound: 0.5-minority
+Number of images: 12.
+
+Bound: 0.75-majority
+Number of images: 2.
+
+Bound: 0.75-minority
+Number of images: 5.
+
+Bound: 1.0-minority
+Number of images: 22.
+
+-------------------------
+regulatory--minimum-safe-distance--g1:
+
+Bound: 0.5-majority
+Number of images: 8.
+
+Bound: 0.5-minority
+Number of images: 6.
+
+Bound: 0.75-majority
+Number of images: 4.
+
+Bound: 0.75-minority
+Number of images: 8.
+
+Bound: 1.0-minority
+Number of images: 4.
+
+-------------------------
+regulatory--no-turn-on-red--g1:
+
+Bound: 0.5-majority
+Number of images: 27.
+
+Bound: 0.5-minority
+Number of images: 24.
+
+Bound: 0.75-majority
+Number of images: 8.
+
+Bound: 0.75-minority
+Number of images: 24.
+
+Bound: 1.0-minority
+Number of images: 5.
+
+-------------------------
+information--gas-station--g1:
+
+Bound: 0.5-majority
+Number of images: 18.
+
+Bound: 0.5-minority
+Number of images: 11.
+
+Bound: 0.75-majority
+Number of images: 4.
+
+Bound: 0.75-minority
+Number of images: 17.
+
+Bound: 1.0-minority
+Number of images: 4.
+
+-------------------------
+regulatory--end-of-speed-limit-zone--g1:
+
+Bound: 0.5-majority
+Number of images: 26.
+
+Bound: 0.5-minority
+Number of images: 33.
+
+Bound: 0.75-majority
+Number of images: 21.
+
+Bound: 0.75-minority
+Number of images: 30.
+
+Bound: 1.0-minority
+Number of images: 15.
+
+-------------------------
+warning--railroad-crossing-without-barriers--g3:
+
+Bound: 0.5-majority
+Number of images: 61.
+
+Bound: 0.5-minority
+Number of images: 76.
+
+Bound: 0.75-majority
+Number of images: 24.
+
+Bound: 0.75-minority
+Number of images: 34.
+
+Bound: 1.0-minority
+Number of images: 21.
+
+-------------------------
+warning--slippery-road-surface--g1:
+
+Bound: 0.5-majority
+Number of images: 55.
+
+Bound: 0.5-minority
+Number of images: 60.
+
+Bound: 0.75-majority
+Number of images: 22.
+
+Bound: 0.75-minority
+Number of images: 43.
+
+Bound: 1.0-minority
+Number of images: 46.
+
+-------------------------
+information--hospital--g1:
+
+Bound: 0.5-majority
+Number of images: 29.
+
+Bound: 0.5-minority
+Number of images: 48.
+
+Bound: 0.75-majority
+Number of images: 32.
+
+Bound: 0.75-minority
+Number of images: 22.
+
+Bound: 1.0-minority
+Number of images: 10.
+
+-------------------------
+warning--stop-ahead--g9:
+
+Bound: 0.5-majority
+Number of images: 37.
+
+Bound: 0.5-minority
+Number of images: 40.
+
+Bound: 0.75-majority
+Number of images: 11.
+
+Bound: 0.75-minority
+Number of images: 25.
+
+Bound: 1.0-minority
+Number of images: 22.
+
+-------------------------
+warning--railroad-crossing--g3:
+
+Bound: 0.5-majority
+Number of images: 16.
+
+Bound: 0.5-minority
+Number of images: 17.
+
+Bound: 0.75-majority
+Number of images: 3.
+
+Bound: 0.75-minority
+Number of images: 10.
+
+Bound: 1.0-minority
+Number of images: 10.
+
+-------------------------
+regulatory--buses-only--g1:
+
+Bound: 0.5-majority
+Number of images: 19.
+
+Bound: 0.5-minority
+Number of images: 24.
+
+Bound: 0.75-majority
+Number of images: 8.
+
+Bound: 0.75-minority
+Number of images: 7.
+
+Bound: 1.0-minority
+Number of images: 9.
+
+-------------------------
+complementary--keep-right--g1:
+
+Bound: 0.5-majority
+Number of images: 25.
+
+Bound: 0.5-minority
+Number of images: 21.
+
+Bound: 0.75-majority
+Number of images: 14.
+
+Bound: 0.75-minority
+Number of images: 36.
+
+Bound: 1.0-minority
+Number of images: 10.
+
+-------------------------
+regulatory--no-left-turn--g1:
+
+Bound: 0.5-majority
+Number of images: 90.
+
+Bound: 0.5-minority
+Number of images: 120.
+
+Bound: 0.75-majority
+Number of images: 76.
+
+Bound: 0.75-minority
+Number of images: 99.
+
+Bound: 1.0-minority
+Number of images: 56.
+
+-------------------------
+warning--two-way-traffic--g1:
+
+Bound: 0.5-majority
+Number of images: 23.
+
+Bound: 0.5-minority
+Number of images: 27.
+
+Bound: 0.75-majority
+Number of images: 10.
+
+Bound: 0.75-minority
+Number of images: 11.
+
+Bound: 1.0-minority
+Number of images: 12.
+
+-------------------------
+warning--traffic-signals--g4:
+
+Bound: 0.5-majority
+Number of images: 3.
+
+Bound: 0.5-minority
+Number of images: 2.
+
+Bound: 0.75-majority
+Number of images: 1.
+
+Bound: 0.75-minority
+Number of images: 3.
+
+Bound: 1.0-minority
+Number of images: 3.
+
+-------------------------
+warning--crossroads--g3:
+
+Bound: 0.5-majority
+Number of images: 37.
+
+Bound: 0.5-minority
+Number of images: 52.
+
+Bound: 0.75-majority
+Number of images: 24.
+
+Bound: 0.75-minority
+Number of images: 26.
+
+Bound: 1.0-minority
+Number of images: 36.
+
+-------------------------
+warning--two-way-traffic--g2:
+
+Bound: 0.5-majority
+Number of images: 24.
+
+Bound: 0.5-minority
+Number of images: 27.
+
+Bound: 0.75-majority
+Number of images: 9.
+
+Bound: 0.75-minority
+Number of images: 21.
+
+Bound: 1.0-minority
+Number of images: 20.
+
+-------------------------
+warning--traffic-signals--g2:
+
+Bound: 0.5-majority
+Number of images: 19.
+
+Bound: 0.5-minority
+Number of images: 17.
+
+Bound: 0.75-majority
+Number of images: 6.
+
+Bound: 0.75-minority
+Number of images: 21.
+
+Bound: 1.0-minority
+Number of images: 11.
+
+-------------------------
+warning--double-reverse-curve-right--g1:
+
+Bound: 0.5-majority
+Number of images: 10.
+
+Bound: 0.5-minority
+Number of images: 13.
+
+Bound: 0.75-majority
+Number of images: 5.
+
+Bound: 0.75-minority
+Number of images: 11.
+
+Bound: 1.0-minority
+Number of images: 18.
+
+-------------------------
+warning--double-curve-first-left--g2:
+
+Bound: 0.5-majority
+Number of images: 29.
+
+Bound: 0.5-minority
+Number of images: 33.
+
+Bound: 0.75-majority
+Number of images: 9.
+
+Bound: 0.75-minority
+Number of images: 13.
+
+Bound: 1.0-minority
+Number of images: 32.
+
+-------------------------
+warning--steep-ascent--g7:
+
+Bound: 0.5-majority
+Number of images: 17.
+
+Bound: 0.5-minority
+Number of images: 18.
+
+Bound: 0.75-majority
+Number of images: 6.
+
+Bound: 0.75-minority
+Number of images: 12.
+
+Bound: 1.0-minority
+Number of images: 23.
+
+-------------------------
+complementary--except-bicycles--g1:
+
+Bound: 0.5-majority
+Number of images: 19.
+
+Bound: 0.5-minority
+Number of images: 21.
+
+Bound: 0.75-majority
+Number of images: 10.
+
+Bound: 0.75-minority
+Number of images: 21.
+
+Bound: 1.0-minority
+Number of images: 3.
+
+-------------------------
+warning--traffic-signals--g1:
+
+Bound: 0.5-majority
+Number of images: 45.
+
+Bound: 0.5-minority
+Number of images: 64.
+
+Bound: 0.75-majority
+Number of images: 33.
+
+Bound: 0.75-minority
+Number of images: 32.
+
+Bound: 1.0-minority
+Number of images: 35.
+
+-------------------------
+complementary--distance--g2:
+
+Bound: 0.5-majority
+Number of images: 63.
+
+Bound: 0.5-minority
+Number of images: 60.
+
+Bound: 0.75-majority
+Number of images: 28.
+
+Bound: 0.75-minority
+Number of images: 66.
+
+Bound: 1.0-minority
+Number of images: 36.
+
+-------------------------
+regulatory--road-closed--g2:
+
+Bound: 0.5-majority
+Number of images: 9.
+
+Bound: 0.5-minority
+Number of images: 9.
+
+Bound: 0.75-majority
+Number of images: 3.
+
+Bound: 0.75-minority
+Number of images: 23.
+
+Bound: 1.0-minority
+Number of images: 15.
+
+-------------------------
+complementary--chevron-left--g5:
+
+Bound: 0.5-majority
+Number of images: 68.
+
+Bound: 0.5-minority
+Number of images: 77.
+
+Bound: 0.75-majority
+Number of images: 43.
+
+Bound: 0.75-minority
+Number of images: 104.
+
+Bound: 1.0-minority
+Number of images: 81.
+
+-------------------------
+regulatory--road-closed-to-vehicles--g3:
+
+Bound: 0.5-majority
+Number of images: 49.
+
+Bound: 0.5-minority
+Number of images: 72.
+
+Bound: 0.75-majority
+Number of images: 43.
+
+Bound: 0.75-minority
+Number of images: 50.
+
+Bound: 1.0-minority
+Number of images: 13.
+
+-------------------------
+regulatory--no-straight-through--g2:
+
+Bound: 0.5-majority
+Number of images: 7.
+
+Bound: 0.5-minority
+Number of images: 12.
+
+Bound: 0.75-majority
+Number of images: 7.
+
+Bound: 0.75-minority
+Number of images: 7.
+
+Bound: 1.0-minority
+Number of images: 7.
+
+-------------------------
+warning--junction-with-a-side-road-acute-right--g1:
+
+Bound: 0.5-majority
+Number of images: 22.
+
+Bound: 0.5-minority
+Number of images: 23.
+
+Bound: 0.75-majority
+Number of images: 6.
+
+Bound: 0.75-minority
+Number of images: 13.
+
+Bound: 1.0-minority
+Number of images: 28.
+
+-------------------------
+regulatory--maximum-speed-limit-40--g6:
+
+Bound: 0.5-majority
+Number of images: 6.
+
+Bound: 0.5-minority
+Number of images: 4.
+
+Bound: 0.75-minority
+Number of images: 2.
+
+-------------------------
+warning--horizontal-alignment-left--g1:
+
+Bound: 0.5-majority
+Number of images: 19.
+
+Bound: 0.5-minority
+Number of images: 20.
+
+Bound: 0.75-majority
+Number of images: 4.
+
+Bound: 0.75-minority
+Number of images: 8.
+
+Bound: 1.0-minority
+Number of images: 25.
+
+-------------------------
+complementary--maximum-speed-limit-15--g1:
+
+Bound: 0.5-majority
+Number of images: 23.
+
+Bound: 0.5-minority
+Number of images: 27.
+
+Bound: 0.75-majority
+Number of images: 9.
+
+Bound: 0.75-minority
+Number of images: 21.
+
+Bound: 1.0-minority
+Number of images: 24.
+
+-------------------------
+regulatory--no-bicycles--g1:
+
+Bound: 0.5-majority
+Number of images: 18.
+
+Bound: 0.5-minority
+Number of images: 26.
+
+Bound: 0.75-majority
+Number of images: 16.
+
+Bound: 0.75-minority
+Number of images: 17.
+
+Bound: 1.0-minority
+Number of images: 4.
+
+-------------------------
+regulatory--maximum-speed-limit-15--g1:
+
+Bound: 0.5-majority
+Number of images: 6.
+
+Bound: 0.5-minority
+Number of images: 8.
+
+Bound: 0.75-majority
+Number of images: 3.
+
+Bound: 0.75-minority
+Number of images: 9.
+
+Bound: 1.0-minority
+Number of images: 4.
+
+-------------------------
+warning--wild-animals--g1:
+
+Bound: 0.5-majority
+Number of images: 24.
+
+Bound: 0.5-minority
+Number of images: 22.
+
+Bound: 0.75-majority
+Number of images: 7.
+
+Bound: 0.75-minority
+Number of images: 14.
+
+Bound: 1.0-minority
+Number of images: 12.
+
+-------------------------
+regulatory--parking-restrictions--g2:
+
+Bound: 0.5-majority
+Number of images: 15.
+
+Bound: 0.5-minority
+Number of images: 12.
+
+Bound: 0.75-majority
+Number of images: 2.
+
+Bound: 0.75-minority
+Number of images: 10.
+
+Bound: 1.0-minority
+Number of images: 8.
+
+-------------------------
+regulatory--no-parking-or-no-stopping--g1:
+
+Bound: 0.5-majority
+Number of images: 29.
+
+Bound: 0.5-minority
+Number of images: 38.
+
+Bound: 0.75-majority
+Number of images: 15.
+
+Bound: 0.75-minority
+Number of images: 17.
+
+Bound: 1.0-minority
+Number of images: 19.
+
+-------------------------
+regulatory--maximum-speed-limit-45--g3:
+
+Bound: 0.5-majority
+Number of images: 19.
+
+Bound: 0.5-minority
+Number of images: 30.
+
+Bound: 0.75-majority
+Number of images: 16.
+
+Bound: 0.75-minority
+Number of images: 17.
+
+Bound: 1.0-minority
+Number of images: 13.
+
+-------------------------
+warning--railroad-intersection--g3:
+
+Bound: 0.5-majority
+Number of images: 28.
+
+Bound: 0.5-minority
+Number of images: 29.
+
+Bound: 0.75-majority
+Number of images: 6.
+
+Bound: 0.75-minority
+Number of images: 12.
+
+Bound: 1.0-minority
+Number of images: 22.
+
+-------------------------
+warning--junction-with-a-side-road-perpendicular-left--g1:
+
+Bound: 0.5-majority
+Number of images: 31.
+
+Bound: 0.5-minority
+Number of images: 30.
+
+Bound: 0.75-majority
+Number of images: 4.
+
+Bound: 0.75-minority
+Number of images: 23.
+
+Bound: 1.0-minority
+Number of images: 49.
+
+-------------------------
+information--highway-exit--g1:
+
+Bound: 0.5-majority
+Number of images: 14.
+
+Bound: 0.5-minority
+Number of images: 18.
+
+Bound: 0.75-majority
+Number of images: 8.
+
+Bound: 0.75-minority
+Number of images: 19.
+
+Bound: 1.0-minority
+Number of images: 6.
+
+-------------------------
+warning--road-narrows--g2:
+
+Bound: 0.5-majority
+Number of images: 11.
+
+Bound: 0.5-minority
+Number of images: 12.
+
+Bound: 0.75-majority
+Number of images: 3.
+
+Bound: 0.75-minority
+Number of images: 9.
+
+Bound: 1.0-minority
+Number of images: 22.
+
+-------------------------
+regulatory--one-way-right--g2:
+
+Bound: 0.5-majority
+Number of images: 21.
+
+Bound: 0.5-minority
+Number of images: 29.
+
+Bound: 0.75-majority
+Number of images: 19.
+
+Bound: 0.75-minority
+Number of images: 22.
+
+Bound: 1.0-minority
+Number of images: 4.
+
+-------------------------
+warning--pedestrians-crossing--g5:
+
+Bound: 0.5-majority
+Number of images: 34.
+
+Bound: 0.5-minority
+Number of images: 54.
+
+Bound: 0.75-majority
+Number of images: 27.
+
+Bound: 0.75-minority
+Number of images: 23.
+
+Bound: 1.0-minority
+Number of images: 58.
+
+-------------------------
+complementary--both-directions--g1:
+
+Bound: 0.5-majority
+Number of images: 20.
+
+Bound: 0.5-minority
+Number of images: 28.
+
+Bound: 0.75-majority
+Number of images: 15.
+
+Bound: 0.75-minority
+Number of images: 25.
+
+Bound: 1.0-minority
+Number of images: 15.
+
+-------------------------
+regulatory--no-overtaking-by-heavy-goods-vehicles--g1:
+
+Bound: 0.5-majority
+Number of images: 16.
+
+Bound: 0.5-minority
+Number of images: 15.
+
+Bound: 0.75-majority
+Number of images: 9.
+
+Bound: 0.75-minority
+Number of images: 21.
+
+Bound: 1.0-minority
+Number of images: 4.
+
+-------------------------
+regulatory--maximum-speed-limit-led-60--g1:
+
+Bound: 0.5-majority
+Number of images: 2.
+
+Bound: 0.5-minority
+Number of images: 10.
+
+Bound: 0.75-majority
+Number of images: 8.
+
+Bound: 0.75-minority
+Number of images: 10.
+
+Bound: 1.0-minority
+Number of images: 5.
+
+-------------------------
+regulatory--pedestrians-only--g2:
+
+Bound: 0.5-majority
+Number of images: 10.
+
+Bound: 0.5-minority
+Number of images: 14.
+
+Bound: 0.75-majority
+Number of images: 7.
+
+Bound: 0.75-minority
+Number of images: 14.
+
+Bound: 1.0-minority
+Number of images: 9.
+
+-------------------------
+warning--slippery-motorcycles--g1:
+
+Bound: 0.5-majority
+Number of images: 18.
+
+Bound: 0.5-minority
+Number of images: 19.
+
+Bound: 0.75-majority
+Number of images: 3.
+
+Bound: 0.75-minority
+Number of images: 6.
+
+Bound: 1.0-minority
+Number of images: 6.
+
+-------------------------
+information--airport--g2:
+
+Bound: 0.5-majority
+Number of images: 7.
+
+Bound: 0.5-minority
+Number of images: 9.
+
+Bound: 0.75-majority
+Number of images: 5.
+
+Bound: 0.75-minority
+Number of images: 8.
+
+Bound: 1.0-minority
+Number of images: 3.
+
+-------------------------
+regulatory--pass-on-either-side--g2:
+
+Bound: 0.5-majority
+Number of images: 11.
+
+Bound: 0.5-minority
+Number of images: 15.
+
+Bound: 0.75-majority
+Number of images: 11.
+
+Bound: 0.75-minority
+Number of images: 7.
+
+Bound: 1.0-minority
+Number of images: 7.
+
+-------------------------
+complementary--one-direction-right--g1:
+
+Bound: 0.5-majority
+Number of images: 15.
+
+Bound: 0.5-minority
+Number of images: 24.
+
+Bound: 0.75-majority
+Number of images: 12.
+
+Bound: 0.75-minority
+Number of images: 24.
+
+Bound: 1.0-minority
+Number of images: 30.
+
+-------------------------
+warning--flaggers-in-road--g1:
+
+Bound: 0.5-majority
+Number of images: 8.
+
+Bound: 0.5-minority
+Number of images: 10.
+
+Bound: 0.75-majority
+Number of images: 2.
+
+Bound: 0.75-minority
+Number of images: 8.
+
+Bound: 1.0-minority
+Number of images: 33.
+
+-------------------------
+warning--pedestrians-crossing--g9:
+
+Bound: 0.5-majority
+Number of images: 9.
+
+Bound: 0.5-minority
+Number of images: 10.
+
+Bound: 0.75-majority
+Number of images: 2.
+
+Bound: 0.75-minority
+Number of images: 6.
+
+Bound: 1.0-minority
+Number of images: 10.
+
+-------------------------
+information--end-of-living-street--g1:
+
+Bound: 0.5-majority
+Number of images: 2.
+
+Bound: 0.5-minority
+Number of images: 6.
+
+Bound: 0.75-majority
+Number of images: 5.
+
+Bound: 0.75-minority
+Number of images: 4.
+
+Bound: 1.0-minority
+Number of images: 5.
+
+-------------------------
+information--bus-stop--g1:
+
+Bound: 0.5-majority
+Number of images: 27.
+
+Bound: 0.5-minority
+Number of images: 28.
+
+Bound: 0.75-majority
+Number of images: 17.
+
+Bound: 0.75-minority
+Number of images: 26.
+
+Bound: 1.0-minority
+Number of images: 3.
+
+-------------------------
+information--motorway--g1:
+
+Bound: 0.5-majority
+Number of images: 60.
+
+Bound: 0.5-minority
+Number of images: 57.
+
+Bound: 0.75-majority
+Number of images: 34.
+
+Bound: 0.75-minority
+Number of images: 59.
+
+Bound: 1.0-minority
+Number of images: 11.
+
+-------------------------
+warning--bus-stop-ahead--g3:
+
+Bound: 0.5-majority
+Number of images: 14.
+
+Bound: 0.5-minority
+Number of images: 14.
+
+Bound: 0.75-minority
+Number of images: 1.
+
+Bound: 1.0-minority
+Number of images: 13.
+
+-------------------------
+warning--double-turn-first-right--g1:
+
+Bound: 0.5-majority
+Number of images: 11.
+
+Bound: 0.5-minority
+Number of images: 8.
+
+Bound: 0.75-majority
+Number of images: 2.
+
+Bound: 0.75-minority
+Number of images: 11.
+
+Bound: 1.0-minority
+Number of images: 23.
+
+-------------------------
+warning--winding-road-first-right--g3:
+
+Bound: 0.5-majority
+Number of images: 8.
+
+Bound: 0.5-minority
+Number of images: 8.
+
+Bound: 0.75-minority
+Number of images: 1.
+
+Bound: 1.0-minority
+Number of images: 19.
+
+-------------------------
+warning--winding-road-first-left--g1:
+
+Bound: 0.5-majority
+Number of images: 41.
+
+Bound: 0.5-minority
+Number of images: 38.
+
+Bound: 0.75-majority
+Number of images: 4.
+
+Bound: 0.75-minority
+Number of images: 24.
+
+Bound: 1.0-minority
+Number of images: 64.
+
+-------------------------
+regulatory--go-straight-or-turn-right--g1:
+
+Bound: 0.5-majority
+Number of images: 28.
+
+Bound: 0.5-minority
+Number of images: 41.
+
+Bound: 0.75-majority
+Number of images: 27.
+
+Bound: 0.75-minority
+Number of images: 42.
+
+Bound: 1.0-minority
+Number of images: 10.
+
+-------------------------
+regulatory--keep-right--g2:
+
+Bound: 0.5-majority
+Number of images: 13.
+
+Bound: 0.5-minority
+Number of images: 18.
+
+Bound: 0.75-majority
+Number of images: 9.
+
+Bound: 0.75-minority
+Number of images: 16.
+
+Bound: 1.0-minority
+Number of images: 19.
+
+-------------------------
+regulatory--maximum-speed-limit-5--g1:
+
+Bound: 0.5-majority
+Number of images: 22.
+
+Bound: 0.5-minority
+Number of images: 30.
+
+Bound: 0.75-majority
+Number of images: 18.
+
+Bound: 0.75-minority
+Number of images: 22.
+
+Bound: 1.0-minority
+Number of images: 23.
+
+-------------------------
+regulatory--turn-right--g1:
+
+Bound: 0.5-majority
+Number of images: 76.
+
+Bound: 0.5-minority
+Number of images: 66.
+
+Bound: 0.75-majority
+Number of images: 37.
+
+Bound: 0.75-minority
+Number of images: 91.
+
+Bound: 1.0-minority
+Number of images: 46.
+
+-------------------------
+warning--horizontal-alignment-right--g1:
+
+Bound: 0.5-majority
+Number of images: 24.
+
+Bound: 0.5-minority
+Number of images: 26.
+
+Bound: 0.75-majority
+Number of images: 6.
+
+Bound: 0.75-minority
+Number of images: 14.
+
+Bound: 1.0-minority
+Number of images: 35.
+
+-------------------------
+warning--uneven-road--g6:
+
+Bound: 0.5-majority
+Number of images: 29.
+
+Bound: 0.5-minority
+Number of images: 30.
+
+Bound: 0.75-majority
+Number of images: 11.
+
+Bound: 0.75-minority
+Number of images: 29.
+
+Bound: 1.0-minority
+Number of images: 28.
+
+-------------------------
+regulatory--maximum-speed-limit-50--g6:
+
+Bound: 0.5-majority
+Number of images: 2.
+
+Bound: 0.5-minority
+Number of images: 9.
+
+Bound: 0.75-majority
+Number of images: 7.
+
+Bound: 0.75-minority
+Number of images: 2.
+
+-------------------------
+warning--height-restriction--g2:
+
+Bound: 0.5-majority
+Number of images: 32.
+
+Bound: 0.5-minority
+Number of images: 48.
+
+Bound: 0.75-majority
+Number of images: 24.
+
+Bound: 0.75-minority
+Number of images: 22.
+
+Bound: 1.0-minority
+Number of images: 25.
+
+-------------------------
+warning--hairpin-curve-right--g4:
+
+Bound: 0.5-majority
+Number of images: 2.
+
+Bound: 0.5-minority
+Number of images: 2.
+
+Bound: 0.75-majority
+Number of images: 1.
+
+Bound: 0.75-minority
+Number of images: 3.
+
+Bound: 1.0-minority
+Number of images: 2.
+
+-------------------------
+warning--traffic-signals--g3:
+
+Bound: 0.5-majority
+Number of images: 48.
+
+Bound: 0.5-minority
+Number of images: 57.
+
+Bound: 0.75-majority
+Number of images: 28.
+
+Bound: 0.75-minority
+Number of images: 45.
+
+Bound: 1.0-minority
+Number of images: 30.
+
+-------------------------
+warning--wombat-crossing--g1:
+
+Bound: 0.5-majority
+Number of images: 11.
+
+Bound: 0.5-minority
+Number of images: 13.
+
+Bound: 0.75-majority
+Number of images: 4.
+
+Bound: 0.75-minority
+Number of images: 7.
+
+Bound: 1.0-minority
+Number of images: 13.
+
+-------------------------
+regulatory--mopeds-and-bicycles-only--g1:
+
+Bound: 0.5-majority
+Number of images: 20.
+
+Bound: 0.5-minority
+Number of images: 24.
+
+Bound: 0.75-majority
+Number of images: 16.
+
+Bound: 0.75-minority
+Number of images: 28.
+
+Bound: 1.0-minority
+Number of images: 9.
+
+-------------------------
+regulatory--end-of-no-parking--g1:
+
+Bound: 0.5-majority
+Number of images: 13.
+
+Bound: 0.5-minority
+Number of images: 10.
+
+Bound: 0.75-majority
+Number of images: 6.
+
+Bound: 0.75-minority
+Number of images: 18.
+
+Bound: 1.0-minority
+Number of images: 10.
+
+-------------------------
+regulatory--end-of-priority-road--g1:
+
+Bound: 0.5-majority
+Number of images: 32.
+
+Bound: 0.5-minority
+Number of images: 22.
+
+Bound: 0.75-majority
+Number of images: 15.
+
+Bound: 0.75-minority
+Number of images: 47.
+
+Bound: 1.0-minority
+Number of images: 8.
+
+-------------------------
+regulatory--no-heavy-goods-vehicles-or-buses--g1:
+
+Bound: 0.5-majority
+Number of images: 5.
+
+Bound: 0.5-minority
+Number of images: 10.
+
+Bound: 0.75-majority
+Number of images: 6.
+
+Bound: 0.75-minority
+Number of images: 5.
+
+Bound: 1.0-minority
+Number of images: 3.
+
+-------------------------
+regulatory--no-u-turn--g1:
+
+Bound: 0.5-majority
+Number of images: 100.
+
+Bound: 0.5-minority
+Number of images: 119.
+
+Bound: 0.75-majority
+Number of images: 51.
+
+Bound: 0.75-minority
+Number of images: 102.
+
+Bound: 1.0-minority
+Number of images: 47.
+
+-------------------------
+warning--accidental-area-unsure--g2:
+
+Bound: 0.5-majority
+Number of images: 6.
+
+Bound: 0.5-minority
+Number of images: 4.
+
+Bound: 0.75-minority
+Number of images: 11.
+
+Bound: 1.0-minority
+Number of images: 17.
+
+-------------------------
+warning--uneven-roads-ahead--g1:
+
+Bound: 0.5-majority
+Number of images: 2.
+
+Bound: 0.5-minority
+Number of images: 1.
+
+Bound: 0.75-minority
+Number of images: 4.
+
+Bound: 1.0-minority
+Number of images: 5.
+
+-------------------------
+regulatory--road-closed-to-vehicles--g1:
+
+Bound: 0.5-majority
+Number of images: 7.
+
+Bound: 0.5-minority
+Number of images: 13.
+
+Bound: 0.75-majority
+Number of images: 8.
+
+Bound: 0.75-minority
+Number of images: 9.
+
+Bound: 1.0-minority
+Number of images: 10.
+
+-------------------------
+information--end-of-built-up-area--g1:
+
+Bound: 0.5-majority
+Number of images: 31.
+
+Bound: 0.5-minority
+Number of images: 26.
+
+Bound: 0.75-majority
+Number of images: 9.
+
+Bound: 0.75-minority
+Number of images: 21.
+
+Bound: 1.0-minority
+Number of images: 29.
+
+-------------------------
+warning--hairpin-curve-left--g1:
+
+Bound: 0.5-majority
+Number of images: 8.
+
+Bound: 0.5-minority
+Number of images: 7.
+
+Bound: 0.75-majority
+Number of images: 1.
+
+Bound: 0.75-minority
+Number of images: 7.
+
+Bound: 1.0-minority
+Number of images: 14.
+
+-------------------------
+warning--pedestrians-crossing--g10:
+
+Bound: 0.5-majority
+Number of images: 9.
+
+Bound: 0.5-minority
+Number of images: 13.
+
+Bound: 0.75-majority
+Number of images: 6.
+
+Bound: 0.75-minority
+Number of images: 9.
+
+-------------------------
+regulatory--stop-signals--g1:
+
+Bound: 0.5-majority
+Number of images: 10.
+
+Bound: 0.5-minority
+Number of images: 8.
+
+Bound: 0.75-majority
+Number of images: 4.
+
+Bound: 0.75-minority
+Number of images: 9.
+
+Bound: 1.0-minority
+Number of images: 10.
+
+-------------------------
+warning--falling-rocks-or-debris-right--g1:
+
+Bound: 0.5-majority
+Number of images: 16.
+
+Bound: 0.5-minority
+Number of images: 14.
+
+Bound: 0.75-majority
+Number of images: 1.
+
+Bound: 0.75-minority
+Number of images: 7.
+
+Bound: 1.0-minority
+Number of images: 23.
+
+-------------------------
+regulatory--dual-lanes-go-straight-on-left--g1:
+
+Bound: 0.5-majority
+Number of images: 10.
+
+Bound: 0.5-minority
+Number of images: 5.
+
+Bound: 0.75-majority
+Number of images: 2.
+
+Bound: 0.75-minority
+Number of images: 11.
+
+Bound: 1.0-minority
+Number of images: 10.
+
+-------------------------
+regulatory--no-parking-or-no-stopping--g3:
+
+Bound: 0.5-majority
+Number of images: 23.
+
+Bound: 0.5-minority
+Number of images: 30.
+
+Bound: 0.75-majority
+Number of images: 15.
+
+Bound: 0.75-minority
+Number of images: 22.
+
+Bound: 1.0-minority
+Number of images: 12.
+
+-------------------------
+complementary--maximum-speed-limit-40--g1:
+
+Bound: 0.5-majority
+Number of images: 17.
+
+Bound: 0.5-minority
+Number of images: 15.
+
+Bound: 0.75-majority
+Number of images: 5.
+
+Bound: 0.75-minority
+Number of images: 20.
+
+Bound: 1.0-minority
+Number of images: 16.
+
+-------------------------
+regulatory--no-pedestrians--g2:
+
+Bound: 0.5-majority
+Number of images: 34.
+
+Bound: 0.5-minority
+Number of images: 53.
+
+Bound: 0.75-majority
+Number of images: 35.
+
+Bound: 0.75-minority
+Number of images: 35.
+
+Bound: 1.0-minority
+Number of images: 13.
+
+-------------------------
+regulatory--no-motor-vehicle-trailers--g1:
+
+Bound: 0.5-majority
+Number of images: 7.
+
+Bound: 0.5-minority
+Number of images: 7.
+
+Bound: 0.75-majority
+Number of images: 4.
+
+Bound: 0.75-minority
+Number of images: 9.
+
+Bound: 1.0-minority
+Number of images: 8.
+
+-------------------------
+regulatory--no-pedestrians--g1:
+
+Bound: 0.5-majority
+Number of images: 20.
+
+Bound: 0.5-minority
+Number of images: 22.
+
+Bound: 0.75-majority
+Number of images: 11.
+
+Bound: 0.75-minority
+Number of images: 20.
+
+Bound: 1.0-minority
+Number of images: 8.
+
+-------------------------
+warning--road-widens--g1:
+
+Bound: 0.5-majority
+Number of images: 10.
+
+Bound: 0.5-minority
+Number of images: 11.
+
+Bound: 0.75-majority
+Number of images: 2.
+
+Bound: 0.75-minority
+Number of images: 6.
+
+Bound: 1.0-minority
+Number of images: 21.
+
+-------------------------
+warning--traffic-merges-left--g2:
+
+Bound: 0.5-majority
+Number of images: 3.
+
+Bound: 0.5-minority
+Number of images: 6.
+
+Bound: 0.75-majority
+Number of images: 3.
+
+Bound: 0.75-minority
+Number of images: 2.
+
+Bound: 1.0-minority
+Number of images: 3.
+
+-------------------------
+regulatory--text-four-lines--g1:
+
+Bound: 0.5-majority
+Number of images: 7.
+
+Bound: 0.5-minority
+Number of images: 8.
+
+Bound: 0.75-majority
+Number of images: 4.
+
+Bound: 0.75-minority
+Number of images: 5.
+
+Bound: 1.0-minority
+Number of images: 10.
+
+-------------------------
+regulatory--no-pedestrians-or-bicycles--g1:
+
+Bound: 0.5-majority
+Number of images: 4.
+
+Bound: 0.5-minority
+Number of images: 6.
+
+Bound: 0.75-majority
+Number of images: 3.
+
+Bound: 0.75-minority
+Number of images: 5.
+
+Bound: 1.0-minority
+Number of images: 1.
+
+-------------------------
+regulatory--maximum-speed-limit-40--g3:
+
+Bound: 0.5-majority
+Number of images: 18.
+
+Bound: 0.5-minority
+Number of images: 26.
+
+Bound: 0.75-majority
+Number of images: 12.
+
+Bound: 0.75-minority
+Number of images: 14.
+
+Bound: 1.0-minority
+Number of images: 16.
+
+-------------------------
+information--parking--g2:
+
+Bound: 0.5-majority
+Number of images: 19.
+
+Bound: 0.5-minority
+Number of images: 28.
+
+Bound: 0.75-majority
+Number of images: 24.
+
+Bound: 0.75-minority
+Number of images: 30.
+
+Bound: 1.0-minority
+Number of images: 7.
+
+-------------------------
+information--parking--g45:
+
+Bound: 0.5-majority
+Number of images: 4.
+
+Bound: 0.5-minority
+Number of images: 11.
+
+Bound: 0.75-majority
+Number of images: 10.
+
+Bound: 0.75-minority
+Number of images: 6.
+
+Bound: 1.0-minority
+Number of images: 1.
+
+-------------------------
+warning--road-widens-right--g1:
+
+Bound: 0.5-majority
+Number of images: 18.
+
+Bound: 0.5-minority
+Number of images: 25.
+
+Bound: 0.75-majority
+Number of images: 9.
+
+Bound: 0.75-minority
+Number of images: 17.
+
+Bound: 1.0-minority
+Number of images: 24.
+
+-------------------------
+regulatory--maximum-speed-limit-35--g2:
+
+Bound: 0.5-majority
+Number of images: 30.
+
+Bound: 0.5-minority
+Number of images: 37.
+
+Bound: 0.75-majority
+Number of images: 16.
+
+Bound: 0.75-minority
+Number of images: 25.
+
+Bound: 1.0-minority
+Number of images: 20.
+
+-------------------------
+warning--bicycles-crossing--g3:
+
+Bound: 0.5-majority
+Number of images: 2.
+
+Bound: 0.5-minority
+Number of images: 9.
+
+Bound: 0.75-majority
+Number of images: 6.
+
+Bound: 0.75-minority
+Number of images: 4.
+
+Bound: 1.0-minority
+Number of images: 4.
+
+-------------------------
+complementary--go-left--g1:
+
+Bound: 0.5-majority
+Number of images: 55.
+
+Bound: 0.5-minority
+Number of images: 94.
+
+Bound: 0.75-majority
+Number of images: 59.
+
+Bound: 0.75-minority
+Number of images: 53.
+
+Bound: 1.0-minority
+Number of images: 17.
+
+-------------------------
+regulatory--pass-on-either-side--g1:
+
+Bound: 0.5-majority
+Number of images: 69.
+
+Bound: 0.5-minority
+Number of images: 81.
+
+Bound: 0.75-majority
+Number of images: 49.
+
+Bound: 0.75-minority
+Number of images: 82.
+
+Bound: 1.0-minority
+Number of images: 26.
+
+-------------------------
+regulatory--no-bicycles--g3:
+
+Bound: 0.5-majority
+Number of images: 5.
+
+Bound: 0.5-minority
+Number of images: 11.
+
+Bound: 0.75-majority
+Number of images: 8.
+
+Bound: 0.75-minority
+Number of images: 6.
+
+Bound: 1.0-minority
+Number of images: 6.
+
+-------------------------
+complementary--maximum-speed-limit-35--g1:
+
+Bound: 0.5-majority
+Number of images: 18.
+
+Bound: 0.5-minority
+Number of images: 16.
+
+Bound: 0.75-majority
+Number of images: 5.
+
+Bound: 0.75-minority
+Number of images: 28.
+
+Bound: 1.0-minority
+Number of images: 58.
+
+-------------------------
+complementary--trucks-turn-right--g1:
+
+Bound: 0.5-majority
+Number of images: 13.
+
+Bound: 0.5-minority
+Number of images: 18.
+
+Bound: 0.75-majority
+Number of images: 8.
+
+Bound: 0.75-minority
+Number of images: 7.
+
+Bound: 1.0-minority
+Number of images: 6.
+
+-------------------------
+complementary--chevron-left--g4:
+
+Bound: 0.5-majority
+Number of images: 17.
+
+Bound: 0.5-minority
+Number of images: 18.
+
+Bound: 0.75-majority
+Number of images: 7.
+
+Bound: 0.75-minority
+Number of images: 15.
+
+Bound: 1.0-minority
+Number of images: 52.
+
+-------------------------
+warning--falling-rocks-or-debris-right--g2:
+
+Bound: 0.5-majority
+Number of images: 13.
+
+Bound: 0.5-minority
+Number of images: 16.
+
+Bound: 0.75-majority
+Number of images: 4.
+
+Bound: 0.75-minority
+Number of images: 5.
+
+Bound: 1.0-minority
+Number of images: 39.
+
+-------------------------
+regulatory--maximum-speed-limit-led-100--g1:
+
+Bound: 0.5-majority
+Number of images: 17.
+
+Bound: 0.5-minority
+Number of images: 9.
+
+Bound: 0.75-majority
+Number of images: 2.
+
+Bound: 0.75-minority
+Number of images: 26.
+
+Bound: 1.0-minority
+Number of images: 7.
+
+-------------------------
+regulatory--no-left-turn--g2:
+
+Bound: 0.5-majority
+Number of images: 12.
+
+Bound: 0.5-minority
+Number of images: 15.
+
+Bound: 0.75-majority
+Number of images: 8.
+
+Bound: 0.75-minority
+Number of images: 14.
+
+Bound: 1.0-minority
+Number of images: 10.
+
+-------------------------
+regulatory--no-heavy-goods-vehicles--g5:
+
+Bound: 0.5-majority
+Number of images: 8.
+
+Bound: 0.5-minority
+Number of images: 13.
+
+Bound: 0.75-majority
+Number of images: 8.
+
+Bound: 0.75-minority
+Number of images: 4.
+
+Bound: 1.0-minority
+Number of images: 2.
+
+-------------------------
+complementary--buses--g1:
+
+Bound: 0.5-majority
+Number of images: 14.
+
+Bound: 0.5-minority
+Number of images: 18.
+
+Bound: 0.75-majority
+Number of images: 8.
+
+Bound: 0.75-minority
+Number of images: 9.
+
+Bound: 1.0-minority
+Number of images: 6.
+
+-------------------------
+warning--road-narrows-right--g1:
+
+Bound: 0.5-majority
+Number of images: 11.
+
+Bound: 0.5-minority
+Number of images: 14.
+
+Bound: 0.75-majority
+Number of images: 5.
+
+Bound: 0.75-minority
+Number of images: 12.
+
+Bound: 1.0-minority
+Number of images: 19.
+
+-------------------------
+information--highway-interstate-route--g2:
+
+Bound: 0.5-majority
+Number of images: 3.
+
+Bound: 0.5-minority
+Number of images: 2.
+
+Bound: 0.75-majority
+Number of images: 1.
+
+Bound: 0.75-minority
+Number of images: 2.
+
+-------------------------
+warning--bicycles-crossing--g2:
+
+Bound: 0.5-majority
+Number of images: 20.
+
+Bound: 0.5-minority
+Number of images: 21.
+
+Bound: 0.75-majority
+Number of images: 9.
+
+Bound: 0.75-minority
+Number of images: 20.
+
+Bound: 1.0-minority
+Number of images: 11.
+
+-------------------------
+warning--y-roads--g1:
+
+Bound: 0.5-majority
+Number of images: 14.
+
+Bound: 0.5-minority
+Number of images: 12.
+
+Bound: 0.75-majority
+Number of images: 1.
+
+Bound: 0.75-minority
+Number of images: 9.
+
+Bound: 1.0-minority
+Number of images: 11.
+
+-------------------------
+warning--narrow-bridge--g3:
+
+Bound: 0.5-majority
+Number of images: 12.
+
+Bound: 0.5-minority
+Number of images: 12.
+
+Bound: 0.75-minority
+Number of images: 6.
+
+Bound: 1.0-minority
+Number of images: 36.
+
+-------------------------
+information--telephone--g2:
+
+Bound: 0.5-majority
+Number of images: 18.
+
+Bound: 0.5-minority
+Number of images: 19.
+
+Bound: 0.75-majority
+Number of images: 8.
+
+Bound: 0.75-minority
+Number of images: 17.
+
+Bound: 1.0-minority
+Number of images: 15.
+
+-------------------------
+regulatory--maximum-speed-limit-110--g1:
+
+Bound: 0.5-majority
+Number of images: 34.
+
+Bound: 0.5-minority
+Number of images: 27.
+
+Bound: 0.75-majority
+Number of images: 13.
+
+Bound: 0.75-minority
+Number of images: 43.
+
+Bound: 1.0-minority
+Number of images: 15.
+
+-------------------------
+regulatory--no-right-turn--g3:
+
+Bound: 0.5-majority
+Number of images: 4.
+
+Bound: 0.5-minority
+Number of images: 4.
+
+Bound: 0.75-majority
+Number of images: 1.
+
+Bound: 0.75-minority
+Number of images: 5.
+
+Bound: 1.0-minority
+Number of images: 1.
+
+-------------------------
+regulatory--stop--g2:
+
+Bound: 0.5-majority
+Number of images: 13.
+
+Bound: 0.5-minority
+Number of images: 10.
+
+Bound: 0.75-majority
+Number of images: 2.
+
+Bound: 0.75-minority
+Number of images: 13.
+
+Bound: 1.0-minority
+Number of images: 11.
+
+-------------------------
+information--emergency-facility--g2:
+
+Bound: 0.5-majority
+Number of images: 22.
+
+Bound: 0.5-minority
+Number of images: 23.
+
+Bound: 0.75-majority
+Number of images: 10.
+
+Bound: 0.75-minority
+Number of images: 17.
+
+Bound: 1.0-minority
+Number of images: 10.
+
+-------------------------
+regulatory--left-turn-yield-on-green--g1:
+
+Bound: 0.5-majority
+Number of images: 12.
+
+Bound: 0.5-minority
+Number of images: 20.
+
+Bound: 0.75-majority
+Number of images: 13.
+
+Bound: 0.75-minority
+Number of images: 10.
+
+Bound: 1.0-minority
+Number of images: 8.
+
+-------------------------
+warning--railroad-crossing-with-barriers--g1:
+
+Bound: 0.5-majority
+Number of images: 18.
+
+Bound: 0.5-minority
+Number of images: 23.
+
+Bound: 0.75-majority
+Number of images: 13.
+
+Bound: 0.75-minority
+Number of images: 22.
+
+Bound: 1.0-minority
+Number of images: 9.
+
+-------------------------
+warning--railroad-crossing--g4:
+
+Bound: 0.5-majority
+Number of images: 15.
+
+Bound: 0.5-minority
+Number of images: 18.
+
+Bound: 0.75-majority
+Number of images: 11.
+
+Bound: 0.75-minority
+Number of images: 19.
+
+Bound: 1.0-minority
+Number of images: 8.
+
+-------------------------
+information--trailer-camping--g1:
+
+Bound: 0.5-majority
+Number of images: 14.
+
+Bound: 0.5-minority
+Number of images: 15.
+
+Bound: 0.75-majority
+Number of images: 5.
+
+Bound: 0.75-minority
+Number of images: 8.
+
+Bound: 1.0-minority
+Number of images: 7.
+
+-------------------------
+regulatory--dual-path-bicycles-and-pedestrians--g1:
+
+Bound: 0.5-majority
+Number of images: 10.
+
+Bound: 0.5-minority
+Number of images: 17.
+
+Bound: 0.75-majority
+Number of images: 13.
+
+Bound: 0.75-minority
+Number of images: 12.
+
+Bound: 1.0-minority
+Number of images: 8.
+
+-------------------------
+information--bike-route--g1:
+
+Bound: 0.5-majority
+Number of images: 14.
+
+Bound: 0.5-minority
+Number of images: 29.
+
+Bound: 0.75-majority
+Number of images: 19.
+
+Bound: 0.75-minority
+Number of images: 16.
+
+Bound: 1.0-minority
+Number of images: 3.
+
+-------------------------
+regulatory--no-left-turn--g3:
+
+Bound: 0.5-majority
+Number of images: 4.
+
+Bound: 0.5-minority
+Number of images: 6.
+
+Bound: 0.75-majority
+Number of images: 3.
+
+Bound: 0.75-minority
+Number of images: 3.
+
+Bound: 1.0-minority
+Number of images: 7.
+
+-------------------------
+regulatory--go-straight-or-turn-right--g3:
+
+Bound: 0.5-majority
+Number of images: 17.
+
+Bound: 0.5-minority
+Number of images: 18.
+
+Bound: 0.75-majority
+Number of images: 7.
+
+Bound: 0.75-minority
+Number of images: 14.
+
+Bound: 1.0-minority
+Number of images: 14.
+
+-------------------------
+warning--dip--g2:
+
+Bound: 0.5-majority
+Number of images: 11.
+
+Bound: 0.5-minority
+Number of images: 12.
+
+Bound: 0.75-majority
+Number of images: 1.
+
+Bound: 0.75-minority
+Number of images: 6.
+
+Bound: 1.0-minority
+Number of images: 13.
+
+-------------------------
+warning--bicycles-crossing--g1:
+
+Bound: 0.5-majority
+Number of images: 15.
+
+Bound: 0.5-minority
+Number of images: 16.
+
+Bound: 0.75-majority
+Number of images: 5.
+
+Bound: 0.75-minority
+Number of images: 7.
+
+Bound: 1.0-minority
+Number of images: 2.
+
+-------------------------
+warning--divided-highway-ends--g1:
+
+Bound: 0.5-majority
+Number of images: 25.
+
+Bound: 0.5-minority
+Number of images: 33.
+
+Bound: 0.75-majority
+Number of images: 11.
+
+Bound: 0.75-minority
+Number of images: 15.
+
+Bound: 1.0-minority
+Number of images: 18.
+
+-------------------------
+regulatory--no-straight-through--g1:
+
+Bound: 0.5-majority
+Number of images: 14.
+
+Bound: 0.5-minority
+Number of images: 15.
+
+Bound: 0.75-majority
+Number of images: 7.
+
+Bound: 0.75-minority
+Number of images: 19.
+
+Bound: 1.0-minority
+Number of images: 24.
+
+-------------------------
+warning--junction-with-a-side-road-perpendicular-left--g4:
+
+Bound: 0.5-majority
+Number of images: 5.
+
+Bound: 0.5-minority
+Number of images: 4.
+
+Bound: 0.75-minority
+Number of images: 5.
+
+-------------------------
+warning--uneven-road--g2:
+
+Bound: 0.5-majority
+Number of images: 14.
+
+Bound: 0.5-minority
+Number of images: 14.
+
+Bound: 0.75-majority
+Number of images: 3.
+
+Bound: 0.75-minority
+Number of images: 8.
+
+Bound: 1.0-minority
+Number of images: 11.
+
+-------------------------
+warning--railroad-crossing-without-barriers--g1:
+
+Bound: 0.5-majority
+Number of images: 25.
+
+Bound: 0.5-minority
+Number of images: 30.
+
+Bound: 0.75-majority
+Number of images: 13.
+
+Bound: 0.75-minority
+Number of images: 20.
+
+Bound: 1.0-minority
+Number of images: 8.
+
+-------------------------
+regulatory--road-closed--g1:
+
+Bound: 0.5-majority
+Number of images: 13.
+
+Bound: 0.5-minority
+Number of images: 15.
+
+Bound: 0.75-majority
+Number of images: 5.
+
+Bound: 0.75-minority
+Number of images: 5.
+
+Bound: 1.0-minority
+Number of images: 3.
+
+-------------------------
+regulatory--maximum-speed-limit-100--g3:
+
+Bound: 0.5-majority
+Number of images: 19.
+
+Bound: 0.5-minority
+Number of images: 22.
+
+Bound: 0.75-majority
+Number of images: 3.
+
+Bound: 0.75-minority
+Number of images: 2.
+
+Bound: 1.0-minority
+Number of images: 19.
+
+-------------------------
+regulatory--no-u-turn--g2:
+
+Bound: 0.5-majority
+Number of images: 8.
+
+Bound: 0.5-minority
+Number of images: 10.
+
+Bound: 0.75-majority
+Number of images: 4.
+
+Bound: 0.75-minority
+Number of images: 6.
+
+Bound: 1.0-minority
+Number of images: 12.
+
+-------------------------
+warning--winding-road-first-left--g2:
+
+Bound: 0.5-majority
+Number of images: 9.
+
+Bound: 0.5-minority
+Number of images: 10.
+
+Bound: 0.75-minority
+Number of images: 4.
+
+Bound: 1.0-minority
+Number of images: 15.
+
+-------------------------
+regulatory--stop-here-on-red-or-flashing-light--g1:
+
+Bound: 0.5-majority
+Number of images: 14.
+
+Bound: 0.5-minority
+Number of images: 25.
+
+Bound: 0.75-majority
+Number of images: 15.
+
+Bound: 0.75-minority
+Number of images: 10.
+
+Bound: 1.0-minority
+Number of images: 7.
+
+-------------------------
+regulatory--dual-lanes-go-straight-on-right--g1:
+
+Bound: 0.5-majority
+Number of images: 3.
+
+Bound: 0.5-minority
+Number of images: 10.
+
+Bound: 0.75-majority
+Number of images: 9.
+
+Bound: 0.75-minority
+Number of images: 7.
+
+-------------------------
+regulatory--do-not-block-intersection--g1:
+
+Bound: 0.5-majority
+Number of images: 9.
+
+Bound: 0.5-minority
+Number of images: 10.
+
+Bound: 0.75-majority
+Number of images: 7.
+
+Bound: 0.75-minority
+Number of images: 14.
+
+Bound: 1.0-minority
+Number of images: 1.
+
+-------------------------
+warning--railroad-crossing-with-barriers--g2:
+
+Bound: 0.5-majority
+Number of images: 17.
+
+Bound: 0.5-minority
+Number of images: 19.
+
+Bound: 0.75-majority
+Number of images: 4.
+
+Bound: 0.75-minority
+Number of images: 5.
+
+Bound: 1.0-minority
+Number of images: 9.
+
+-------------------------
+warning--loop-270-degree--g1:
+
+Bound: 0.5-majority
+Number of images: 6.
+
+Bound: 0.5-minority
+Number of images: 1.
+
+Bound: 0.75-majority
+Number of images: 1.
+
+Bound: 0.75-minority
+Number of images: 7.
+
+-------------------------
+complementary--maximum-speed-limit-25--g1:
+
+Bound: 0.5-majority
+Number of images: 16.
+
+Bound: 0.5-minority
+Number of images: 16.
+
+Bound: 0.75-majority
+Number of images: 9.
+
+Bound: 0.75-minority
+Number of images: 26.
+
+Bound: 1.0-minority
+Number of images: 19.
+
+-------------------------
+regulatory--end-of-bicycles-only--g1:
+
+Bound: 0.5-majority
+Number of images: 11.
+
+Bound: 0.5-minority
+Number of images: 20.
+
+Bound: 0.75-majority
+Number of images: 14.
+
+Bound: 0.75-minority
+Number of images: 10.
+
+Bound: 1.0-minority
+Number of images: 6.
+
+-------------------------
+warning--hairpin-curve-right--g1:
+
+Bound: 0.5-majority
+Number of images: 15.
+
+Bound: 0.5-minority
+Number of images: 17.
+
+Bound: 0.75-majority
+Number of images: 5.
+
+Bound: 0.75-minority
+Number of images: 9.
+
+Bound: 1.0-minority
+Number of images: 13.
+
+-------------------------
+regulatory--maximum-speed-limit-65--g2:
+
+Bound: 0.5-majority
+Number of images: 9.
+
+Bound: 0.5-minority
+Number of images: 10.
+
+Bound: 0.75-majority
+Number of images: 2.
+
+Bound: 0.75-minority
+Number of images: 3.
+
+Bound: 1.0-minority
+Number of images: 3.
+
+-------------------------
+regulatory--width-limit--g1:
+
+Bound: 0.5-majority
+Number of images: 11.
+
+Bound: 0.5-minority
+Number of images: 14.
+
+Bound: 0.75-majority
+Number of images: 7.
+
+Bound: 0.75-minority
+Number of images: 10.
+
+Bound: 1.0-minority
+Number of images: 4.
+
+-------------------------
+warning--trail-crossing--g2:
+
+Bound: 0.5-majority
+Number of images: 16.
+
+Bound: 0.5-minority
+Number of images: 30.
+
+Bound: 0.75-majority
+Number of images: 21.
+
+Bound: 0.75-minority
+Number of images: 21.
+
+Bound: 1.0-minority
+Number of images: 11.
+
+-------------------------
+regulatory--no-pedestrians--g3:
+
+Bound: 0.5-majority
+Number of images: 2.
+
+Bound: 0.5-minority
+Number of images: 2.
+
+Bound: 0.75-majority
+Number of images: 1.
+
+Bound: 0.75-minority
+Number of images: 6.
+
+-------------------------
+warning--roundabout--g25:
+
+Bound: 0.5-majority
+Number of images: 23.
+
+Bound: 0.5-minority
+Number of images: 30.
+
+Bound: 0.75-majority
+Number of images: 13.
+
+Bound: 0.75-minority
+Number of images: 24.
+
+Bound: 1.0-minority
+Number of images: 22.
+
+-------------------------
+regulatory--no-vehicles-carrying-dangerous-goods--g1:
+
+Bound: 0.5-majority
+Number of images: 25.
+
+Bound: 0.5-minority
+Number of images: 29.
+
+Bound: 0.75-majority
+Number of images: 13.
+
+Bound: 0.75-minority
+Number of images: 28.
+
+Bound: 1.0-minority
+Number of images: 12.
+
+-------------------------
+regulatory--bicycles-only--g2:
+
+Bound: 0.5-majority
+Number of images: 5.
+
+Bound: 0.5-minority
+Number of images: 10.
+
+Bound: 0.75-majority
+Number of images: 6.
+
+Bound: 0.75-minority
+Number of images: 5.
+
+Bound: 1.0-minority
+Number of images: 1.
+
+-------------------------
+regulatory--maximum-speed-limit-30--g3:
+
+Bound: 0.5-majority
+Number of images: 17.
+
+Bound: 0.5-minority
+Number of images: 27.
+
+Bound: 0.75-majority
+Number of images: 16.
+
+Bound: 0.75-minority
+Number of images: 17.
+
+Bound: 1.0-minority
+Number of images: 7.
+
+-------------------------
+information--end-of-limited-access-road--g1:
+
+Bound: 0.5-majority
+Number of images: 5.
+
+Bound: 0.5-minority
+Number of images: 7.
+
+Bound: 0.75-majority
+Number of images: 5.
+
+Bound: 0.75-minority
+Number of images: 2.
+
+Bound: 1.0-minority
+Number of images: 1.
+
+-------------------------
+information--lodging--g1:
+
+Bound: 0.5-majority
+Number of images: 8.
+
+Bound: 0.5-minority
+Number of images: 6.
+
+Bound: 0.75-majority
+Number of images: 3.
+
+Bound: 0.75-minority
+Number of images: 5.
+
+Bound: 1.0-minority
+Number of images: 1.
+
+-------------------------
+information--telephone--g1:
+
+Bound: 0.5-majority
+Number of images: 10.
+
+Bound: 0.5-minority
+Number of images: 13.
+
+Bound: 0.75-majority
+Number of images: 5.
+
+Bound: 0.75-minority
+Number of images: 8.
+
+Bound: 1.0-minority
+Number of images: 5.
+
+-------------------------
+regulatory--no-motorcycles--g2:
+
+Bound: 0.5-majority
+Number of images: 14.
+
+Bound: 0.5-minority
+Number of images: 22.
+
+Bound: 0.75-majority
+Number of images: 15.
+
+Bound: 0.75-minority
+Number of images: 18.
+
+Bound: 1.0-minority
+Number of images: 6.
+
+-------------------------
+regulatory--no-turn-on-red--g2:
+
+Bound: 0.5-majority
+Number of images: 18.
+
+Bound: 0.5-minority
+Number of images: 20.
+
+Bound: 0.75-majority
+Number of images: 13.
+
+Bound: 0.75-minority
+Number of images: 21.
+
+Bound: 1.0-minority
+Number of images: 6.
+
+-------------------------
+warning--dual-lanes-right-turn-or-go-straight--g1:
+
+Bound: 0.5-majority
+Number of images: 9.
+
+Bound: 0.5-minority
+Number of images: 13.
+
+Bound: 0.75-majority
+Number of images: 4.
+
+Bound: 0.75-minority
+Number of images: 1.
+
+Bound: 1.0-minority
+Number of images: 3.
+
+-------------------------
+warning--offset-roads--g3:
+
+Bound: 0.5-majority
+Number of images: 3.
+
+Bound: 0.5-minority
+Number of images: 4.
+
+Bound: 0.75-majority
+Number of images: 1.
+
+Bound: 0.75-minority
+Number of images: 1.
+
+Bound: 1.0-minority
+Number of images: 6.
+
+-------------------------
+information--parking--g6:
+
+Bound: 0.5-majority
+Number of images: 17.
+
+Bound: 0.5-minority
+Number of images: 19.
+
+Bound: 0.75-majority
+Number of images: 4.
+
+Bound: 0.75-minority
+Number of images: 11.
+
+Bound: 1.0-minority
+Number of images: 9.
+
+-------------------------
+regulatory--roundabout--g2:
+
+Bound: 0.5-majority
+Number of images: 3.
+
+Bound: 0.5-minority
+Number of images: 5.
+
+Bound: 0.75-majority
+Number of images: 3.
+
+Bound: 0.75-minority
+Number of images: 4.
+
+Bound: 1.0-minority
+Number of images: 2.
+
+-------------------------
+complementary--one-direction-left--g1:
+
+Bound: 0.5-majority
+Number of images: 19.
+
+Bound: 0.5-minority
+Number of images: 19.
+
+Bound: 0.75-majority
+Number of images: 12.
+
+Bound: 0.75-minority
+Number of images: 27.
+
+Bound: 1.0-minority
+Number of images: 16.
+
+-------------------------
+information--no-parking--g3:
+
+Bound: 0.5-majority
+Number of images: 2.
+
+Bound: 0.5-minority
+Number of images: 3.
+
+Bound: 0.75-majority
+Number of images: 2.
+
+Bound: 0.75-minority
+Number of images: 1.
+
+Bound: 1.0-minority
+Number of images: 6.
+
+-------------------------
+information--food--g2:
+
+Bound: 0.5-majority
+Number of images: 14.
+
+Bound: 0.5-minority
+Number of images: 22.
+
+Bound: 0.75-majority
+Number of images: 13.
+
+Bound: 0.75-minority
+Number of images: 13.
+
+Bound: 1.0-minority
+Number of images: 5.
+
+-------------------------
+information--gas-station--g3:
+
+Bound: 0.5-majority
+Number of images: 3.
+
+Bound: 0.5-minority
+Number of images: 8.
+
+Bound: 0.75-majority
+Number of images: 6.
+
+Bound: 0.75-minority
+Number of images: 4.
+
+Bound: 1.0-minority
+Number of images: 2.
+
+-------------------------
+regulatory--no-bicycles--g2:
+
+Bound: 0.5-majority
+Number of images: 11.
+
+Bound: 0.5-minority
+Number of images: 19.
+
+Bound: 0.75-majority
+Number of images: 14.
+
+Bound: 0.75-minority
+Number of images: 14.
+
+Bound: 1.0-minority
+Number of images: 4.
+
+-------------------------
+regulatory--dual-lanes-turn-left-or-straight--g1:
+
+Bound: 0.5-majority
+Number of images: 2.
+
+Bound: 0.5-minority
+Number of images: 6.
+
+Bound: 0.75-majority
+Number of images: 5.
+
+Bound: 0.75-minority
+Number of images: 3.
+
+-------------------------
+regulatory--end-of-maximum-speed-limit-30--g2:
+
+Bound: 0.5-majority
+Number of images: 8.
+
+Bound: 0.5-minority
+Number of images: 8.
+
+Bound: 0.75-majority
+Number of images: 2.
+
+Bound: 0.75-minority
+Number of images: 7.
+
+Bound: 1.0-minority
+Number of images: 6.
+
+-------------------------
+warning--crossroads-with-priority-to-the-right--g1:
+
+Bound: 0.5-majority
+Number of images: 12.
+
+Bound: 0.5-minority
+Number of images: 14.
+
+Bound: 0.75-majority
+Number of images: 4.
+
+Bound: 0.75-minority
+Number of images: 5.
+
+Bound: 1.0-minority
+Number of images: 14.
+
+-------------------------
+warning--horizontal-alignment-right--g3:
+
+Bound: 0.5-majority
+Number of images: 3.
+
+Bound: 0.5-minority
+Number of images: 3.
+
+Bound: 1.0-minority
+Number of images: 2.
+
+-------------------------
+regulatory--u-turn--g1:
+
+Bound: 0.5-majority
+Number of images: 13.
+
+Bound: 0.5-minority
+Number of images: 15.
+
+Bound: 0.75-majority
+Number of images: 9.
+
+Bound: 0.75-minority
+Number of images: 20.
+
+Bound: 1.0-minority
+Number of images: 13.
+
+-------------------------
+warning--other-danger--g3:
+
+Bound: 0.5-majority
+Number of images: 10.
+
+Bound: 0.5-minority
+Number of images: 17.
+
+Bound: 0.75-majority
+Number of images: 8.
+
+Bound: 0.75-minority
+Number of images: 6.
+
+Bound: 1.0-minority
+Number of images: 7.
+
+-------------------------
+warning--falling-rocks-or-debris-right--g4:
+
+Bound: 0.5-majority
+Number of images: 8.
+
+Bound: 0.5-minority
+Number of images: 11.
+
+Bound: 0.75-majority
+Number of images: 3.
+
+Bound: 0.75-minority
+Number of images: 1.
+
+Bound: 1.0-minority
+Number of images: 11.
+
+-------------------------
+warning--pedestrians-crossing--g11:
+
+Bound: 0.5-majority
+Number of images: 2.
+
+Bound: 0.5-minority
+Number of images: 4.
+
+Bound: 0.75-majority
+Number of images: 1.
+
+Bound: 0.75-minority
+Number of images: 5.
+
+Bound: 1.0-minority
+Number of images: 7.
+
+-------------------------
+regulatory--no-motor-vehicles--g1:
+
+Bound: 0.5-majority
+Number of images: 2.
+
+Bound: 0.5-minority
+Number of images: 6.
+
+Bound: 0.75-majority
+Number of images: 4.
+
+Bound: 0.75-minority
+Number of images: 6.
+
+Bound: 1.0-minority
+Number of images: 1.
+
+-------------------------
+regulatory--dual-path-pedestrians-and-bicycles--g1:
+
+Bound: 0.5-majority
+Number of images: 5.
+
+Bound: 0.5-minority
+Number of images: 8.
+
+Bound: 0.75-majority
+Number of images: 4.
+
+Bound: 0.75-minority
+Number of images: 4.
+
+Bound: 1.0-minority
+Number of images: 1.
+
+-------------------------
+regulatory--maximum-speed-limit-led-80--g1:
+
+Bound: 0.5-majority
+Number of images: 12.
+
+Bound: 0.5-minority
+Number of images: 21.
+
+Bound: 0.75-majority
+Number of images: 13.
+
+Bound: 0.75-minority
+Number of images: 12.
+
+Bound: 1.0-minority
+Number of images: 7.
+
+-------------------------
+regulatory--no-stopping--g4:
+
+Bound: 0.5-majority
+Number of images: 8.
+
+Bound: 0.5-minority
+Number of images: 10.
+
+Bound: 0.75-majority
+Number of images: 3.
+
+Bound: 0.75-minority
+Number of images: 2.
+
+Bound: 1.0-minority
+Number of images: 11.
+
+-------------------------
+information--minimum-speed-40--g1:
+
+Bound: 0.5-majority
+Number of images: 5.
+
+Bound: 0.5-minority
+Number of images: 6.
+
+Bound: 0.75-majority
+Number of images: 2.
+
+Bound: 0.75-minority
+Number of images: 7.
+
+Bound: 1.0-minority
+Number of images: 2.
+
+-------------------------
+warning--railroad-crossing--g1:
+
+Bound: 0.5-majority
+Number of images: 17.
+
+Bound: 0.5-minority
+Number of images: 22.
+
+Bound: 0.75-majority
+Number of images: 7.
+
+Bound: 0.75-minority
+Number of images: 9.
+
+Bound: 1.0-minority
+Number of images: 7.
+
+-------------------------
+complementary--go-right--g2:
+
+Bound: 0.5-majority
+Number of images: 10.
+
+Bound: 0.5-minority
+Number of images: 16.
+
+Bound: 0.75-majority
+Number of images: 12.
+
+Bound: 0.75-minority
+Number of images: 8.
+
+Bound: 1.0-minority
+Number of images: 2.
+
+-------------------------
+warning--turn-right--g2:
+
+Bound: 0.5-majority
+Number of images: 7.
+
+Bound: 0.5-minority
+Number of images: 7.
+
+Bound: 0.75-minority
+Number of images: 3.
+
+Bound: 1.0-minority
+Number of images: 12.
+
+-------------------------
+warning--trams-crossing--g1:
+
+Bound: 0.5-majority
+Number of images: 8.
+
+Bound: 0.5-minority
+Number of images: 12.
+
+Bound: 0.75-majority
+Number of images: 8.
+
+Bound: 0.75-minority
+Number of images: 8.
+
+Bound: 1.0-minority
+Number of images: 3.
+
+-------------------------
+warning--railroad-crossing-with-barriers--g4:
+
+Bound: 0.5-majority
+Number of images: 8.
+
+Bound: 0.5-minority
+Number of images: 7.
+
+Bound: 0.75-majority
+Number of images: 1.
+
+Bound: 0.75-minority
+Number of images: 5.
+
+Bound: 1.0-minority
+Number of images: 6.
+
+-------------------------
+warning--playground--g3:
+
+Bound: 0.5-majority
+Number of images: 3.
+
+Bound: 0.5-minority
+Number of images: 4.
+
+Bound: 0.75-majority
+Number of images: 1.
+
+Bound: 0.75-minority
+Number of images: 1.
+
+Bound: 1.0-minority
+Number of images: 5.
+
+-------------------------
+regulatory--bicycles-only--g3:
+
+Bound: 0.5-majority
+Number of images: 10.
+
+Bound: 0.5-minority
+Number of images: 11.
+
+Bound: 0.75-majority
+Number of images: 6.
+
+Bound: 0.75-minority
+Number of images: 11.
+
+Bound: 1.0-minority
+Number of images: 1.
+
+-------------------------
+warning--hairpin-curve-left--g3:
+
+Bound: 0.5-majority
+Number of images: 4.
+
+Bound: 0.5-minority
+Number of images: 4.
+
+Bound: 0.75-minority
+Number of images: 3.
+
+Bound: 1.0-minority
+Number of images: 15.
+
+-------------------------
+regulatory--end-of-buses-only--g1:
+
+Bound: 0.5-majority
+Number of images: 4.
+
+Bound: 0.5-minority
+Number of images: 6.
+
+Bound: 0.75-majority
+Number of images: 4.
+
+Bound: 0.75-minority
+Number of images: 3.
+
+Bound: 1.0-minority
+Number of images: 1.
+
+-------------------------
+information--camp--g1:
+
+Bound: 0.5-majority
+Number of images: 7.
+
+Bound: 0.5-minority
+Number of images: 2.
+
+Bound: 0.75-minority
+Number of images: 7.
+
+-------------------------
+warning--pass-left-or-right--g1:
+
+Bound: 0.5-majority
+Number of images: 5.
+
+Bound: 0.5-minority
+Number of images: 2.
+
+Bound: 0.75-minority
+Number of images: 3.
+
+Bound: 1.0-minority
+Number of images: 2.
+
+-------------------------
+regulatory--dual-lanes-turn-left-no-u-turn--g1:
+
+Bound: 0.5-majority
+Number of images: 3.
+
+Bound: 0.5-minority
+Number of images: 5.
+
+Bound: 0.75-majority
+Number of images: 1.
+
+-------------------------
+warning--pedestrians-crossing--g12:
+
+Bound: 0.5-majority
+Number of images: 4.
+
+Bound: 0.5-minority
+Number of images: 5.
+
+Bound: 0.75-majority
+Number of images: 1.
+
+Bound: 0.75-minority
+Number of images: 1.
+
+Bound: 1.0-minority
+Number of images: 1.
+
+-------------------------
+regulatory--no-mopeds-or-bicycles--g1:
+
+Bound: 0.5-majority
+Number of images: 5.
+
+Bound: 0.5-minority
+Number of images: 5.
+
+Bound: 0.75-majority
+Number of images: 3.
+
+Bound: 0.75-minority
+Number of images: 5.
+
+Bound: 1.0-minority
+Number of images: 4.
+
+-------------------------
+regulatory--maximum-speed-limit-25--g1:
+
+Bound: 0.5-majority
+Number of images: 13.
+
+Bound: 0.5-minority
+Number of images: 12.
+
+Bound: 0.75-majority
+Number of images: 2.
+
+Bound: 0.75-minority
+Number of images: 9.
+
+Bound: 1.0-minority
+Number of images: 7.
+
+-------------------------
+regulatory--no-motor-vehicles--g4:
+
+Bound: 0.5-majority
+Number of images: 8.
+
+Bound: 0.5-minority
+Number of images: 5.
+
+Bound: 0.75-majority
+Number of images: 3.
+
+Bound: 0.75-minority
+Number of images: 8.
+
+Bound: 1.0-minority
+Number of images: 1.
+
+-------------------------
+warning--equestrians-crossing--g2:
+
+Bound: 0.5-majority
+Number of images: 3.
+
+Bound: 0.5-minority
+Number of images: 5.
+
+Bound: 0.75-majority
+Number of images: 3.
+
+Bound: 0.75-minority
+Number of images: 5.
+
+Bound: 1.0-minority
+Number of images: 10.
+
+-------------------------
+regulatory--truck-speed-limit-60--g1:
+
+Bound: 0.5-majority
+Number of images: 5.
+
+Bound: 0.5-minority
+Number of images: 4.
+
+Bound: 0.75-majority
+Number of images: 1.
+
+Bound: 0.75-minority
+Number of images: 3.
+
+Bound: 1.0-minority
+Number of images: 1.
+
+-------------------------
+information--central-lane--g1:
+
+Bound: 0.5-majority
+Number of images: 2.
+
+Bound: 0.5-minority
+Number of images: 5.
+
+Bound: 0.75-majority
+Number of images: 4.
+
+Bound: 0.75-minority
+Number of images: 1.
+
+-------------------------
+warning--shared-lane-motorcycles-bicycles--g1:
+
+Bound: 0.5-majority
+Number of images: 4.
+
+Bound: 0.5-minority
+Number of images: 4.
+
+Bound: 0.75-minority
+Number of images: 2.
+
+Bound: 1.0-minority
+Number of images: 4.
+
+-------------------------
+regulatory--weight-limit-with-trucks--g1:
+
+Bound: 0.5-majority
+Number of images: 3.
+
+Bound: 0.5-minority
+Number of images: 4.
+
+Bound: 0.75-majority
+Number of images: 2.
+
+Bound: 0.75-minority
+Number of images: 3.
+
+-------------------------
+regulatory--detour-left--g1:
+
+Bound: 0.5-majority
+Number of images: 3.
+
+Bound: 0.5-minority
+Number of images: 3.
+
+Bound: 0.75-minority
+Number of images: 3.
+
+Bound: 1.0-minority
+Number of images: 8.
+
+-------------------------
+regulatory--shared-path-bicycles-and-pedestrians--g1:
+
+Bound: 0.5-majority
+Number of images: 7.
+
+Bound: 0.5-minority
+Number of images: 7.
+
+Bound: 0.75-majority
+Number of images: 2.
+
+Bound: 0.75-minority
+Number of images: 4.
+
+Bound: 1.0-minority
+Number of images: 3.
+
+-------------------------
+regulatory--end-of-maximum-speed-limit-70--g1:
+
+Bound: 0.5-majority
+Number of images: 1.
+
+Bound: 0.5-minority
+Number of images: 1.
+
+Bound: 0.75-majority
+Number of images: 1.
+
+Bound: 0.75-minority
+Number of images: 1.
+
+Bound: 1.0-minority
+Number of images: 2.
+
+-------------------------
+regulatory--dual-lanes-turn-right-or-straight--g1:
+
+Bound: 0.5-minority
+Number of images: 4.
+
+Bound: 0.75-majority
+Number of images: 5.
+
+Bound: 0.75-minority
+Number of images: 1.
+
+Bound: 1.0-minority
+Number of images: 1.
+
+-------------------------
+information--end-of-pedestrians-only--g2:
+
+Bound: 0.5-majority
+Number of images: 1.
+
+Bound: 0.5-minority
+Number of images: 2.
+
+Bound: 0.75-majority
+Number of images: 1.
+
+Bound: 0.75-minority
+Number of images: 1.
+
+Bound: 1.0-minority
+Number of images: 6.
+
+-------------------------
+warning--railroad-intersection--g4:
+
+Bound: 0.5-majority
+Number of images: 6.
+
+Bound: 0.5-minority
+Number of images: 5.
+
+Bound: 0.75-majority
+Number of images: 1.
+
+Bound: 0.75-minority
+Number of images: 4.
+
+Bound: 1.0-minority
+Number of images: 3.
+
+-------------------------
+information--dead-end-except-bicycles--g1:
+
+Bound: 0.5-majority
+Number of images: 1.
+
+Bound: 0.5-minority
+Number of images: 1.
+
+Bound: 1.0-minority
+Number of images: 1.
+
+-------------------------
+warning--roadworks--g6:
+
+Bound: 0.5-majority
+Number of images: 2.
+
+Bound: 0.5-minority
+Number of images: 1.
+
+Bound: 0.75-minority
+Number of images: 3.
+
+Bound: 1.0-minority
+Number of images: 2.
+
+-------------------------
+regulatory--do-not-stop-on-tracks--g1:
+
+Bound: 0.5-majority
+Number of images: 1.
+
+Bound: 0.5-minority
+Number of images: 5.
+
+Bound: 0.75-majority
+Number of images: 4.
+
+Bound: 0.75-minority
+Number of images: 4.
+
+Bound: 1.0-minority
+Number of images: 2.
+
+-------------------------
+warning--restricted-zone--g1:
+
+Bound: 0.5-majority
+Number of images: 2.
+
+Bound: 0.5-minority
+Number of images: 4.
+
+Bound: 0.75-majority
+Number of images: 2.
+
+Bound: 0.75-minority
+Number of images: 4.
+
+-------------------------
+regulatory--turning-vehicles-yield-to-pedestrians--g1:
+
+Bound: 0.5-majority
+Number of images: 1.
+
+Bound: 0.5-minority
+Number of images: 4.
+
+Bound: 0.75-majority
+Number of images: 2.
+

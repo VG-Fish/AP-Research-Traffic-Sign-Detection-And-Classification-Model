@@ -82,20 +82,12 @@ insert_background_files()
 with open(f"{OUTPUT_DIR}/dataset_information.json", "w") as f:
     dump(classes_to_images, f, indent=2)
 
-# with open(f"{OUTPUT_DIR}/class_data.txt", "w") as f:
-#     lines = "-" * 25
-#     f.write(f"{lines}\nMinority Sign Bounds\n")
-#     for bound, info in sorted(minority_sign_percents.items()):
-#         output_str = f"Bound: {bound}\n"
-#         for directory, images in info.items():
-#             output_str += f"Number of {directory} images: {len(images)}.\n"
-#         output_str += f"{lines}\n"
-#         f.write(output_str)
-
-#     f.write(f"\n\n{lines}\nMajority Sign Bounds\n")
-#     for bound, info in sorted(majority_sign_percents.items()):
-#         output_str = f"Bound: {bound}\n"
-#         for directory, images in info.items():
-#             output_str += f"Number of {directory} images: {len(images)}.\n"
-#         output_str += f"{lines}\n"
-#         f.write(output_str)
+with open(f"{OUTPUT_DIR}/class_data.txt", "w") as f:
+    lines = "-" * 25
+    for traffic_sign_class, info in classes_to_images.items():
+        f.write(f"{lines}\n{traffic_sign_class}:\n")
+        for bound, images in sorted(info.items()):
+            output_str = f"\nBound: {bound}\n"
+            output_str += f"Number of images: {len(images)}.\n"
+            f.write(output_str)
+        f.write("\n")
