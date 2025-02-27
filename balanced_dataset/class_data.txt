@@ -1,45 +1,46 @@
 -------------------------
 Minority Sign Bounds
 Bound: 0.5
-Number of train images: 26399.
+Number of train images: 26396.
 Number of val images: 3848.
-Number of test images: 1319.
+Number of test images: 1356.
 -------------------------
 Bound: 0.75
-Number of train images: 3657.
-Number of val images: 523.
-Number of test images: 1342.
+Number of train images: 3653.
+Number of val images: 518.
+Number of test images: 1352.
 -------------------------
 Bound: 0.9
-Number of train images: 510.
-Number of val images: 85.
-Number of test images: 1297.
+Number of train images: 509.
+Number of val images: 84.
+Number of test images: 1264.
 -------------------------
 Bound: 1.0
-Number of train images: 5099.
-Number of val images: 762.
-Number of test images: 1322.
+Number of train images: 5101.
+Number of val images: 764.
+Number of test images: 1310.
 -------------------------
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
 -------------------------
 Majority Sign Bounds
 Bound: 0.5
-Number of train images: 13769.
-Number of val images: 2032.
-Number of test images: 1289.
+Number of train images: 13767.
+Number of val images: 2033.
+Number of test images: 1323.
 -------------------------
 Bound: 0.75
-Number of train images: 8155.
-Number of val images: 1202.
-Number of test images: 1354.
+Number of train images: 8156.
+Number of val images: 1208.
+Number of test images: 1310.
 -------------------------
 Bound: 0.9
-Number of train images: 3714.
-Number of val images: 545.
-Number of test images: 1321.
+Number of train images: 3719.
+Number of val images: 548.
+Number of test images: 1339.
 -------------------------
 Bound: 1.0
-Number of train images: 10020.
-Number of val images: 1437.
-Number of test images: 1351.
+Number of train images: 10018.
+Number of val images: 1444.
+Number of test images: 1332.
 -------------------------

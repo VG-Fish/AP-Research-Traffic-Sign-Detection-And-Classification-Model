@@ -1,27 +1,30 @@
 from json import load, dump
 from pprint import pprint as pp
-from random import choices
+from random import choices, choice
 import numpy as np
 
 DIRECTORY = "mtsd_v2_fully_annotated"
 OUTPUT_DIR = "balanced_dataset"
 IGNORE_PANORAMAS = True
 
+# Ensures that files containing 40% or more minority or majority signs are inside the dataset.
 MINORITY_SIGN_PERCENTS = {0.5, 0.75, 0.9, 1.0}
+MINORITY_SIGN_LIMIT = 0.4
+
 MAJORITY_SIGN_PERCENTS = {0.5, 0.75, 0.9, 1.0}
-minority_sign_percents = {i: {"train": [], "val": [], "test": []} for i in sorted(MINORITY_SIGN_PERCENTS)}
-majority_sign_percents = {i: {"train": [], "val": [], "test": []} for i in sorted(MAJORITY_SIGN_PERCENTS)}
+MAJORITY_SIGN_LIMIT = 0.4
 
 background_images = []
 
 classes_to_images = dict()
 
-def add_classes_to_image(directory, file_name, annotation):
+def add_classes_to_image(directory, file_name, annotation, bound):
+    path = f"{directory}/{file_name}"
     for sign in annotation["objects"]:
         classes_to_images \
             .setdefault(sign["label"], {}) \
-            .setdefault(directory, []) \
-            .append(file_name)
+            .setdefault(bound, []) \
+            .append(path)
 
 def insert_files(directory):
     with open(f"{DIRECTORY}/splits/{directory}.txt", "r") as f:
@@ -35,13 +38,11 @@ def insert_files(directory):
             if IGNORE_PANORAMAS and data["ispano"]:
                 continue
 
-            add_classes_to_image(directory, file_name, data)
-
             # Note down background images
             objects = data["objects"]
             num_signs = len(objects)
             if num_signs == 0:
-                background_images.append(file_name)
+                background_images.append(f"{directory}/{file_name}")
                 continue
             
             # Note down minority and majority images
@@ -52,74 +53,49 @@ def insert_files(directory):
                     counter += 1
         
             minority_sign_percent = counter / num_signs
-            for bound, images in minority_sign_percents.items():
+            if minority_sign_percent < MINORITY_SIGN_LIMIT:
+                continue
+            for bound in MINORITY_SIGN_PERCENTS:
                 if bound >= minority_sign_percent:
-                    images[directory].append(file_name)
+                    add_classes_to_image(directory, file_name, data, f"{bound}-minority")
                     break
 
             majority_sign_percent = 1 - minority_sign_percent
-            for bound, images in majority_sign_percents.items():
+            if majority_sign_percent < MAJORITY_SIGN_LIMIT:
+                continue
+            for bound in MAJORITY_SIGN_PERCENTS:
                 if bound >= majority_sign_percent:
-                    images[directory].append(file_name)
+                    add_classes_to_image(directory, file_name, data, f"{bound}-majority")
                     break
 
-def insert_test_and_background_files():
-    with open(f"{DIRECTORY}/splits/test.txt", "r") as f:
-        file_names = f.read().splitlines()
-    
-    num_files = len(file_names)
-    random_minority_bounds = choices(list(MINORITY_SIGN_PERCENTS), k=num_files)
-    random_majority_bounds = choices(list(MAJORITY_SIGN_PERCENTS), k=num_files)
-    random_bounds = np.random.random(num_files)
-    
-    # Insert test images
-    for (
-        rand_num, file_name, random_minor_bound, random_major_bound
-    ) in zip(random_bounds, file_names, random_minority_bounds, random_majority_bounds):
-        if rand_num >= 0.5:
-            minority_sign_percents[random_minor_bound]["test"].append(file_name)
-        else:
-            majority_sign_percents[random_major_bound]["test"].append(file_name)
-    
+def insert_background_files():
     # Insert background images
-    random_class_bounds = np.random.random(len(background_images))
-    random_directories = choices(["train", "val", "test"], k=num_files)
-    for (
-        rand_num, file_name, random_minor_bound, random_major_bound, random_directory
-    ) in zip(random_class_bounds, background_images, random_minority_bounds, random_majority_bounds, random_directories):
-        if rand_num >= 0.5:
-            minority_sign_percents[random_minor_bound][random_directory].append(file_name)
-        else:
-            majority_sign_percents[random_major_bound][random_directory].append(file_name)
+    random_classes = choices(list(classes_to_images.keys()), k=len(background_images))
+    for rand_class, file_name in zip(random_classes, background_images):
+        rand_bound = choice(list(classes_to_images[rand_class].keys()))
+        classes_to_images[rand_class][rand_bound].append(file_name)
 
 insert_files("train")
 insert_files("val")
-insert_test_and_background_files()
+insert_background_files()
 
-output_data = {
-    "minority_class_bounds": minority_sign_percents,
-    "majority_class_bounds": majority_sign_percents,
-    "classes_to_images": classes_to_images
-}
+with open(f"{OUTPUT_DIR}/dataset_information.json", "w") as f:
+    dump(classes_to_images, f, indent=2)
 
-with open(f"{OUTPUT_DIR}/class_information.json", "w") as f:
-    dump(output_data, f, indent=2)
+# with open(f"{OUTPUT_DIR}/class_data.txt", "w") as f:
+#     lines = "-" * 25
+#     f.write(f"{lines}\nMinority Sign Bounds\n")
+#     for bound, info in sorted(minority_sign_percents.items()):
+#         output_str = f"Bound: {bound}\n"
+#         for directory, images in info.items():
+#             output_str += f"Number of {directory} images: {len(images)}.\n"
+#         output_str += f"{lines}\n"
+#         f.write(output_str)
 
-with open(f"{OUTPUT_DIR}/class_data.txt", "w") as f:
-    lines = "-" * 25
-    sep = ">" * 50
-    f.write(f"{lines}\nMinority Sign Bounds\n")
-    for bound, info in sorted(minority_sign_percents.items()):
-        output_str = f"Bound: {bound}\n"
-        for directory, images in info.items():
-            output_str += f"Number of {directory} images: {len(images)}.\n"
-        output_str += f"{lines}\n"
-        f.write(output_str)
-
-    f.write(f"{sep}\n{lines}\nMajority Sign Bounds\n")
-    for bound, info in sorted(majority_sign_percents.items()):
-        output_str = f"Bound: {bound}\n"
-        for directory, images in info.items():
-            output_str += f"Number of {directory} images: {len(images)}.\n"
-        output_str += f"{lines}\n"
-        f.write(output_str)
+#     f.write(f"\n\n{lines}\nMajority Sign Bounds\n")
+#     for bound, info in sorted(majority_sign_percents.items()):
+#         output_str = f"Bound: {bound}\n"
+#         for directory, images in info.items():
+#             output_str += f"Number of {directory} images: {len(images)}.\n"
+#         output_str += f"{lines}\n"
+#         f.write(output_str)
