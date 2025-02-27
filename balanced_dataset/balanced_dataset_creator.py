@@ -34,26 +34,7 @@ def load_data() -> Dict[str, Any]:
         return load(f)
 
 def upload_data(data: Dict[str, Any], for_train: bool) -> None:
-    minority_class_bounds = data["minority_class_bounds"].keys()
-    majority_class_bounds = data["majority_class_bounds"].keys()
-
-    total_minority_bounds = len(minority_class_bounds)
-    total_majority_bounds = len(majority_class_bounds)
-
-    # Ensure that total_{minority, majority}_bounds is < SPLITS["amount_per_class"]
-    amount_per_minority_bound = total_minority_bounds / SPLITS["amount_per_class"]
-    assert amount_per_minority_bound <= 1, "Ensure that total_minority_bounds is < SPLITS['amount_per_class']"
-    amount_per_minority_bound = SPLITS["amount_per_class"] * amount_per_minority_bound
-    amount_per_minority_bound *= SPLITS["train"] if for_train else SPLITS["val"]
-    amount_per_minority_bound = int(amount_per_minority_bound)
-
-    amount_per_majority_bound = total_majority_bounds / SPLITS["amount_per_class"]
-    assert amount_per_majority_bound <= 1, "Ensure that total_majority_bounds is < SPLITS['amount_per_class']"
-    amount_per_majority_bound = int(SPLITS["amount_per_class"] * amount_per_majority_bound)
-    amount_per_majority_bound *= SPLITS["train"] if for_train else SPLITS["val"]
-    amount_per_majority_bound = int(amount_per_majority_bound)
-
-    print(amount_per_minority_bound, amount_per_majority_bound)
+    pass
 
 
 def create_dataset() -> None:

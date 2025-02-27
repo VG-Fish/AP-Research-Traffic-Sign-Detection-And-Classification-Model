@@ -23,7 +23,8 @@ def add_classes_to_image(directory, file_name, annotation, bound):
     for sign in annotation["objects"]:
         classes_to_images \
             .setdefault(sign["label"], {}) \
-            .setdefault(bound, []) \
+            .setdefault(bound, {}) \
+            .setdefault(directory, []) \
             .append(path)
 
 def insert_files(directory):
@@ -73,7 +74,8 @@ def insert_background_files():
     random_classes = choices(list(classes_to_images.keys()), k=len(background_images))
     for rand_class, file_name in zip(random_classes, background_images):
         rand_bound = choice(list(classes_to_images[rand_class].keys()))
-        classes_to_images[rand_class][rand_bound].append(file_name)
+        rand_directory = choice(list(classes_to_images[rand_class][rand_bound].keys()))
+        classes_to_images[rand_class][rand_bound][rand_directory].append(file_name)
 
 insert_files("train")
 insert_files("val")
@@ -86,8 +88,9 @@ with open(f"{OUTPUT_DIR}/class_data.txt", "w") as f:
     lines = "-" * 25
     for traffic_sign_class, info in classes_to_images.items():
         f.write(f"{lines}\n{traffic_sign_class}:\n")
-        for bound, images in sorted(info.items()):
-            output_str = f"\nBound: {bound}\n"
-            output_str += f"Number of images: {len(images)}.\n"
+        for bound, directories in sorted(info.items()):
+            for directory, images in directories.items():
+                output_str = f"\nBound: {bound}\n"
+                output_str += f"The number of images in the {directory} directory: {len(images)}.\n"
             f.write(output_str)
         f.write("\n")
