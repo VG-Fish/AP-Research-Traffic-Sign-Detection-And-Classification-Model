@@ -7,9 +7,9 @@ DIRECTORY = "mtsd_v2_fully_annotated"
 OUTPUT_DIR = "balanced_dataset"
 IGNORE_PANORAMAS = True
 
-# Ensures that files containing 40% or more minority or majority signs are inside the dataset.
-MINORITY_SIGN_PERCENTS = {0.5, 0.75, 0.9, 1.0}
-MINORITY_SIGN_LIMIT = 0.4
+# Ensures that files containing X% or more minority or majority signs are inside the dataset.
+MINORITY_SIGN_PERCENTS = {1.0}
+MINORITY_SIGN_LIMIT = 0.85
 
 MAJORITY_SIGN_PERCENTS = {0.5, 0.75, 0.9, 1.0}
 MAJORITY_SIGN_LIMIT = 0.4
@@ -19,13 +19,12 @@ background_images = []
 classes_to_images = dict()
 
 def add_classes_to_image(directory, file_name, annotation, bound):
-    path = f"{directory}/{file_name}"
     for sign in annotation["objects"]:
         classes_to_images \
             .setdefault(sign["label"], {}) \
             .setdefault(bound, {}) \
-            .setdefault(directory, []) \
-            .append(path)
+            .setdefault(directory, set()) \
+            .add(file_name)
 
 def insert_files(directory):
     with open(f"{DIRECTORY}/splits/{directory}.txt", "r") as f:
@@ -61,25 +60,40 @@ def insert_files(directory):
                     add_classes_to_image(directory, file_name, data, f"{bound}-minority")
                     break
 
-            majority_sign_percent = 1 - minority_sign_percent
-            if majority_sign_percent < MAJORITY_SIGN_LIMIT:
-                continue
-            for bound in MAJORITY_SIGN_PERCENTS:
-                if bound >= majority_sign_percent:
-                    add_classes_to_image(directory, file_name, data, f"{bound}-majority")
-                    break
+            # majority_sign_percent = 1 - minority_sign_percent
+            # if majority_sign_percent < MAJORITY_SIGN_LIMIT:
+            #     continue
+            # for bound in MAJORITY_SIGN_PERCENTS:
+            #     if bound >= majority_sign_percent:
+            #         add_classes_to_image(directory, file_name, data, f"{bound}-majority")
+            #         break
 
 def insert_background_files():
     # Insert background images
     random_classes = choices(list(classes_to_images.keys()), k=len(background_images))
-    for rand_class, file_name in zip(random_classes, background_images):
+    counter = 0
+    while counter < len(background_images):
+        rand_class = random_classes[counter]
+        directory, file_name = background_images[counter].split("/")
         rand_bound = choice(list(classes_to_images[rand_class].keys()))
-        rand_directory = choice(list(classes_to_images[rand_class][rand_bound].keys()))
-        classes_to_images[rand_class][rand_bound][rand_directory].append(file_name)
+
+        # To ensure that the background image ends up at the correct directory
+        if directory not in classes_to_images[rand_class][rand_bound].keys():
+            counter += 1
+            continue
+        
+        classes_to_images[rand_class][rand_bound][directory].add(file_name)
+        counter += 1
 
 insert_files("train")
 insert_files("val")
 insert_background_files()
+
+# Make the dictionary serializable. 
+for info in classes_to_images.values():
+    for bounds in info.values():
+        for directory in bounds:
+            bounds[directory] = list(bounds[directory])
 
 with open(f"{OUTPUT_DIR}/dataset_information.json", "w") as f:
     dump(classes_to_images, f, indent=2)

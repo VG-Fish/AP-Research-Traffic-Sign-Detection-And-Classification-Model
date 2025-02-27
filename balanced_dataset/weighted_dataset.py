@@ -21,7 +21,7 @@ class YOLOWeightedDataset(YOLODataset):
         class_weights = np.sum(self.counts) / self.counts
 
         # Aggregation function
-        self.agg_func = np.median
+        self.agg_func = np.mean
 
         self.class_weights = np.array(class_weights)
         self.weights = self.calculate_weights()

@@ -40,9 +40,9 @@ model.add_callback("on_val_batch_start", clear_cache)
 
 results = model.train(
     # Train Variables
-    data="balanced_mapillary.yaml",
+    data="balanced_dataset/balanced_mapillary.yaml",
     project="train",
-    name="balanced_dataset_p2",
+    name="balanced_augmented",
     epochs=100,
     device="mps",
     patience=10,
