@@ -40,7 +40,7 @@ model.add_callback("on_val_batch_start", clear_cache)
 
 results = model.train(
     # Train Variables
-    data="balanced_dataset/balanced_mapillary.yaml",
+    data="balanced_dataset/balanced_augmented_mapillary.yaml",
     project="train",
     name="balanced_augmented",
     epochs=50,
@@ -48,7 +48,7 @@ results = model.train(
     patience=10,
     batch=32,
     save_period=1,
-    imgsz=640,
+    imgsz=896,
     exist_ok=True,
     optimizer="AdamW",
     amp=True, # mixed precision training
@@ -65,10 +65,24 @@ results = model.train(
     multi_scale=True,
 
     # Augmentation Variables
+    # I'm disabling these following parameters as we already did image augmentation
+    hsv_h=0.0,
+    hsv_s=0.0,
+    hsv_v=0.0,
+    # an image has a 0% of being flipped as some signs carry information based on direction
+    flipud=0.0,
+    fliplr=0.0,
+    
+    # I'm enabling these following parameters
+    degrees=22.5,
+    translate=0.1,
+    scale=0.5,
+    shear=15,
+    perspective=0.0005,
     mosaic=1.0,
     mixup=0.5,
     copy_paste=0.5,
-    degrees=22.5,
-    shear=2,
-    perspective=0.001,
+    copy_paste_mode="mixup",
+    erasing=0.4,
+    crop_fraction=1.0,
 )

@@ -170,7 +170,7 @@ def apply_augmentations():
         with Pool(processes=cpu_count()) as pool:
             list(tqdm(pool.imap(process_image, args_list), total=len(args_list)))
         
-        source_directory = abspath(f"{MAPILLARY_DATASET_DIRECTORY}/{directory}-augmented/labels")
+        source_directory = abspath(f"{MAPILLARY_DATASET_DIRECTORY}/{directory}/labels")
         destination_directory = abspath(f"{BALANCED_DATASET_DIRECTORY}/{directory}-augmented/labels")
         copytree(source_directory, destination_directory, dirs_exist_ok=True)
 
