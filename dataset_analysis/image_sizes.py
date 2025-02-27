@@ -8,10 +8,10 @@ sizes = set()
 for file in files:
     with open(file, "r") as f:
         data = load(f)
+        if data["width"] == 320:
+            print(file)
         sizes.add((data["width"], data["height"]))
 
-from pprint import pprint
-pprint(sizes)
 """
 {(320, 240),
  (480, 320),
