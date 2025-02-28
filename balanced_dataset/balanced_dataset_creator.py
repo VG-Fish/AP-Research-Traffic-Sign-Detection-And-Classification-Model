@@ -44,7 +44,7 @@ IMAGE_TRANSFORM = A.Compose([
         A.ChannelShuffle(),
     ], p=0.1),
 ])
-NUM_AUGMENTATIONS = 5
+NUM_AUGMENTATIONS = 3
 
 """
 The parent directory you want to save to.
@@ -87,6 +87,7 @@ def save_images(image_paths: List[str], directory: str) -> None:
         
         new_image = f"{new_stem}/images/{image_path}.jpg"
         new_label = f"{new_stem}/labels/{image_path}.txt"
+        new_augmented_label = f"{new_stem}-augmented/labels/augmented-{image_path}.txt"
 
         try:
             link(core_image, new_image)
@@ -97,9 +98,11 @@ def save_images(image_paths: List[str], directory: str) -> None:
         if exists(core_label):
             try:
                 link(core_label, new_label)
+                link(core_label, new_augmented_label)
             except OSError:
                 if not samefile(core_label, new_label):
                     copy2(core_label, new_label)
+                    copy2(core_label, new_augmented_label)
 
 def upload_data(data: Dict[str, Any], directory: str) -> None:
     amount_per_class = SPLITS["amount_per_class"]
@@ -157,8 +160,11 @@ def process_image(args):
 
     for _ in range(num_augmentations):
         augmented = IMAGE_TRANSFORM(image=image)['image']
+        output_augmented_path = f"{output_directory}/augmented-{image_name}"
         output_path = f"{output_directory}/{image_name}"
-        imwrite(output_path, augmented)
+
+        imwrite(output_augmented_path, augmented)
+        imwrite(output_path, image)
 
 def apply_augmentations():    
     input_directory = f"{BALANCED_DATASET_DIRECTORY}/train/images"
@@ -173,8 +179,6 @@ def apply_augmentations():
     source_directory = abspath(f"{MAPILLARY_DATASET_DIRECTORY}/train/labels")
     destination_directory = abspath(f"{BALANCED_DATASET_DIRECTORY}/train-augmented/labels")
     copytree(source_directory, destination_directory, dirs_exist_ok=True)
-
-
 
 def main() -> None:
     create_directories(True)

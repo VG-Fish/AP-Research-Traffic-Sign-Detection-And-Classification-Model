@@ -42,8 +42,8 @@ results = model.train(
     # Train Variables
     data="balanced_dataset/balanced_augmented_mapillary.yaml",
     project="train",
-    name="balanced_pre_augmented",
-    epochs=100  ,
+    name="balanced_augmented_with_original",
+    epochs=100,
     device="mps",
     patience=15,
     batch=32,
@@ -60,7 +60,7 @@ results = model.train(
     augment=True,
     seed=16,
     conf=0.01,
-    iou=0.6,
+    iou=0.5,
     rect=True,
     multi_scale=True,
 
