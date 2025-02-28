@@ -11,7 +11,7 @@ from multiprocessing import Pool, cpu_count
 # from balanced_dataset_verifier import verify_dataset
 
 SPLITS: Dict[str, int | float] = {
-    "amount_per_class": 25,
+    "amount_per_class": 30,
     "train": 0.7,
     "val": 0.2,
     "test": 0.1,
@@ -64,8 +64,10 @@ def create_directories(exist_ok: bool = False) -> None:
 
         makedirs(f"{BALANCED_DATASET_DIRECTORY}/{directory}/images", exist_ok=exist_ok)
         makedirs(f"{BALANCED_DATASET_DIRECTORY}/{directory}/labels", exist_ok=exist_ok)
-        makedirs(f"{BALANCED_DATASET_DIRECTORY}/{directory}-augmented/images", exist_ok=exist_ok)
-        makedirs(f"{BALANCED_DATASET_DIRECTORY}/{directory}-augmented/labels", exist_ok=exist_ok)
+
+        if directory == "train":
+            makedirs(f"{BALANCED_DATASET_DIRECTORY}/{directory}-augmented/images", exist_ok=exist_ok)
+            makedirs(f"{BALANCED_DATASET_DIRECTORY}/{directory}-augmented/labels", exist_ok=exist_ok)
     
     if not UPLOADED_TEST:
         makedirs(f"{BALANCED_DATASET_DIRECTORY}/{directory}/test/images", exist_ok=True)
@@ -105,7 +107,6 @@ def upload_data(data: Dict[str, Any], directory: str) -> None:
     amount_of_classes = len(data.keys())
 
     for counter, (traffic_sign_class, info) in enumerate(data.items(), start=0):
-
         available_images = []
         for bound_dict in info.values():
             if directory in bound_dict:
@@ -160,21 +161,19 @@ def process_image(args):
         imwrite(output_path, augmented)
 
 def apply_augmentations():    
-    for directory in ["train", "val"]:
-        input_directory = f"{BALANCED_DATASET_DIRECTORY}/{directory}/images"
-        output_directory = f"{BALANCED_DATASET_DIRECTORY}/{directory}-augmented/images"
-        args_list = [
-            (filename, input_directory, output_directory, NUM_AUGMENTATIONS) 
-            for filename in listdir(input_directory) 
-        ]
-        with Pool(processes=cpu_count()) as pool:
-            list(tqdm(pool.imap(process_image, args_list), total=len(args_list)))
-        
-        source_directory = abspath(f"{MAPILLARY_DATASET_DIRECTORY}/{directory}/labels")
-        destination_directory = abspath(f"{BALANCED_DATASET_DIRECTORY}/{directory}-augmented/labels")
-        copytree(source_directory, destination_directory, dirs_exist_ok=True)
+    input_directory = f"{BALANCED_DATASET_DIRECTORY}/train/images"
+    output_directory = f"{BALANCED_DATASET_DIRECTORY}/train-augmented/images"
+    args_list = [
+        (filename, input_directory, output_directory, NUM_AUGMENTATIONS) 
+        for filename in listdir(input_directory) 
+    ]
+    with Pool(processes=cpu_count()) as pool:
+        list(tqdm(pool.imap(process_image, args_list), total=len(args_list)))
+    
+    source_directory = abspath(f"{MAPILLARY_DATASET_DIRECTORY}/train/labels")
+    destination_directory = abspath(f"{BALANCED_DATASET_DIRECTORY}/train-augmented/labels")
+    copytree(source_directory, destination_directory, dirs_exist_ok=True)
 
-        print(f"Successfully applied transformations to {directory} directory.")
 
 
 def main() -> None:
