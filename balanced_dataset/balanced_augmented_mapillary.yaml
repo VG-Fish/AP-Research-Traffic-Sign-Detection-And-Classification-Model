@@ -1,6 +1,6 @@
 path: "../balanced_augmented_mapillary_dataset"
 train: train-augmented/images
-val: val-augmented/images
+val: val/images
 test: test/images
 
 names:
