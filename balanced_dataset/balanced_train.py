@@ -69,9 +69,6 @@ results = model.train(
     hsv_h=0.0,
     hsv_s=0.0,
     hsv_v=0.0,
-    # an image has a 0% of being flipped as some signs carry information based on direction
-    flipud=0.0,
-    fliplr=0.0,
     
     # I'm enabling these following parameters
     degrees=22.5,

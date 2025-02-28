@@ -7,7 +7,7 @@ IGNORE_PANORAMAS = True
 
 # Ensures that files containing X% or more minority or majority signs are inside the dataset.
 MINORITY_SIGN_PERCENTS = {1.0}
-MINORITY_SIGN_LIMIT = 0.75
+MINORITY_SIGN_LIMIT = 0.8
 
 MAJORITY_SIGN_PERCENTS = {}
 MAJORITY_SIGN_LIMIT = 2
