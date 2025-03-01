@@ -7,7 +7,7 @@ IGNORE_PANORAMAS = True
 
 # Ensures that files containing X% or more minority or majority signs are inside the dataset.
 MINORITY_SIGN_PERCENTS = {1.0}
-MINORITY_SIGN_LIMIT = 0.825
+MINORITY_SIGN_LIMIT = 1.0
 
 MAJORITY_SIGN_PERCENTS = {}
 MAJORITY_SIGN_LIMIT = 2
@@ -18,11 +18,12 @@ classes_to_images = dict()
 
 def add_classes_to_image(directory, file_name, annotation, bound):
     for sign in annotation["objects"]:
-        classes_to_images \
+        class_directory = classes_to_images \
             .setdefault(sign["label"], {}) \
             .setdefault(bound, {}) \
-            .setdefault(directory, set()) \
-            .add(file_name)
+            .setdefault(directory, set())
+        if len(classes_to_images[sign["label"]][bound][directory]) <= 100 and sign["label"] != "other-sign":
+            class_directory.add(file_name)
 
 def insert_files(directory):
     with open(f"{DIRECTORY}/splits/{directory}.txt", "r") as f:
@@ -96,10 +97,10 @@ for info in classes_to_images.values():
         for directory in bounds:
             bounds[directory] = list(bounds[directory])
 
-with open(f"{OUTPUT_DIR}/dataset_information.json", "w") as f:
+with open(f"{OUTPUT_DIR}/rare_dataset_information.json", "w") as f:
     dump(classes_to_images, f, indent=2)
 
-with open(f"{OUTPUT_DIR}/class_data.txt", "w") as f:
+with open(f"{OUTPUT_DIR}/rare_class_data.txt", "w") as f:
     lines = "-" * 25
     for traffic_sign_class, info in classes_to_images.items():
         f.write(f"{lines}\n{traffic_sign_class}:\n")

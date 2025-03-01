@@ -42,7 +42,7 @@ results = model.train(
     # Train Variables
     data="balanced_dataset/balanced_augmented_mapillary.yaml",
     project="train",
-    name="balanced_augmented_with_original",
+    name="balanced_augmented_640",
     epochs=100,
     device="mps",
     patience=15,
@@ -62,7 +62,6 @@ results = model.train(
     conf=0.01,
     iou=0.5,
     rect=True,
-    multi_scale=True,
 
     # Augmentation Variables
     # I'm disabling these following parameters as we already did image augmentation
@@ -74,8 +73,8 @@ results = model.train(
     degrees=22.5,
     translate=0.1,
     scale=0.5,
-    shear=5,
-    perspective=0.0005,
+    shear=2.5,
+    perspective=0.0002,
     mosaic=1.0,
     mixup=0.5,
     copy_paste=0.5,

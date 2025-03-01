@@ -44,14 +44,14 @@ IMAGE_TRANSFORM = A.Compose([
         A.ChannelShuffle(),
     ], p=0.1),
 ])
-NUM_AUGMENTATIONS = 3
+NUM_AUGMENTATIONS = 5
 
 """
 The parent directory you want to save to.
 """
-BALANCED_DATASET_DIRECTORY = "balanced_augmented_mapillary_dataset"
+BALANCED_DATASET_DIRECTORY = "rare_balanced_augmented_mapillary_dataset"
 MAPILLARY_DATASET_DIRECTORY = "mapillary_dataset"
-DATASET_INFORMATION_PATH = "balanced_dataset/dataset_information.json"
+DATASET_INFORMATION_PATH = "balanced_dataset/rare_dataset_information.json"
 UPLOADED_TEST = True
 
 def create_directories(exist_ok: bool = False) -> None:
@@ -159,8 +159,8 @@ def process_image(args):
     image_name, input_directory, output_directory, num_augmentations = args
     image_path = f"{input_directory}/{image_name}"
     image = imread(image_path)
-    output_path = f"{output_directory}/{image_name}"
-    imwrite(output_path, image)
+    #output_path = f"{output_directory}/{image_name}"
+    #imwrite(output_path, image)
 
     image = cvtColor(image, COLOR_BGR2RGB)
 

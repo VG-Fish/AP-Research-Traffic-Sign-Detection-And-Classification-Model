@@ -10,5 +10,6 @@ num_classes.txt
 __pycache__/
 dataset_information.json
 balanced_augmented_mapillary_dataset/
+rare_balanced_augmented_mapillary_dataset/
 balanced_mapillary_dataset/
 StarSRGAN/
