@@ -3,10 +3,14 @@ import torch
 
 EPOCHS = 5
 
-for i in range(5):
-    # I moved the instantiation in here to ensure it gets the latest model weights every time.
-    core_model = YOLO("train/balanced_augmented_640/weights/best.pt")
-    rare_model = YOLO("train/rare_balanced_augmented_640/weights/best.pt")
+for i in range(3):
+    # I moved the model instantiation in here to ensure it gets the latest model weights every time.
+    core_model = YOLO(
+        f"train/balanced_augmented_640/weights/best.pt" 
+        if i == 0 else 
+        f"train/balanced_augmented_640-{i}/weights/best.pt"
+    )
+    rare_model = YOLO(f"train/rare_balanced_augmented_640-{i}/weights/best.pt")
 
     def clear_cache(_):
         torch.mps.empty_cache()
@@ -41,6 +45,7 @@ for i in range(5):
         conf=0.01,
         iou=0.5,
         rect=True,
+        lr0=0.001,
 
         # Augmentation Variables
         # I'm disabling these following parameters as we already did image augmentation
@@ -66,7 +71,7 @@ for i in range(5):
         # Train Variables
         data="balanced_dataset/balanced_augmented_mapillary.yaml",
         project="train",
-        name=f"rare_balanced_augmented_640-{i}",
+        name=f"balanced_augmented_640-{i}",
         epochs=EPOCHS,
         device="mps",
         patience=15,
@@ -86,6 +91,7 @@ for i in range(5):
         conf=0.01,
         iou=0.5,
         rect=True,
+        lr0=0.001,
 
         # Augmentation Variables
         # I'm disabling these following parameters as we already did image augmentation
