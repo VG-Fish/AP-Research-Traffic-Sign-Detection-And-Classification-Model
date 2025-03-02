@@ -3,7 +3,7 @@ import torch
 
 EPOCHS = 5
 
-for i in range(3):
+for i in range(7):
     # I moved the model instantiation in here to ensure it gets the latest model weights every time.
     core_model = YOLO(
         f"train/balanced_augmented_640-{i}/weights/best.pt"
@@ -45,6 +45,7 @@ for i in range(3):
         rect=True,
         lr0=0.005,
         save_conf=True,
+        save_crop=True,
 
         # Augmentation Variables
         # I'm disabling these following parameters as we already did image augmentation
@@ -93,6 +94,8 @@ for i in range(3):
         iou=0.7,
         rect=True,
         lr0=0.005,
+        save_conf=True,
+        save_crop=True,
 
         # Augmentation Variables
         # I'm disabling these following parameters as we already did image augmentation
@@ -101,7 +104,6 @@ for i in range(3):
         hsv_v=0.0,
         flipud=0.0,
         fliplr=0.0,
-        save_conf=True,
         
         # I'm enabling these following parameters
         degrees=15,
