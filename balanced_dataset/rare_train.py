@@ -6,8 +6,6 @@ EPOCHS = 5
 for i in range(3):
     # I moved the model instantiation in here to ensure it gets the latest model weights every time.
     core_model = YOLO(
-        f"train/balanced_augmented_640/weights/best.pt" 
-        if i == 0 else 
         f"train/balanced_augmented_640-{i}/weights/best.pt"
     )
     rare_model = YOLO(f"train/rare_balanced_augmented_640-{i}/weights/best.pt")
@@ -25,11 +23,11 @@ for i in range(3):
         # Train Variables
         data="balanced_dataset/rare_balanced_augmented_mapillary.yaml",
         project="train",
-        name=f"rare_balanced_augmented_640-{i}",
+        name=f"rare_balanced_augmented_640-{i + 1}",
         epochs=EPOCHS,
         device="mps",
         patience=15,
-        batch=32,
+        batch=42,
         save_period=1,
         imgsz=640,
         exist_ok=True,
@@ -43,24 +41,27 @@ for i in range(3):
         augment=True,
         seed=16,
         conf=0.01,
-        iou=0.5,
+        iou=0.7,
         rect=True,
-        lr0=0.001,
+        lr0=0.005,
+        save_conf=True,
 
         # Augmentation Variables
         # I'm disabling these following parameters as we already did image augmentation
         hsv_h=0.0,
         hsv_s=0.0,
         hsv_v=0.0,
+        flipud=0.0,
+        fliplr=0.0,
         
         # I'm enabling these following parameters
-        degrees=22.5,
+        degrees=15,
         translate=0.1,
         scale=0.5,
-        shear=2.5,
+        shear=2,
         perspective=0.0002,
         mosaic=1.0,
-        mixup=0.5,
+        mixup=0.7,
         copy_paste=0.5,
         copy_paste_mode="mixup",
         erasing=0.4,
@@ -71,11 +72,11 @@ for i in range(3):
         # Train Variables
         data="balanced_dataset/balanced_augmented_mapillary.yaml",
         project="train",
-        name=f"balanced_augmented_640-{i}",
+        name=f"balanced_augmented_640-{i + 1}",
         epochs=EPOCHS,
         device="mps",
         patience=15,
-        batch=32,
+        batch=42,
         save_period=1,
         imgsz=640,
         exist_ok=True,
@@ -89,21 +90,24 @@ for i in range(3):
         augment=True,
         seed=16,
         conf=0.01,
-        iou=0.5,
+        iou=0.7,
         rect=True,
-        lr0=0.001,
+        lr0=0.005,
 
         # Augmentation Variables
         # I'm disabling these following parameters as we already did image augmentation
         hsv_h=0.0,
         hsv_s=0.0,
         hsv_v=0.0,
+        flipud=0.0,
+        fliplr=0.0,
+        save_conf=True,
         
         # I'm enabling these following parameters
-        degrees=22.5,
+        degrees=15,
         translate=0.1,
         scale=0.5,
-        shear=2.5,
+        shear=2,
         perspective=0.0002,
         mosaic=1.0,
         mixup=0.5,
