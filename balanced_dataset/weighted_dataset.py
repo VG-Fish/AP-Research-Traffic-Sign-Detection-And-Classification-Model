@@ -36,7 +36,7 @@ class YOLOWeightedDataset(YOLODataset):
         """
         self.counts = [0 for i in range(len(self.data["names"]))]
         for label in self.labels:
-            cls = label['cls'].reshape(-1).astype(int)
+            cls = label["cls"].reshape(-1).astype(int)
             for id in cls:
                 self.counts[id] += 1
 
@@ -52,7 +52,7 @@ class YOLOWeightedDataset(YOLODataset):
         """
         weights = []
         for label in self.labels:
-            cls = label['cls'].reshape(-1).astype(int)
+            cls = label["cls"].reshape(-1).astype(int)
 
             # Give a default weight to background class
             if cls.size == 0:
@@ -113,7 +113,7 @@ class YOLOWeightedDataset(YOLODataset):
         class_counts = Counter(all_labels)
         return class_counts
     
-    def plot_class_balance(self, weighted_cnts, unweighted_cnts):
+    def plot_class_balance(self, weighted_counts, unweighted_counts):
         """
         Plots the comparison of class distribution between training and validation modes.
 
@@ -124,20 +124,20 @@ class YOLOWeightedDataset(YOLODataset):
         """
         class_names = set(self.data["names"].values())
         classes = range(len(class_names))
-        weighted_values = [weighted_cnts.get(c, 0) for c in classes]
-        unweighted_values = [unweighted_cnts.get(c, 0) for c in classes]
+        weighted_values = [weighted_counts.get(c, 0) for c in classes]
+        unweighted_values = [unweighted_counts.get(c, 0) for c in classes]
 
         width = 0.35  # Bar width
 
         fig, ax = plt.subplots()
-        ax.bar(classes, unweighted_values, width, label='Normal mode')
-        ax.bar([c + width for c in classes], weighted_values, width, label='Weighted Mode')
+        ax.bar(classes, unweighted_values, width, label="Normal mode")
+        ax.bar([c + width for c in classes], weighted_values, width, label="Weighted Mode")
 
-        ax.set_xlabel('Class')
-        ax.set_ylabel('Count')
-        ax.set_title('Class Distribution in Normal vs Weighted Modes')
+        ax.set_xlabel("Class")
+        ax.set_ylabel("Count")
+        ax.set_title("Class Distribution in Normal vs Weighted Modes")
         ax.set_xticks([c + width / 2 for c in classes])
-        ax.set_xticklabels(class_names, rotation=45, ha='right')
+        ax.set_xticklabels(class_names, rotation=45, ha="right")
         ax.legend()
 
         plt.show()
@@ -149,8 +149,8 @@ class YOLOWeightedDataset(YOLODataset):
         counts = np.array([class_counts.get(i, 0) for i in range(len(self.data["names"]))])
         non_zero = counts[counts > 0]
         metrics = {
-            'max_min_ratio': np.max(non_zero) / np.min(non_zero) if len(non_zero) > 1 else float('inf'),
-            'std_normalized': np.std(non_zero) / np.mean(non_zero) if len(non_zero) > 0 else float('inf'),
-            'zero_classes': np.sum(counts == 0)
+            "max_min_ratio": np.max(non_zero) / np.min(non_zero) if len(non_zero) > 1 else float("inf"),
+            "std_normalized": np.std(non_zero) / np.mean(non_zero) if len(non_zero) > 0 else float("inf"),
+            "zero_classes": np.sum(counts == 0)
         }
         return class_counts, metrics

@@ -83,9 +83,6 @@ def insert_background_files():
         
         classes_to_images[rand_class][rand_bound][directory].add(file_name)
         counter += 1
-    
-    with open(f"{OUTPUT_DIR}/background_images_names.json", "w") as f:
-        dump({"background_images": background_images}, f, indent=2)
 
 insert_files("train")
 insert_files("val")
