@@ -1,9 +1,9 @@
 from ultralytics import YOLO
 import torch
 
-EPOCHS = 5
+EPOCHS = 10
 
-for i in range(7):
+for i in range(3):
     # I moved the model instantiation in here to ensure it gets the latest model weights every time.
     core_model = YOLO(
         f"train/balanced_augmented_640-{i}/weights/best.pt"
