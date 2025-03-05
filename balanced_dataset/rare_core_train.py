@@ -27,7 +27,7 @@ for i in range(3):
         epochs=EPOCHS,
         device="mps",
         patience=15,
-        batch=40,
+        batch=48,
         save_period=1,
         imgsz=640,
         exist_ok=True,

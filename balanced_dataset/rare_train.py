@@ -1,26 +1,38 @@
 from ultralytics import YOLO
 import torch
+from torch.utils.data import DataLoader
+from torchvision import datasets, transforms
 
-
-core_model = YOLO(
-    "train/balanced_augmented_640-3/weights/best.pt"
+rare_model = YOLO(
+    "train/rare_balanced_augmented_640-3/weights/best.pt"
 )
 
+# Clearing memory 
 def clear_cache(_):
     torch.mps.empty_cache()
 
-core_model.add_callback("on_train_batch_start", clear_cache)
-core_model.add_callback("on_val_batch_start", clear_cache)
+rare_model.add_callback("on_train_batch_start", clear_cache)
+rare_model.add_callback("on_val_batch_start", clear_cache)
 
-core_model.train(
+# Data prefetcher
+transform = transforms.Compose([transforms.Resize((640, 640)), transforms.ToTensor()])
+dataset = datasets.ImageFolder(root="rare_balanced_augmented_mapillary_dataset", transform=transform)
+
+data_loader = DataLoader(dataset, batch_size=40, num_workers=8, pin_memory=True, prefetch_factor=2)
+
+from ultralytics.data.build import dataloader
+
+dataloader.DataLoader = dataloader
+
+rare_model.train(
     # Train Variables
-    data="balanced_dataset/rare_balanced_augmented_mapillary.yaml",
+    data="balanced_dataset/balanced_augmented_mapillary.yaml",
     project="train",
-    name=f"rare_balanced_augmented_640-4",
+    name=f"balanced_augmented_640-4",
     epochs=20,
     device="mps",
     patience=15,
-    batch=40,
+    batch=48,
     save_period=1,
     imgsz=640,
     exist_ok=True,
