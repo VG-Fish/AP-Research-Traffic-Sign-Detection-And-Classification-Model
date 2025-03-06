@@ -13,3 +13,5 @@ balanced_augmented_mapillary_dataset/
 rare_balanced_augmented_mapillary_dataset/
 balanced_mapillary_dataset/
 StarSRGAN/
+work_dir/
+rare_balanced_dataset_analysis/
