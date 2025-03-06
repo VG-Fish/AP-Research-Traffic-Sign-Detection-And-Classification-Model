@@ -6,7 +6,6 @@ pose_model = YOLO("yolo11n-pose.pt")
 # Converting pose model to detect
 detect_rare_model = YOLO("train/detect_rare_model/weights/best.pt").load(pose_model.model)
 detect_rare_model.ckpt = {"model": detect_rare_model.model}
-detect_rare_model.save("models/detect_rare_model.pt")
 
 # Clearing memory 
 def clear_cache(_):
