@@ -11,9 +11,9 @@ from multiprocessing import Pool, cpu_count
 # from balanced_dataset_verifier import verify_dataset
 
 SPLITS: Dict[str, int | float] = {
-    "amount_per_class": 30,
-    "train": 0.85,
-    "val": 0.15,
+    "amount_per_class": 50,
+    "train": 0.8,
+    "val": 0.2,
     "test": 0.0,
 }
 IMAGE_TRANSFORM = A.Compose([

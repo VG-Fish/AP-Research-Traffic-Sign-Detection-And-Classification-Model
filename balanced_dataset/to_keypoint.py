@@ -1,4 +1,5 @@
 from pathlib import Path
+from os import makedirs
 
 DIRECTORIES = [
     "rare_balanced_augmented_mapillary_dataset/train-augmented/labels",
@@ -9,6 +10,7 @@ for directory in DIRECTORIES:
     files = Path(directory).glob("*.txt")
     for file in files:
         new_annotations = []
+        new_pose_annotations = []
         with open(file) as f:
             annotations = f.readlines()
             for annotation in annotations:
@@ -20,8 +22,11 @@ for directory in DIRECTORIES:
                 visibility = 1.0
                 # For the keypoint loss
                 x_keypoint, y_keypoint = bounding_box[:2]
-                new_annotations \
-                    .append(f"{traffic_sign_class} {' '.join(bounding_box)} {x_keypoint} {y_keypoint} {visibility}")
-        with open(f"{directory}/{file.stem}-keypoint.txt", "w") as f:
+                new_annotations.append(f"{traffic_sign_class} {' '.join(bounding_box)}")
+                new_pose_annotations.append(f"{traffic_sign_class} {' '.join(bounding_box)} {x_keypoint} {y_keypoint} {visibility}")
+            
+        with open(f"{directory}/{file.stem}.txt", "w") as f:
             f.write("\n".join(new_annotations))
+        with open(f"{directory}-pose/{file.stem}.txt", "w") as f:
+            f.write("\n".join(new_pose_annotations))
         

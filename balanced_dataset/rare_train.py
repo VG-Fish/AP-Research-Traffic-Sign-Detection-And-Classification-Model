@@ -1,22 +1,25 @@
 from ultralytics import YOLO
 import torch
 
-rare_model = YOLO(
-    "train/rare_balanced_augmented_640-3/weights/best.pt"
-)
+pose_model = YOLO("yolo11n-pose.pt")
+
+# Converting pose model to detect
+detect_rare_model = YOLO("train/rare_balanced_augmented_640-4/weights/best.pt").load(pose_model.model)
+detect_rare_model.ckpt = {"model": detect_rare_model.model}
+detect_rare_model.save("models/detect_rare_model.pt")
 
 # Clearing memory 
 def clear_cache(_):
     torch.mps.empty_cache()
 
-rare_model.add_callback("on_train_batch_start", clear_cache)
-rare_model.add_callback("on_val_batch_start", clear_cache)
+detect_rare_model.add_callback("on_train_batch_start", clear_cache)
+detect_rare_model.add_callback("on_val_batch_start", clear_cache)
 
-rare_model.train(
+detect_rare_model.train(
     # Train Variables
-    data="balanced_dataset/balanced_augmented_mapillary.yaml",
+    data="balanced_dataset/small_object.yaml",
     project="train",
-    name=f"balanced_augmented_640-4",
+    name=f"detect_rare_model",
     epochs=20,
     device="mps",
     patience=15,
@@ -50,7 +53,7 @@ rare_model.train(
     fliplr=0.0,
     
     # I'm enabling these following parameters
-    degrees=10,
+    degrees=15,
     translate=0.1,
     scale=0.5,
     shear=2,
