@@ -12,9 +12,9 @@ from multiprocessing import Pool, cpu_count
 
 SPLITS: Dict[str, int | float] = {
     "amount_per_class": 30,
-    "train": 0.7,
-    "val": 0.2,
-    "test": 0.1,
+    "train": 0.85,
+    "val": 0.15,
+    "test": 0.0,
 }
 IMAGE_TRANSFORM = A.Compose([
     A.MotionBlur(p=0.1), # Simulating realistic camera conditions while driving
@@ -31,7 +31,7 @@ IMAGE_TRANSFORM = A.Compose([
         A.RandomShadow(),
         A.AutoContrast(method="pil"),
         A.Illumination(),
-    ], n=2, p=0.5),
+    ], n=2, p=0.15),
     A.OneOf([
         # Random weather conditions
         A.RandomFog(),

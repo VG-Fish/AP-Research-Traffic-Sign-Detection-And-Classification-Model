@@ -1,7 +1,5 @@
 from ultralytics import YOLO
 import torch
-from torch.utils.data import DataLoader
-from torchvision import datasets, transforms
 
 rare_model = YOLO(
     "train/rare_balanced_augmented_640-3/weights/best.pt"
@@ -14,16 +12,6 @@ def clear_cache(_):
 rare_model.add_callback("on_train_batch_start", clear_cache)
 rare_model.add_callback("on_val_batch_start", clear_cache)
 
-# Data prefetcher
-transform = transforms.Compose([transforms.Resize((640, 640)), transforms.ToTensor()])
-dataset = datasets.ImageFolder(root="rare_balanced_augmented_mapillary_dataset", transform=transform)
-
-data_loader = DataLoader(dataset, batch_size=40, num_workers=8, pin_memory=True, prefetch_factor=2)
-
-from ultralytics.data.build import dataloader
-
-dataloader.DataLoader = dataloader
-
 rare_model.train(
     # Train Variables
     data="balanced_dataset/balanced_augmented_mapillary.yaml",
@@ -32,7 +20,7 @@ rare_model.train(
     epochs=20,
     device="mps",
     patience=15,
-    batch=48,
+    batch=40,
     save_period=1,
     imgsz=640,
     exist_ok=True,
@@ -50,6 +38,8 @@ rare_model.train(
     save_conf=True,
     save_crop=True,
     show_boxes=True,
+    warmup_epochs=2, 
+    close_mosaic=2,
 
     # Augmentation Variables
     # I'm disabling these following parameters as we already did image augmentation
