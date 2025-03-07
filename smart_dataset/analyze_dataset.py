@@ -17,6 +17,10 @@ def main():
 
     fd.run()
 
+    blurry_images = fd.img_stats()[["blur", "filename"]]
+
+    print(blurry_images[blurry_images["blur"] <= 150])
+
     connected_components_df , _ = fd.connected_components()
 
     duplicates_df = (
@@ -32,12 +36,11 @@ def main():
 
     df = duplicates_df.apply(extract_image_duplicates, axis=1)
     
-    print(df[df["mean_distance"] == 1]["duplicates"].to_json("smart_dataset/duplicates.json"))
+    df[df["mean_distance"] == 1]["duplicates"].to_json("smart_dataset/duplicates.json")
 
     fd.summary()
 
     # fd.explore()
-
 
 if __name__ == '__main__':
     freeze_support()

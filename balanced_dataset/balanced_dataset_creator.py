@@ -21,14 +21,14 @@ IMAGE_TRANSFORM = A.Compose([
     A.RandomToneCurve(p=0.01), # Switches night to day
     A.OneOf([
         # Standard image augmentations
-        A.RandomBrightnessContrast(),
+        A.RandomBrightnessContrast(p=0.7),
         A.RandomGamma(),
     ], p=0.5),
     A.SomeOf([
         # More simulation of realistic camera conditions while driving
         A.OpticalDistortion(),
         A.AdditiveNoise("gaussian"),
-        A.RandomShadow(),
+        A.RandomShadow(p=0.75),
         A.AutoContrast(method="pil"),
         A.OneOf([
             A.Illumination("corner"),
@@ -41,12 +41,12 @@ IMAGE_TRANSFORM = A.Compose([
         A.RandomFog(),
         A.RandomSunFlare(),
         A.RandomRain(),
-    ], p=0.1),
+    ], p=0.05),
     A.OneOf([
         # These transformations tries to get the model to focus less on color and more on shape
         A.HueSaturationValue(),
         A.ChannelShuffle(),
-    ], p=0.1),
+    ], p=0.075),
 ])
 NUM_AUGMENTATIONS = 5
 
