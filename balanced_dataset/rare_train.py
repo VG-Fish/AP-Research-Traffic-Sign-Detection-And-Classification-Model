@@ -4,7 +4,7 @@ import torch
 pose_model = YOLO("models/yolo11n-pose.pt")
 
 # Converting pose model to detect
-detect_rare_model = YOLO("train/detect_rare_model/weights/best.pt").load(pose_model.model)
+detect_rare_model = YOLO("train/detect_rare_model_2/weights/best.pt").load(pose_model.model)
 detect_rare_model.ckpt = {"model": detect_rare_model.model}
 
 # Clearing memory 
@@ -18,18 +18,17 @@ detect_rare_model.train(
     # Train Variables
     data="balanced_dataset/small_object.yaml",
     project="train",
-    name=f"detect_rare_model",
-    epochs=16,
+    name=f"detect_rare_model_3",
+    epochs=7,
     device="mps",
     patience=15,
-    batch=64,
+    batch=48,
     workers=12, # 12 CPU cores = 24 available threads
     save_period=1,
     imgsz=640,
     exist_ok=True,
     optimizer="AdamW",
     amp=True, # mixed precision training
-    rect=True,
     plots=True,
     max_det=73, # The max number of annotations for an image is 73
     cos_lr=True, # Learning rate oscillates for better convergence
@@ -41,8 +40,8 @@ detect_rare_model.train(
     save_conf=True,
     save_crop=True,
     show_boxes=True,
-    warmup_epochs=2, 
-    close_mosaic=2,
+    warmup_epochs=1, 
+    close_mosaic=1,
     # To give more weight to the keypoint loss
     box=0.01,
     dfl=0.01,
