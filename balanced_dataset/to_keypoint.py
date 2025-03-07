@@ -22,7 +22,7 @@ for directory in DIRECTORIES:
                 # .rstrip() to remove newlines
                 annotation = annotation.rstrip().split(" ")
                 traffic_sign_class = annotation[0]
-                bounding_box = annotation[1:]
+                bounding_box = annotation[1:5]
 
                 visibility = 1.0
                 # For the keypoint loss

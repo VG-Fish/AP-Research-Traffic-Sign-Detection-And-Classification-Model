@@ -1,7 +1,7 @@
 from ultralytics import YOLO
 import torch
 
-pose_model = YOLO("yolo11n-pose.pt")
+pose_model = YOLO("models/yolo11n-pose.pt")
 
 # Converting pose model to detect
 detect_rare_model = YOLO("train/detect_rare_model/weights/best.pt").load(pose_model.model)
