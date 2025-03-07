@@ -16,7 +16,6 @@ def remove_stat_with_threshold(fd, stat, threshold):
     stat_images = stat_images[stat_images[stat] <= threshold]
 
     for file in stat_images["filename"]:
-        print(file)
         label_path = f"{file.split('.')[0]}.txt"
         if exists(file):
             remove(file)
@@ -53,7 +52,7 @@ def main():
 
     fd.summary()
 
-    # fd.explore()
+    fd.explore()
 
 if __name__ == '__main__':
     freeze_support()
