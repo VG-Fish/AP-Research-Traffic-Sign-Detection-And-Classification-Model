@@ -1,5 +1,6 @@
 from pathlib import Path
 from os import makedirs
+from os.path import exists
 
 DIRECTORIES = [
     "rare_balanced_augmented_mapillary_dataset/train-augmented/labels",
@@ -8,6 +9,10 @@ DIRECTORIES = [
 
 for directory in DIRECTORIES:
     files = Path(directory).glob("*.txt")
+
+    if not exists(f"{directory}-pose"):
+        makedirs(f"{directory}-pose")
+    
     for file in files:
         new_annotations = []
         new_pose_annotations = []

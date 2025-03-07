@@ -17,27 +17,31 @@ SPLITS: Dict[str, int | float] = {
     "test": 0.0,
 }
 IMAGE_TRANSFORM = A.Compose([
-    A.MotionBlur(p=0.1), # Simulating realistic camera conditions while driving
+    A.MotionBlur(p=0.01), # Simulating realistic camera conditions while driving
     A.RandomToneCurve(p=0.01), # Switches night to day
-    A.SomeOf([
+    A.OneOf([
         # Standard image augmentations
         A.RandomBrightnessContrast(),
         A.RandomGamma(),
-    ], n=2, p=0.5),
+    ], p=0.5),
     A.SomeOf([
         # More simulation of realistic camera conditions while driving
         A.OpticalDistortion(),
         A.AdditiveNoise("gaussian"),
         A.RandomShadow(),
         A.AutoContrast(method="pil"),
-        A.Illumination(),
-    ], n=2, p=0.15),
+        A.OneOf([
+            A.Illumination("corner"),
+            A.Illumination("gaussian"),
+            A.Illumination("linear"),
+        ])
+    ], n=2, p=0.1),
     A.OneOf([
         # Random weather conditions
         A.RandomFog(),
         A.RandomSunFlare(),
         A.RandomRain(),
-    ], p=0.05),
+    ], p=0.1),
     A.OneOf([
         # These transformations tries to get the model to focus less on color and more on shape
         A.HueSaturationValue(),
