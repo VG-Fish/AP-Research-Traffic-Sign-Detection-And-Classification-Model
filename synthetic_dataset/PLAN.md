@@ -1,5 +1,7 @@
 # The plan to create an accurate, precise, and robust model.
 
+## 0. Combine multiple classes into one (401 classes exist currently).
+
 ## 1. Iterate through the dataset and choose/crop X random images for each class.
 - Choose full resolution images until crops become necessary.
     - Keep track of the amount of instances per class. If adding a new image overflows the amount of instances per class, try a new image.
