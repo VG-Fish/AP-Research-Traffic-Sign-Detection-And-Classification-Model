@@ -14,12 +14,16 @@ background_images = set()
 def transform_image(path: str, annotations):
     directory, file = path.split("/")
     image = cv2.imread(f"{DATASET_DIRECTORY}/{directory}/images/{file}")
-    image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 
+    print(file)
+    pp(annotations)
     for anno in annotations:
         if not anno[2]:
+            print("removed")
             bbox = anno[1]
-            image[bbox["xmin"]:bbox["xmax"], bbox["ymin"]:bbox["ymax"]] = 225
+            image[bbox["ymin"]:bbox["ymax"], bbox["xmin"]:bbox["xmax"]] = 0
+    
+    cv2.imwrite("debug.jpg", image)
 
 def parse_files(file: str) -> None:
     amount = MAX_AMOUNT * 0.8 if file == "train" else MAX_AMOUNT
@@ -27,6 +31,7 @@ def parse_files(file: str) -> None:
     with open(f"{PATH_DIRECTORY}/splits/{file}.txt") as f:
         paths = f.read().splitlines()
 
+    counter = 0
     for path in paths:
         with open(f"{PATH_DIRECTORY}/annotations/{path}.json") as f:
             annotations = load(f)
@@ -61,13 +66,14 @@ def parse_files(file: str) -> None:
             if len(cleaned_annotations) == 0:
                 continue
             
-            transform_image(f"{file}/{path}.jpg", cleaned_annotations)
+            counter += 1
+            if counter == 50:
+                transform_image(f"{file}/{path}.jpg", cleaned_annotations)
+                break
 
 def main() -> None:
     parse_files("train")
-    print()
-    parse_files("val")
-
+    # parse_files("val")
 
 if __name__ == "__main__":
     main()
