@@ -1,11 +1,12 @@
 from json import load
 from thread_safe_counter import ThreadSafeCounter
+from collections import Counter
 from pprint import pprint as pp
 from math import floor, ceil
 import cv2
 from os import makedirs
 from os.path import exists
-from random import random, sample
+from random import sample
 from multiprocessing import Pool, cpu_count
 from tqdm import tqdm
 
@@ -15,11 +16,27 @@ SAVE_DIRECTORY = "balanced_mapillary_dataset"
 MAX_AMOUNT = 100
 TRAIN_FRAC = 0.8
 CROP_FRAC = 0.1
-class_amount = ThreadSafeCounter()
+class_amount = Counter()
 AMOUNT_OF_CLASSES = 401
 
+def resize_image(image, *, width, height, interpolation):
+    (h, w) = image.shape[:2]
+
+    if width is None and height is None:
+        return image
+
+    if width is None:
+        ratio = height / float(h)
+        dim = (int(w * ratio), height)
+    else:
+        ratio = width / float(w)
+        dim = (width, int(h * ratio))
+
+    resized = cv2.resize(image, dim, interpolation=interpolation)
+    return resized
+
 def parse_file(args) -> None:
-    (directory, path, amount) = args
+    (directory, path, amount, i) = args
 
     if len(class_amount) == AMOUNT_OF_CLASSES and all([v == 1 for v in class_amount.values()]):
         return
@@ -34,7 +51,8 @@ def parse_file(args) -> None:
     if annotations["ispano"]:
         return
 
-    for anno in annotations["objects"]:
+    image = cv2.imread(f"{DATASET_DIRECTORY}/{directory}/images/{path}.jpg")
+    for idx, anno in enumerate(annotations["objects"]):
         name = anno["label"]
 
         bbox = anno["bbox"]
@@ -46,8 +64,9 @@ def parse_file(args) -> None:
         if class_amount[name] < amount:
             class_amount[name] += 1
         else:
-            image = cv2.imread(f"{DATASET_DIRECTORY}/{directory}/images/{path}.jpg")
             image[y_min:y_max, x_min:x_max] = 0
+    
+    cv2.imwrite(f"s-{i}.jpg", resize_image(image, width=2048, height=1080, interpolation=cv2.INTER_AREA))
 
 def parse_files(directory: str) -> None:
     amount = MAX_AMOUNT * 0.8 if directory == "train" else MAX_AMOUNT
@@ -61,8 +80,12 @@ def parse_files(directory: str) -> None:
         (directory, path, amount)
         for path in paths
     ]
-    with Pool(processes=cpu_count()) as pool:
-        list(tqdm(pool.imap(parse_file, args_list), total=len(args_list)))
+    
+    for i, path in enumerate(paths):
+        print(f"Parsing {path}.")
+        parse_file((directory, path, amount, i))
+    # with Pool(processes=cpu_count()) as pool:
+    #     list(tqdm(pool.imap(parse_file, args_list), total=len(args_list)))
         
 def make_dataset() -> None:
     for directory in ["train", "val"]:
