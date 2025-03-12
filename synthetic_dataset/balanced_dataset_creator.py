@@ -1,6 +1,5 @@
 from json import load
 from thread_safe_counter import ThreadSafeCounter
-from collections import Counter
 from pprint import pprint as pp
 from math import floor, ceil
 import cv2
@@ -17,7 +16,7 @@ SAVE_DIRECTORY = "balanced_mapillary_dataset"
 MAX_AMOUNT = 100
 TRAIN_FRAC = 0.8
 CROP_FRAC = 0.1
-class_amount = Counter()
+class_amount = ThreadSafeCounter()
 AMOUNT_OF_CLASSES = 401
 
 IMAGE_TRANSFORM = A.Compose([
@@ -30,7 +29,6 @@ IMAGE_TRANSFORM = A.Compose([
     ], p=0.5),
     A.SomeOf([
         # More simulation of realistic camera conditions while driving
-        A.OpticalDistortion(),
         A.AdditiveNoise("gaussian"),
         A.RandomShadow(p=0.6),
         A.AutoContrast(method="pil"),
@@ -73,9 +71,6 @@ def resize_image(image, *, width, height, interpolation):
 def parse_file(args) -> None:
     (directory, path, amount) = args
 
-    if len(class_amount) == AMOUNT_OF_CLASSES and all([v == MAX_AMOUNT for v in class_amount.values()]):
-        return
-
     with open(f"{PATH_DIRECTORY}/annotations/{path}.json") as f:
         annotations = load(f)
 
@@ -88,11 +83,16 @@ def parse_file(args) -> None:
 
     objects = annotations["objects"]
     if all([class_amount[o["label"]] == MAX_AMOUNT for o in objects]):
-        print(f"Skipping {path}.json\n")
         return
     
     image = cv2.imread(f"{DATASET_DIRECTORY}/{directory}/images/{path}.jpg")
-    for idx, anno in enumerate(objects):
+    image = resize_image(image, width=2048, height=1080, interpolation=cv2.INTER_AREA)
+
+    with open(f"{DATASET_DIRECTORY}/{directory}/labels/{path}.txt") as f:
+        labels = f.read().splitlines()
+
+    new_labels = []
+    for idx, anno in enumerate(objects, start=0):
         name = anno["label"]
 
         bbox = anno["bbox"]
@@ -103,16 +103,26 @@ def parse_file(args) -> None:
 
         if class_amount[name] < amount:
             class_amount[name] += 1
+            new_labels.append(labels[idx])
         else:
             image[y_min:y_max, x_min:x_max] = 0
-        
-    image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+    
+    if len(new_labels) == 0:
+        return
+    
+    cv2.imwrite(f"{SAVE_DIRECTORY}/{directory}/images/{path}.jpg", image)
+    updated_labels = "\n".join(new_labels)
+    with open(f"{SAVE_DIRECTORY}/{directory}/labels/{path}.txt", "w") as f:
+        f.write(updated_labels)
 
+    image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
     for i in range(NUM_AUGMENTATIONS):
-        print(f"Augmenting {path}.json")
         augmented = IMAGE_TRANSFORM(image=image)['image']
-    # cv2.imwrite(f"s-{i}.jpg", resize_image(image, width=2048, height=1080, interpolation=cv2.INTER_AREA))
-    print()
+        augmented = cv2.cvtColor(augmented, cv2.COLOR_RGB2BGR)
+
+        cv2.imwrite(f"{SAVE_DIRECTORY}/{directory}/images/augmented_{i+1}-{path}.jpg", augmented)
+        with open(f"{SAVE_DIRECTORY}/{directory}/labels/augmented_{i+1}-{path}.txt", "w") as f:
+            f.write(updated_labels)
 
 def parse_files(directory: str) -> None:
     amount = MAX_AMOUNT * 0.8 if directory == "train" else MAX_AMOUNT
@@ -122,16 +132,16 @@ def parse_files(directory: str) -> None:
         paths = f.read().splitlines()
     paths = sample(paths, k=len(paths))
 
-    # args_list = [
-    #     (directory, path, amount)
-    #     for path in paths
-    # ]
+    args_list = [
+        (directory, path, amount)
+        for path in paths
+    ]
     
-    for path in paths:
-        print(f"Parsing {path}.")
-        parse_file((directory, path, amount))
-    # with Pool(processes=cpu_count()) as pool:
-    #     list(tqdm(pool.imap(parse_file, args_list), total=len(args_list)))
+    # for path in paths:
+    #     print(f"Parsing {path}.")
+    #     parse_file((directory, path, amount))
+    with Pool(processes=cpu_count()) as pool:
+        list(tqdm(pool.imap(parse_file, args_list), total=len(args_list)))
         
 def make_dataset() -> None:
     for directory in ["train", "val"]:
