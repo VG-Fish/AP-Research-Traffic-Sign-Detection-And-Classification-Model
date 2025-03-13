@@ -49,7 +49,3 @@ class ThreadSafeCollectionCounter:
     
     def reset(self):
         self._counter = Counter()
-    
-    def print(self):
-        from pprint import pprint as pp
-        pp(self._counter)
