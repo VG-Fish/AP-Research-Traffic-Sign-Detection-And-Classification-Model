@@ -69,11 +69,11 @@ def resize_image(image, *, width, height, interpolation):
     return resized
 
 def parse_file(args) -> None:
-    if times_till_last_update.value >= 250:
+    (directory, path, amount, times_till_last_update_bound) = args
+
+    if times_till_last_update.value >= times_till_last_update_bound:
         return
     
-    (directory, path, amount) = args
-
     with open(f"{PATH_DIRECTORY}/annotations/{path}.json") as f:
         annotations = load(f)
 
@@ -125,6 +125,9 @@ def parse_file(args) -> None:
     with open(f"{SAVE_DIRECTORY}/{directory}/labels/{path}.txt", "w") as f:
         f.write(updated_labels)
 
+    if directory == "val":
+        return
+    
     image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
     for i in range(NUM_AUGMENTATIONS):
         augmented = IMAGE_TRANSFORM(image=image)['image']
@@ -134,17 +137,18 @@ def parse_file(args) -> None:
         with open(f"{SAVE_DIRECTORY}/{directory}/labels/augmented_{i+1}-{path}.txt", "w") as f:
             f.write(updated_labels)
 
-def parse_files(directory: str) -> None:
-    amount = MAX_AMOUNT * 0.8 if directory == "train" else MAX_AMOUNT
+def parse_files(directory: str, times_till_last_update_bound: int) -> None:
+    amount = MAX_AMOUNT * 0.8 if directory == "train" else MAX_AMOUNT * 0.2
+    class_amount.reset()
     amount = ceil(amount)
 
     with open(f"{PATH_DIRECTORY}/splits/{directory}.txt") as f:
         paths = f.read().splitlines()
     paths = sample(paths, k=len(paths))
 
-    args_list = [(directory, path, amount) for path in paths]
+    args_list = [(directory, path, amount, times_till_last_update_bound) for path in paths]
     with Pool(processes=cpu_count()) as pool:
-        list(tqdm(pool.map(parse_file, args_list, 8), total=len(args_list)))
+        list(tqdm(pool.imap(parse_file, args_list, chunksize=4), total=len(args_list)))
         
 def make_dataset() -> None:
     for directory in ["train", "val"]:
@@ -155,12 +159,13 @@ def main() -> None:
     make_dataset()
     print("Created the directories.")
 
-    parse_files("train")
+    parse_files("train", 150)
     print("Finished creating the train subdirectory.")
 
     times_till_last_update.set_val(0)
+    class_amount.reset()
 
-    parse_files("val")
+    parse_files("val", 20)
     print("Finished creating the val subdirectory.")
 
     pp(class_amount)

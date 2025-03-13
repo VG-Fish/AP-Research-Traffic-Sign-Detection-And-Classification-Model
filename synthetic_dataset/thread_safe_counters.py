@@ -46,3 +46,9 @@ class ThreadSafeCollectionCounter:
     def values(self):
         with self._lock:
             return self._counter.values()
+    
+    def reset(self):
+        self._counter = Counter()
+    
+    def __repr__(self):
+        return self._counter
