@@ -1,5 +1,5 @@
 from json import load
-from thread_safe_counter import ThreadSafeCounter
+from thread_safe_counters import ThreadSafeCollectionCounter, ThreadSafeCounter
 from pprint import pprint as pp
 from math import floor, ceil
 import cv2
@@ -15,8 +15,8 @@ DATASET_DIRECTORY = "mapillary_dataset"
 SAVE_DIRECTORY = "balanced_mapillary_dataset"
 MAX_AMOUNT = 100
 TRAIN_FRAC = 0.8
-CROP_FRAC = 0.1
-class_amount = ThreadSafeCounter()
+class_amount = ThreadSafeCollectionCounter()
+times_till_last_update = ThreadSafeCounter()
 AMOUNT_OF_CLASSES = 401
 
 IMAGE_TRANSFORM = A.Compose([
@@ -69,6 +69,9 @@ def resize_image(image, *, width, height, interpolation):
     return resized
 
 def parse_file(args) -> None:
+    if times_till_last_update.value >= 250:
+        return
+    
     (directory, path, amount) = args
 
     with open(f"{PATH_DIRECTORY}/annotations/{path}.json") as f:
@@ -86,9 +89,13 @@ def parse_file(args) -> None:
         return
     
     image = cv2.imread(f"{DATASET_DIRECTORY}/{directory}/images/{path}.jpg")
-    image = resize_image(image, width=2048, height=1080, interpolation=cv2.INTER_AREA)
 
-    with open(f"{DATASET_DIRECTORY}/{directory}/labels/{path}.txt") as f:
+    label_path = f"{DATASET_DIRECTORY}/{directory}/labels/{path}.txt"
+    if not exists(label_path):
+        print(f"{label_path} doesn't exist.")
+        return
+    
+    with open(label_path) as f:
         labels = f.read().splitlines()
 
     new_labels = []
@@ -108,9 +115,12 @@ def parse_file(args) -> None:
             image[y_min:y_max, x_min:x_max] = 0
     
     if len(new_labels) == 0:
+        times_till_last_update.add(1)
         return
     
+    image = resize_image(image, width=2048, height=1080, interpolation=cv2.INTER_AREA)
     cv2.imwrite(f"{SAVE_DIRECTORY}/{directory}/images/{path}.jpg", image)
+    
     updated_labels = "\n".join(new_labels)
     with open(f"{SAVE_DIRECTORY}/{directory}/labels/{path}.txt", "w") as f:
         f.write(updated_labels)
@@ -132,22 +142,14 @@ def parse_files(directory: str) -> None:
         paths = f.read().splitlines()
     paths = sample(paths, k=len(paths))
 
-    args_list = [
-        (directory, path, amount)
-        for path in paths
-    ]
-    
-    # for path in paths:
-    #     print(f"Parsing {path}.")
-    #     parse_file((directory, path, amount))
+    args_list = [(directory, path, amount) for path in paths]
     with Pool(processes=cpu_count()) as pool:
-        list(tqdm(pool.imap(parse_file, args_list), total=len(args_list)))
+        list(tqdm(pool.map(parse_file, args_list, 8), total=len(args_list)))
         
 def make_dataset() -> None:
     for directory in ["train", "val"]:
-        if not exists(f"{SAVE_DIRECTORY}/{directory}"):
-            makedirs(f"{SAVE_DIRECTORY}/{directory}/images")
-            makedirs(f"{SAVE_DIRECTORY}/{directory}/labels")
+        makedirs(f"{SAVE_DIRECTORY}/{directory}/images", exist_ok=True)
+        makedirs(f"{SAVE_DIRECTORY}/{directory}/labels", exist_ok=True)
 
 def main() -> None:
     make_dataset()
@@ -155,6 +157,8 @@ def main() -> None:
 
     parse_files("train")
     print("Finished creating the train subdirectory.")
+
+    times_till_last_update.set_val(0)
 
     parse_files("val")
     print("Finished creating the val subdirectory.")
