@@ -1,8 +1,9 @@
 from json import load
 from os import makedirs
+from os.path import exists
 
 ORIGIN_DIRECTORY = "mtsd_v2_fully_annotated"
-WRITE_DIRECTORY = "mapillary_dataset"
+WRITE_DIRECTORY = "balanced_mapillary_dataset"
 
 classes = {
     "other-sign": 1,
@@ -447,6 +448,20 @@ def convert(directory: str) -> None:
 
         with open(f"{WRITE_DIRECTORY}/{directory}/labels/{path}-pose.txt", "w") as f:
             f.write("\n".join(image_pose_annotations))
+        
+        idx = 1
+        while True:
+            augmented_path = f"{WRITE_DIRECTORY}/{directory}/labels/augmented_{idx}-{path}.txt"
+            if not exists(augmented_path):
+                break
+            
+            with open(augmented_path, "w") as f:
+                    f.write("\n".join(image_annotations))
+                
+            with open(f"{WRITE_DIRECTORY}/{directory}/labels/augmented_{idx}-{path}-pose.txt", "w") as f:
+                f.write("\n".join(image_pose_annotations))
+            
+            idx += 1
 
 convert("train")
 convert("val")

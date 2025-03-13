@@ -4,7 +4,7 @@ import torch
 pose_model = YOLO("models/yolo11n-pose.pt")
 
 # Converting pose model to detect
-model = YOLO("train/detect_rare_model_2/weights/best.pt").load(pose_model.model)
+model = YOLO("models/yolo11n.pt").load(pose_model.model)
 model.ckpt = {"model": model.model}
 
 # Clearing memory 
