@@ -168,7 +168,7 @@ def main() -> None:
     parse_files("val", 20)
     print("Finished creating the val subdirectory.")
 
-    pp(class_amount)
+    class_amount.print()
 
 if __name__ == "__main__":
     main()

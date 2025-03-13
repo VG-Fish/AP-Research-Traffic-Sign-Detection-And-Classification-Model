@@ -50,5 +50,6 @@ class ThreadSafeCollectionCounter:
     def reset(self):
         self._counter = Counter()
     
-    def __repr__(self):
-        return self._counter
+    def print(self):
+        from pprint import pprint as pp
+        pp(self._counter)
