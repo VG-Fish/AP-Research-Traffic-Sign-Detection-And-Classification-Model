@@ -18,7 +18,7 @@ class ThreadSafeCounter:
     def value(self):
         return self.count
 
-class ThreadSafeCollectionCounter:
+class ThreadSafeCollectionCounter(Counter):
     def __init__(self):
         self._counter: Counter = Counter()
         self._lock = Lock()
@@ -48,4 +48,4 @@ class ThreadSafeCollectionCounter:
             return self._counter.values()
     
     def reset(self):
-        self._counter = Counter()
+        self._counter.clear()
