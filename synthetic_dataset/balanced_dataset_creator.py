@@ -1,5 +1,5 @@
 from json import load
-from thread_safe_counter import ThreadSafeCounter
+from process_safe_counter import ProcessSafeCounter
 from collections import Counter
 from pprint import pprint as pp
 from math import floor, ceil
@@ -19,7 +19,7 @@ DESIRED_TYPE = "1.0-minority"
 MAX_AMOUNT = 200
 TRAIN_FRAC = 0.8
 class_amount = Counter()
-times_till_last_update = ThreadSafeCounter()
+times_till_last_update = ProcessSafeCounter()
 AMOUNT_OF_CLASSES = 401
 
 IMAGE_TRANSFORM = A.Compose([
@@ -75,6 +75,7 @@ def parse_file(args) -> None:
     (directory, path, amount, times_till_last_update_bound, directory_class_amount) = args
 
     if times_till_last_update.value >= times_till_last_update_bound:
+        print(f"bound: {path}")
         return
     
     with open(f"{PATH_DIRECTORY}/annotations/{path}.json") as f:
@@ -118,7 +119,8 @@ def parse_file(args) -> None:
             image[y_min:y_max, x_min:x_max] = 0
     
     if len(new_labels) == 0:
-        times_till_last_update.add(1)
+        print(f"label: {path}")
+        times_till_last_update.change(1)
         return
     
     image = resize_image(image, width=2048, height=1080, interpolation=cv2.INTER_AREA)
@@ -182,7 +184,7 @@ def make_classes_equal(directory: str) -> None:
         # Randomize the list
         shuffle(paths)
 
-        amount = (MAX_AMOUNT - class_amount[traffic_sign_class]) // NUM_AUGMENTATIONS
+        amount = (MAX_AMOUNT - class_amount[traffic_sign_class]) / NUM_AUGMENTATIONS
         amount = amount * 0.8 if directory == "train" else amount * 0.2
         amount = ceil(amount)
         
@@ -192,7 +194,7 @@ def make_classes_equal(directory: str) -> None:
 
             args_list = [(directory, path, amount, 1, directory_class_amount) for path in paths]
             with Pool(processes=cpu_count()) as pool:
-                list(tqdm(pool.imap(parse_file, args_list, chunksize=4), total=len(args_list)))
+                list(tqdm(pool.imap(parse_file, args_list, chunksize=2), total=len(args_list)))
             
             class_amount.update(dict(directory_class_amount))
 
