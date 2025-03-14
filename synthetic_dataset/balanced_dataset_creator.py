@@ -1,12 +1,13 @@
 from json import load
-from thread_safe_counters import ThreadSafeCollectionCounter, ThreadSafeCounter
+from thread_safe_counter import ThreadSafeCounter
+from collections import Counter
 from pprint import pprint as pp
 from math import floor, ceil
 import cv2
 from os import makedirs
 from os.path import exists
 from random import sample
-from multiprocessing import Pool, cpu_count
+from multiprocessing import Pool, cpu_count, Manager
 from tqdm import tqdm
 import albumentations as A
 
@@ -15,7 +16,7 @@ DATASET_DIRECTORY = "mapillary_dataset"
 SAVE_DIRECTORY = "balanced_mapillary_dataset"
 MAX_AMOUNT = 100
 TRAIN_FRAC = 0.8
-class_amount = ThreadSafeCollectionCounter()
+class_amount = Counter()
 times_till_last_update = ThreadSafeCounter()
 AMOUNT_OF_CLASSES = 401
 
@@ -69,7 +70,7 @@ def resize_image(image, *, width, height, interpolation):
     return resized
 
 def parse_file(args) -> None:
-    (directory, path, amount, times_till_last_update_bound) = args
+    (directory, path, amount, times_till_last_update_bound, directory_class_amount) = args
 
     if times_till_last_update.value >= times_till_last_update_bound:
         return
@@ -85,7 +86,7 @@ def parse_file(args) -> None:
         return
 
     objects = annotations["objects"]
-    if all([class_amount[o["label"]] == MAX_AMOUNT for o in objects]):
+    if all([directory_class_amount.get(o["label"], 0) == MAX_AMOUNT for o in objects]):
         return
     
     image = cv2.imread(f"{DATASET_DIRECTORY}/{directory}/images/{path}.jpg")
@@ -108,8 +109,8 @@ def parse_file(args) -> None:
         y_min = floor(bbox["ymin"])
         y_max = ceil(bbox["ymax"])
 
-        if class_amount[name] < amount:
-            class_amount[name] += 1
+        if directory_class_amount.setdefault(name, 0) < amount:
+            directory_class_amount[name] += 1
             new_labels.append(labels[idx])
         else:
             image[y_min:y_max, x_min:x_max] = 0
@@ -139,16 +140,21 @@ def parse_file(args) -> None:
 
 def parse_files(directory: str, times_till_last_update_bound: int) -> None:
     amount = MAX_AMOUNT * 0.8 if directory == "train" else MAX_AMOUNT * 0.2
-    class_amount.reset()
+
     amount = ceil(amount)
 
     with open(f"{PATH_DIRECTORY}/splits/{directory}.txt") as f:
         paths = f.read().splitlines()
     paths = sample(paths, k=len(paths))
 
-    args_list = [(directory, path, amount, times_till_last_update_bound) for path in paths]
-    with Pool(processes=cpu_count()) as pool:
-        list(tqdm(pool.imap(parse_file, args_list, chunksize=4), total=len(args_list)))
+    with Manager() as manager:
+        directory_class_amount = manager.dict()
+
+        args_list = [(directory, path, amount, times_till_last_update_bound, directory_class_amount) for path in paths]
+        with Pool(processes=cpu_count()) as pool:
+            list(tqdm(pool.imap(parse_file, args_list, chunksize=4), total=len(args_list)))
+        
+        class_amount.update(dict(directory_class_amount))
         
 def make_dataset() -> None:
     for directory in ["train", "val"]:
@@ -159,13 +165,12 @@ def main() -> None:
     make_dataset()
     print("Created the directories.")
 
-    parse_files("train", 150)
+    parse_files("train", 1)
     print("Finished creating the train subdirectory.")
 
     times_till_last_update.set_val(0)
-    class_amount.reset()
 
-    parse_files("val", 20)
+    parse_files("val", 1)
     print("Finished creating the val subdirectory.")
 
 if __name__ == "__main__":
