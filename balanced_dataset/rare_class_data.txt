@@ -2,109 +2,19 @@
 warning--traffic-merges-right--g1:
 
 Bound: 1.0-minority
-The number of images in the val directory: 7.
+The number of images in the val directory: 29.
 
 -------------------------
 warning--added-lane-right--g1:
 
 Bound: 1.0-minority
-The number of images in the train directory: 1.
+The number of images in the val directory: 6.
 
 -------------------------
 warning--playground--g1:
 
 Bound: 1.0-minority
-The number of images in the val directory: 2.
-
--------------------------
-warning--pedestrian-stumble-train--g1:
-
-Bound: 1.0-minority
-The number of images in the train directory: 4.
-
--------------------------
-regulatory--maximum-speed-limit-55--g2:
-
-Bound: 1.0-minority
-The number of images in the val directory: 4.
-
--------------------------
-warning--domestic-animals--g3:
-
-Bound: 1.0-minority
-The number of images in the val directory: 1.
-
--------------------------
-warning--traffic-merges-left--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 1.
-
--------------------------
-warning--texts--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 10.
-
--------------------------
-complementary--maximum-speed-limit-20--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 4.
-
--------------------------
-regulatory--no-parking--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 21.
-
--------------------------
-warning--roadworks--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 3.
-
--------------------------
-complementary--turn-left--g2:
-
-Bound: 1.0-minority
-The number of images in the val directory: 1.
-
--------------------------
-warning--double-curve-first-right--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 9.
-
--------------------------
-information--end-of-motorway--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 1.
-
--------------------------
-warning--junction-with-a-side-road-acute-left--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 2.
-
--------------------------
-regulatory--no-heavy-goods-vehicles--g2:
-
-Bound: 1.0-minority
-The number of images in the val directory: 4.
-
--------------------------
-regulatory--no-parking--g5:
-
-Bound: 1.0-minority
-The number of images in the val directory: 7.
-
--------------------------
-complementary--chevron-left--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 33.
+The number of images in the val directory: 5.
 
 -------------------------
 other-sign:
@@ -113,691 +23,619 @@ Bound: 1.0-minority
 The number of images in the val directory: 0.
 
 -------------------------
-regulatory--end-of-prohibition--g1:
+information--lodging--g1:
 
 Bound: 1.0-minority
-The number of images in the val directory: 3.
+The number of images in the val directory: 2.
 
 -------------------------
 regulatory--no-stopping--g15:
 
 Bound: 1.0-minority
-The number of images in the val directory: 21.
-
--------------------------
-warning--other-danger--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 3.
-
--------------------------
-information--stairs--g1:
-
-Bound: 1.0-minority
-The number of images in the train directory: 2.
-
--------------------------
-regulatory--no-entry--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 21.
-
--------------------------
-warning--curve-right--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 19.
-
--------------------------
-regulatory--maximum-speed-limit-30--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 14.
-
--------------------------
-regulatory--maximum-speed-limit-50--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 15.
-
--------------------------
-complementary--pass-right--g1:
-
-Bound: 1.0-minority
-The number of images in the train directory: 9.
-
--------------------------
-complementary--chevron-right--g4:
-
-Bound: 1.0-minority
-The number of images in the val directory: 2.
-
--------------------------
-warning--t-roads--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 3.
-
--------------------------
-warning--junction-with-a-side-road-perpendicular-right--g3:
-
-Bound: 1.0-minority
-The number of images in the val directory: 6.
-
--------------------------
-regulatory--no-hawkers--g1:
-
-Bound: 1.0-minority
-The number of images in the train directory: 6.
-
--------------------------
-information--disabled-persons--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 4.
-
--------------------------
-warning--pedestrians-crossing--g4:
-
-Bound: 1.0-minority
-The number of images in the val directory: 17.
-
--------------------------
-regulatory--stop--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 11.
-
--------------------------
-regulatory--no-parking--g2:
-
-Bound: 1.0-minority
-The number of images in the val directory: 5.
-
--------------------------
-warning--double-curve-first-left--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 6.
-
--------------------------
-regulatory--maximum-speed-limit-40--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 23.
-
--------------------------
-warning--road-bump--g2:
-
-Bound: 1.0-minority
-The number of images in the val directory: 15.
-
--------------------------
-regulatory--yield--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 30.
-
--------------------------
-information--parking--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 17.
-
--------------------------
-warning--narrow-bridge--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 7.
-
--------------------------
-information--pedestrians-crossing--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 39.
-
--------------------------
-warning--curve-left--g2:
-
-Bound: 1.0-minority
-The number of images in the val directory: 29.
-
--------------------------
-regulatory--no-overtaking--g5:
-
-Bound: 1.0-minority
-The number of images in the val directory: 26.
-
--------------------------
-regulatory--maximum-speed-limit-60--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 13.
-
--------------------------
-regulatory--give-way-to-oncoming-traffic--g1:
-
-Bound: 1.0-minority
-The number of images in the train directory: 15.
-
--------------------------
-warning--children--g2:
-
-Bound: 1.0-minority
-The number of images in the val directory: 14.
-
--------------------------
-warning--crossroads--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 4.
-
--------------------------
-warning--junction-with-a-side-road-perpendicular-right--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 9.
-
--------------------------
-regulatory--one-way-left--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 6.
-
--------------------------
-regulatory--one-way-right--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 7.
-
--------------------------
-information--pedestrians-crossing--g2:
-
-Bound: 1.0-minority
-The number of images in the val directory: 1.
-
--------------------------
-warning--wild-animals--g4:
-
-Bound: 1.0-minority
-The number of images in the train directory: 8.
-
--------------------------
-regulatory--no-overtaking--g4:
-
-Bound: 1.0-minority
-The number of images in the val directory: 4.
-
--------------------------
-regulatory--passing-lane-ahead--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 2.
-
--------------------------
-regulatory--no-motor-vehicles-except-motorcycles--g2:
-
-Bound: 1.0-minority
-The number of images in the val directory: 2.
-
--------------------------
-information--safety-area--g2:
-
-Bound: 1.0-minority
-The number of images in the val directory: 4.
-
--------------------------
-warning--curve-right--g2:
-
-Bound: 1.0-minority
-The number of images in the val directory: 24.
-
--------------------------
-regulatory--maximum-speed-limit-20--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 2.
-
--------------------------
-regulatory--no-overtaking--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 5.
-
--------------------------
-warning--road-narrows--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 4.
-
--------------------------
-warning--road-narrows-left--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 1.
-
--------------------------
-warning--trucks-crossing--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 6.
-
--------------------------
-regulatory--bicycles-only--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 3.
-
--------------------------
-warning--pedestrians-crossing--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 11.
-
--------------------------
-complementary--chevron-right--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 30.
-
--------------------------
-complementary--maximum-speed-limit-70--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 1.
-
--------------------------
-warning--winding-road-first-right--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 6.
-
--------------------------
-warning--curve-left--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 12.
-
--------------------------
-warning--domestic-animals--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 3.
-
--------------------------
-regulatory--triple-lanes-turn-left-center-lane--g1:
-
-Bound: 1.0-minority
-The number of images in the train directory: 6.
-
--------------------------
-warning--double-curve-first-right--g2:
-
-Bound: 1.0-minority
-The number of images in the val directory: 3.
-
--------------------------
-complementary--maximum-speed-limit-45--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 6.
-
--------------------------
-warning--turn-left--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 2.
-
--------------------------
-information--limited-access-road--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 1.
-
--------------------------
-regulatory--keep-right--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 7.
-
--------------------------
-warning--traffic-merges-right--g2:
-
-Bound: 1.0-minority
-The number of images in the val directory: 2.
-
--------------------------
-regulatory--maximum-speed-limit-120--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 2.
-
--------------------------
-complementary--chevron-right--g3:
-
-Bound: 1.0-minority
-The number of images in the val directory: 5.
-
--------------------------
-regulatory--maximum-speed-limit-90--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 8.
-
--------------------------
-regulatory--maximum-speed-limit-70--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 7.
-
--------------------------
-regulatory--maximum-speed-limit-80--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 13.
-
--------------------------
-regulatory--keep-right--g4:
-
-Bound: 1.0-minority
-The number of images in the val directory: 8.
+The number of images in the val directory: 101.
 
 -------------------------
 regulatory--priority-road--g4:
 
 Bound: 1.0-minority
-The number of images in the val directory: 19.
+The number of images in the val directory: 101.
 
 -------------------------
-regulatory--end-of-maximum-speed-limit-70--g2:
+information--parking--g1:
 
 Bound: 1.0-minority
-The number of images in the val directory: 4.
+The number of images in the val directory: 101.
 
 -------------------------
-warning--turn-right--g1:
+complementary--turn-right--g2:
 
 Bound: 1.0-minority
-The number of images in the val directory: 9.
+The number of images in the val directory: 10.
 
 -------------------------
-complementary--keep-left--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 6.
-
--------------------------
-warning--roadworks--g4:
-
-Bound: 1.0-minority
-The number of images in the val directory: 1.
-
--------------------------
-warning--two-way-traffic--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 1.
-
--------------------------
-regulatory--no-heavy-goods-vehicles--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 6.
-
--------------------------
-warning--traffic-signals--g4:
-
-Bound: 1.0-minority
-The number of images in the val directory: 1.
-
--------------------------
-warning--crossroads--g3:
-
-Bound: 1.0-minority
-The number of images in the val directory: 4.
-
--------------------------
-warning--divided-highway-ends--g2:
-
-Bound: 1.0-minority
-The number of images in the val directory: 6.
-
--------------------------
-complementary--chevron-right--g5:
+warning--pedestrian-stumble-train--g1:
 
 Bound: 1.0-minority
 The number of images in the val directory: 3.
 
 -------------------------
-warning--roundabout--g1:
+regulatory--maximum-speed-limit-45--g3:
 
 Bound: 1.0-minority
-The number of images in the val directory: 6.
+The number of images in the val directory: 12.
 
 -------------------------
-information--parking--g5:
+regulatory--stop--g1:
 
 Bound: 1.0-minority
-The number of images in the val directory: 2.
+The number of images in the val directory: 101.
 
 -------------------------
-warning--traffic-signals--g1:
+warning--railroad-crossing--g1:
 
 Bound: 1.0-minority
-The number of images in the val directory: 3.
+The number of images in the val directory: 10.
 
 -------------------------
-complementary--distance--g1:
+information--end-of-built-up-area--g1:
 
 Bound: 1.0-minority
-The number of images in the val directory: 5.
-
--------------------------
-complementary--distance--g2:
-
-Bound: 1.0-minority
-The number of images in the val directory: 8.
-
--------------------------
-regulatory--no-straight-through--g2:
-
-Bound: 1.0-minority
-The number of images in the val directory: 2.
-
--------------------------
-warning--texts--g3:
-
-Bound: 1.0-minority
-The number of images in the val directory: 3.
-
--------------------------
-warning--horizontal-alignment-left--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 6.
-
--------------------------
-complementary--maximum-speed-limit-30--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 3.
-
--------------------------
-warning--railroad-crossing-without-barriers--g4:
-
-Bound: 1.0-minority
-The number of images in the val directory: 2.
-
--------------------------
-regulatory--parking-restrictions--g2:
-
-Bound: 1.0-minority
-The number of images in the val directory: 1.
-
--------------------------
-regulatory--no-parking-or-no-stopping--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 5.
+The number of images in the val directory: 10.
 
 -------------------------
 regulatory--pedestrians-only--g1:
 
 Bound: 1.0-minority
-The number of images in the val directory: 3.
+The number of images in the val directory: 19.
 
 -------------------------
-warning--junction-with-a-side-road-perpendicular-left--g1:
+regulatory--no-entry--g1:
 
 Bound: 1.0-minority
-The number of images in the val directory: 7.
+The number of images in the val directory: 101.
 
 -------------------------
-regulatory--radar-enforced--g1:
+regulatory--one-way-straight--g1:
 
 Bound: 1.0-minority
-The number of images in the val directory: 1.
+The number of images in the val directory: 53.
 
 -------------------------
-complementary--maximum-speed-limit-75--g1:
+complementary--maximum-speed-limit-15--g1:
 
 Bound: 1.0-minority
-The number of images in the val directory: 4.
+The number of images in the val directory: 10.
 
 -------------------------
-warning--pedestrians-crossing--g5:
+regulatory--keep-right--g4:
 
 Bound: 1.0-minority
-The number of images in the val directory: 8.
+The number of images in the val directory: 68.
 
 -------------------------
-warning--flaggers-in-road--g1:
+regulatory--yield--g1:
 
 Bound: 1.0-minority
-The number of images in the val directory: 8.
+The number of images in the val directory: 101.
 
 -------------------------
-warning--bus-stop-ahead--g3:
-
-Bound: 1.0-minority
-The number of images in the val directory: 3.
-
--------------------------
-regulatory--no-stopping--g8:
-
-Bound: 1.0-minority
-The number of images in the val directory: 1.
-
--------------------------
-regulatory--no-motor-vehicles-except-motorcycles--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 1.
-
--------------------------
-warning--kangaloo-crossing--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 8.
-
--------------------------
-warning--winding-road-first-left--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 9.
-
--------------------------
-warning--winding-road-first-right--g3:
-
-Bound: 1.0-minority
-The number of images in the val directory: 2.
-
--------------------------
-regulatory--maximum-speed-limit-25--g2:
-
-Bound: 1.0-minority
-The number of images in the val directory: 3.
-
--------------------------
-regulatory--no-left-turn--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 8.
-
--------------------------
-regulatory--turn-right--g2:
-
-Bound: 1.0-minority
-The number of images in the val directory: 3.
-
--------------------------
-regulatory--turn-right-ahead--g2:
-
-Bound: 1.0-minority
-The number of images in the val directory: 1.
-
--------------------------
-regulatory--keep-right--g2:
-
-Bound: 1.0-minority
-The number of images in the val directory: 2.
-
--------------------------
-complementary--obstacle-delineator--g2:
+warning--pedestrians-crossing--g10:
 
 Bound: 1.0-minority
 The number of images in the val directory: 6.
 
 -------------------------
-regulatory--no-right-turn--g1:
+regulatory--reversible-lanes--g2:
 
 Bound: 1.0-minority
-The number of images in the val directory: 3.
+The number of images in the val directory: 14.
 
 -------------------------
-warning--horizontal-alignment-right--g1:
+regulatory--turn-left--g2:
 
 Bound: 1.0-minority
-The number of images in the val directory: 5.
+The number of images in the val directory: 30.
 
 -------------------------
-regulatory--no-stopping--g2:
+regulatory--no-parking--g2:
 
 Bound: 1.0-minority
-The number of images in the val directory: 5.
+The number of images in the val directory: 60.
 
 -------------------------
-warning--children--g1:
+regulatory--one-way-right--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 32.
+
+-------------------------
+regulatory--one-way-left--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 44.
+
+-------------------------
+warning--divided-highway-ends--g1:
 
 Bound: 1.0-minority
 The number of images in the val directory: 9.
 
 -------------------------
-regulatory--end-of-speed-limit-zone--g1:
+regulatory--maximum-speed-limit-55--g2:
 
 Bound: 1.0-minority
-The number of images in the val directory: 3.
+The number of images in the val directory: 15.
 
 -------------------------
-regulatory--end-of-no-parking--g1:
+information--pedestrians-crossing--g1:
 
 Bound: 1.0-minority
-The number of images in the train directory: 9.
+The number of images in the val directory: 101.
 
 -------------------------
-complementary--maximum-speed-limit-55--g1:
+regulatory--no-right-turn--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 38.
+
+-------------------------
+information--tram-bus-stop--g2:
+
+Bound: 1.0-minority
+The number of images in the val directory: 42.
+
+-------------------------
+regulatory--turn-right-ahead--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 23.
+
+-------------------------
+regulatory--no-overtaking--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 27.
+
+-------------------------
+regulatory--height-limit--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 44.
+
+-------------------------
+warning--domestic-animals--g3:
 
 Bound: 1.0-minority
 The number of images in the val directory: 5.
 
 -------------------------
-warning--accidental-area-unsure--g2:
+warning--traffic-merges-left--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 10.
+
+-------------------------
+regulatory--maximum-speed-limit-35--g2:
+
+Bound: 1.0-minority
+The number of images in the val directory: 21.
+
+-------------------------
+regulatory--keep-right--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 101.
+
+-------------------------
+complementary--priority-route-at-intersection--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 5.
+
+-------------------------
+warning--texts--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 18.
+
+-------------------------
+complementary--maximum-speed-limit-20--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 15.
+
+-------------------------
+information--disabled-persons--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 26.
+
+-------------------------
+warning--crossroads--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 21.
+
+-------------------------
+regulatory--no-parking--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 101.
+
+-------------------------
+warning--roadworks--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 36.
+
+-------------------------
+complementary--turn-left--g2:
+
+Bound: 1.0-minority
+The number of images in the val directory: 22.
+
+-------------------------
+warning--double-curve-first-right--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 16.
+
+-------------------------
+regulatory--turn-left-ahead--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 7.
+
+-------------------------
+regulatory--no-heavy-goods-vehicles--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 42.
+
+-------------------------
+regulatory--no-motor-vehicles-except-motorcycles--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 8.
+
+-------------------------
+regulatory--maximum-speed-limit-30--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 82.
+
+-------------------------
+regulatory--no-motorcycles--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 8.
+
+-------------------------
+complementary--chevron-left--g2:
+
+Bound: 1.0-minority
+The number of images in the val directory: 16.
+
+-------------------------
+complementary--chevron-left--g3:
+
+Bound: 1.0-minority
+The number of images in the val directory: 29.
+
+-------------------------
+complementary--chevron-right--g3:
+
+Bound: 1.0-minority
+The number of images in the val directory: 27.
+
+-------------------------
+information--end-of-motorway--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 15.
+
+-------------------------
+regulatory--maximum-speed-limit-50--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 81.
+
+-------------------------
+warning--texts--g3:
+
+Bound: 1.0-minority
+The number of images in the val directory: 21.
+
+-------------------------
+warning--junction-with-a-side-road-acute-left--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 16.
+
+-------------------------
+regulatory--no-heavy-goods-vehicles--g2:
+
+Bound: 1.0-minority
+The number of images in the val directory: 55.
+
+-------------------------
+regulatory--maximum-speed-limit-10--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 12.
+
+-------------------------
+regulatory--roundabout--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 39.
+
+-------------------------
+warning--texts--g2:
+
+Bound: 1.0-minority
+The number of images in the val directory: 35.
+
+-------------------------
+warning--pedestrians-crossing--g4:
+
+Bound: 1.0-minority
+The number of images in the val directory: 101.
+
+-------------------------
+complementary--keep-left--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 38.
+
+-------------------------
+warning--slippery-road-surface--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 30.
+
+-------------------------
+warning--double-curve-first-right--g2:
+
+Bound: 1.0-minority
+The number of images in the val directory: 13.
+
+-------------------------
+regulatory--no-parking--g5:
+
+Bound: 1.0-minority
+The number of images in the val directory: 52.
+
+-------------------------
+complementary--obstacle-delineator--g2:
+
+Bound: 1.0-minority
+The number of images in the val directory: 48.
+
+-------------------------
+regulatory--keep-left--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 52.
+
+-------------------------
+warning--railroad-crossing-without-barriers--g4:
+
+Bound: 1.0-minority
+The number of images in the val directory: 19.
+
+-------------------------
+complementary--chevron-left--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 90.
+
+-------------------------
+regulatory--end-of-prohibition--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 9.
+
+-------------------------
+warning--junction-with-a-side-road-perpendicular-right--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 35.
+
+-------------------------
+warning--roundabout--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 18.
+
+-------------------------
+complementary--obstacle-delineator--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 25.
+
+-------------------------
+regulatory--maximum-speed-limit-45--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 8.
+
+-------------------------
+regulatory--weight-limit--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 25.
+
+-------------------------
+warning--slippery-road-surface--g2:
+
+Bound: 1.0-minority
+The number of images in the val directory: 28.
+
+-------------------------
+complementary--distance--g3:
+
+Bound: 1.0-minority
+The number of images in the val directory: 38.
+
+-------------------------
+warning--junction-with-a-side-road-perpendicular-left--g3:
+
+Bound: 1.0-minority
+The number of images in the val directory: 19.
+
+-------------------------
+regulatory--go-straight--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 50.
+
+-------------------------
+information--road-bump--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 11.
+
+-------------------------
+warning--children--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 29.
+
+-------------------------
+regulatory--maximum-speed-limit-40--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 101.
+
+-------------------------
+warning--other-danger--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 46.
+
+-------------------------
+regulatory--no-buses--g3:
+
+Bound: 1.0-minority
+The number of images in the val directory: 7.
+
+-------------------------
+regulatory--no-heavy-goods-vehicles--g4:
+
+Bound: 1.0-minority
+The number of images in the val directory: 38.
+
+-------------------------
+complementary--chevron-right-unsure--g6:
+
+Bound: 1.0-minority
+The number of images in the val directory: 15.
+
+-------------------------
+complementary--chevron-right--g5:
+
+Bound: 1.0-minority
+The number of images in the val directory: 28.
+
+-------------------------
+complementary--chevron-right--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 98.
+
+-------------------------
+information--stairs--g1:
 
 Bound: 1.0-minority
 The number of images in the train directory: 17.
 
 -------------------------
-complementary--chevron-left--g3:
+warning--curve-right--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 33.
+
+-------------------------
+complementary--pass-right--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 9.
+
+-------------------------
+complementary--chevron-right--g4:
+
+Bound: 1.0-minority
+The number of images in the val directory: 5.
+
+-------------------------
+warning--t-roads--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 4.
+
+-------------------------
+regulatory--no-u-turn--g2:
+
+Bound: 1.0-minority
+The number of images in the val directory: 6.
+
+-------------------------
+warning--junction-with-a-side-road-perpendicular-right--g3:
+
+Bound: 1.0-minority
+The number of images in the val directory: 22.
+
+-------------------------
+warning--horizontal-alignment-right--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 11.
+
+-------------------------
+warning--pedestrians-crossing--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 37.
+
+-------------------------
+regulatory--keep-left--g2:
+
+Bound: 1.0-minority
+The number of images in the val directory: 14.
+
+-------------------------
+warning--wombat-crossing--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 7.
+
+-------------------------
+regulatory--no-hawkers--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 2.
+
+-------------------------
+warning--railroad-crossing-with-barriers--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 10.
+
+-------------------------
+warning--uneven-road--g2:
+
+Bound: 1.0-minority
+The number of images in the val directory: 6.
+
+-------------------------
+complementary--extent-of-prohibition-area-both-direction--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 18.
+
+-------------------------
+warning--t-roads--g2:
 
 Bound: 1.0-minority
 The number of images in the val directory: 6.
@@ -806,118 +644,976 @@ The number of images in the val directory: 6.
 regulatory--turn-left--g1:
 
 Bound: 1.0-minority
-The number of images in the val directory: 3.
+The number of images in the val directory: 19.
 
 -------------------------
-regulatory--road-closed-to-vehicles--g1:
+regulatory--turn-left--g3:
 
 Bound: 1.0-minority
-The number of images in the train directory: 7.
+The number of images in the val directory: 13.
 
 -------------------------
-warning--texts--g2:
+information--parking--g3:
 
 Bound: 1.0-minority
-The number of images in the val directory: 4.
+The number of images in the val directory: 19.
 
 -------------------------
-warning--uneven-road--g6:
+regulatory--turn-right--g2:
 
 Bound: 1.0-minority
-The number of images in the val directory: 3.
+The number of images in the val directory: 13.
 
 -------------------------
-regulatory--stop-signals--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 1.
-
--------------------------
-warning--falling-rocks-or-debris-right--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 1.
-
--------------------------
-complementary--maximum-speed-limit-40--g1:
+regulatory--no-motor-vehicles--g4:
 
 Bound: 1.0-minority
 The number of images in the val directory: 3.
 
 -------------------------
-warning--hairpin-curve-left--g1:
+regulatory--shared-path-pedestrians-and-bicycles--g1:
 
 Bound: 1.0-minority
-The number of images in the val directory: 1.
+The number of images in the val directory: 29.
 
 -------------------------
-warning--road-widens--g1:
+regulatory--no-overtaking--g5:
 
 Bound: 1.0-minority
-The number of images in the val directory: 5.
+The number of images in the val directory: 44.
 
 -------------------------
-complementary--chevron-right-unsure--g6:
+regulatory--maximum-speed-limit-5--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 13.
+
+-------------------------
+complementary--go-left--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 38.
+
+-------------------------
+warning--double-curve-first-left--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 15.
+
+-------------------------
+regulatory--go-straight-or-turn-left--g2:
+
+Bound: 1.0-minority
+The number of images in the val directory: 8.
+
+-------------------------
+regulatory--turn-right--g3:
+
+Bound: 1.0-minority
+The number of images in the val directory: 16.
+
+-------------------------
+information--interstate-route--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 6.
+
+-------------------------
+regulatory--lane-control--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 13.
+
+-------------------------
+warning--road-bump--g2:
+
+Bound: 1.0-minority
+The number of images in the val directory: 57.
+
+-------------------------
+warning--roadworks--g3:
+
+Bound: 1.0-minority
+The number of images in the val directory: 6.
+
+-------------------------
+regulatory--one-way-left--g3:
+
+Bound: 1.0-minority
+The number of images in the val directory: 36.
+
+-------------------------
+warning--narrow-bridge--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 22.
+
+-------------------------
+complementary--maximum-speed-limit-50--g1:
 
 Bound: 1.0-minority
 The number of images in the val directory: 2.
 
 -------------------------
-warning--traffic-merges-left--g2:
+warning--curve-left--g2:
 
 Bound: 1.0-minority
-The number of images in the train directory: 3.
+The number of images in the val directory: 64.
 
 -------------------------
-regulatory--wrong-way--g1:
+regulatory--maximum-speed-limit-60--g1:
 
 Bound: 1.0-minority
-The number of images in the train directory: 9.
+The number of images in the val directory: 67.
 
 -------------------------
-regulatory--text-four-lines--g1:
+regulatory--maximum-speed-limit-100--g1:
 
 Bound: 1.0-minority
-The number of images in the val directory: 1.
+The number of images in the val directory: 20.
 
 -------------------------
-regulatory--no-pedestrians-or-bicycles--g1:
+regulatory--maximum-speed-limit-120--g1:
 
 Bound: 1.0-minority
-The number of images in the train directory: 1.
+The number of images in the val directory: 10.
 
 -------------------------
-regulatory--height-limit--g1:
+information--dead-end--g1:
 
 Bound: 1.0-minority
-The number of images in the val directory: 7.
+The number of images in the val directory: 17.
 
 -------------------------
-warning--road-widens-right--g1:
+complementary--maximum-speed-limit-55--g1:
 
 Bound: 1.0-minority
-The number of images in the val directory: 4.
+The number of images in the val directory: 10.
+
+-------------------------
+warning--junction-with-a-side-road-acute-right--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 12.
+
+-------------------------
+regulatory--maximum-speed-limit-70--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 37.
+
+-------------------------
+regulatory--no-u-turn--g3:
+
+Bound: 1.0-minority
+The number of images in the val directory: 12.
+
+-------------------------
+regulatory--no-right-turn--g2:
+
+Bound: 1.0-minority
+The number of images in the val directory: 13.
 
 -------------------------
 regulatory--no-stopping--g5:
 
 Bound: 1.0-minority
-The number of images in the val directory: 4.
+The number of images in the val directory: 15.
 
 -------------------------
-warning--double-reverse-curve-right--g1:
+warning--roadworks--g2:
 
 Bound: 1.0-minority
-The number of images in the val directory: 2.
+The number of images in the val directory: 6.
 
 -------------------------
-warning--double-turn-first-right--g1:
+complementary--go-right--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 42.
+
+-------------------------
+warning--wild-animals--g4:
+
+Bound: 1.0-minority
+The number of images in the val directory: 9.
+
+-------------------------
+information--bike-route--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 12.
+
+-------------------------
+information--food--g2:
+
+Bound: 1.0-minority
+The number of images in the val directory: 11.
+
+-------------------------
+regulatory--go-straight-or-turn-left--g3:
+
+Bound: 1.0-minority
+The number of images in the val directory: 12.
+
+-------------------------
+regulatory--turn-right-ahead--g2:
+
+Bound: 1.0-minority
+The number of images in the val directory: 3.
+
+-------------------------
+regulatory--no-stopping--g2:
+
+Bound: 1.0-minority
+The number of images in the val directory: 37.
+
+-------------------------
+regulatory--give-way-to-oncoming-traffic--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 6.
+
+-------------------------
+warning--children--g2:
+
+Bound: 1.0-minority
+The number of images in the val directory: 42.
+
+-------------------------
+complementary--maximum-speed-limit-35--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 17.
+
+-------------------------
+warning--road-bump--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 49.
+
+-------------------------
+regulatory--no-u-turn--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 57.
+
+-------------------------
+warning--pass-left-or-right--g2:
+
+Bound: 1.0-minority
+The number of images in the val directory: 16.
+
+-------------------------
+regulatory--no-overtaking--g2:
+
+Bound: 1.0-minority
+The number of images in the val directory: 28.
+
+-------------------------
+regulatory--turn-right--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 30.
+
+-------------------------
+warning--curve-right--g2:
+
+Bound: 1.0-minority
+The number of images in the val directory: 53.
+
+-------------------------
+regulatory--no-turns--g1:
 
 Bound: 1.0-minority
 The number of images in the val directory: 1.
 
 -------------------------
-complementary--maximum-speed-limit-35--g1:
+regulatory--no-turn-on-red--g3:
+
+Bound: 1.0-minority
+The number of images in the val directory: 7.
+
+-------------------------
+regulatory--no-parking-or-no-stopping--g2:
+
+Bound: 1.0-minority
+The number of images in the val directory: 13.
+
+-------------------------
+regulatory--stop-here-on-red-or-flashing-light--g2:
+
+Bound: 1.0-minority
+The number of images in the val directory: 6.
+
+-------------------------
+regulatory--maximum-speed-limit-25--g2:
+
+Bound: 1.0-minority
+The number of images in the val directory: 23.
+
+-------------------------
+warning--junction-with-a-side-road-perpendicular-left--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 17.
+
+-------------------------
+warning--winding-road-first-right--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 16.
+
+-------------------------
+warning--accidental-area-unsure--g2:
+
+Bound: 1.0-minority
+The number of images in the val directory: 4.
+
+-------------------------
+regulatory--no-overtaking--g4:
+
+Bound: 1.0-minority
+The number of images in the val directory: 6.
+
+-------------------------
+warning--school-zone--g2:
+
+Bound: 1.0-minority
+The number of images in the val directory: 24.
+
+-------------------------
+regulatory--wrong-way--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 7.
+
+-------------------------
+regulatory--road-closed--g2:
+
+Bound: 1.0-minority
+The number of images in the val directory: 10.
+
+-------------------------
+regulatory--no-stopping--g8:
+
+Bound: 1.0-minority
+The number of images in the val directory: 3.
+
+-------------------------
+complementary--distance--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 21.
+
+-------------------------
+warning--emergency-vehicles--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 10.
+
+-------------------------
+warning--kangaloo-crossing--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 17.
+
+-------------------------
+complementary--maximum-speed-limit-30--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 16.
+
+-------------------------
+warning--turn-right--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 25.
+
+-------------------------
+regulatory--priority-over-oncoming-vehicles--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 13.
+
+-------------------------
+information--pedestrians-crossing--g2:
+
+Bound: 1.0-minority
+The number of images in the val directory: 10.
+
+-------------------------
+information--parking--g5:
+
+Bound: 1.0-minority
+The number of images in the val directory: 21.
+
+-------------------------
+information--children--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 8.
+
+-------------------------
+regulatory--passing-lane-ahead--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 6.
+
+-------------------------
+information--airport--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 6.
+
+-------------------------
+information--limited-access-road--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 14.
+
+-------------------------
+regulatory--no-motor-vehicles-except-motorcycles--g2:
+
+Bound: 1.0-minority
+The number of images in the val directory: 12.
+
+-------------------------
+information--safety-area--g2:
+
+Bound: 1.0-minority
+The number of images in the val directory: 12.
+
+-------------------------
+regulatory--no-left-turn--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 50.
+
+-------------------------
+warning--roadworks--g4:
+
+Bound: 1.0-minority
+The number of images in the val directory: 8.
+
+-------------------------
+complementary--trucks--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 14.
+
+-------------------------
+regulatory--go-straight--g3:
+
+Bound: 1.0-minority
+The number of images in the val directory: 8.
+
+-------------------------
+warning--steep-ascent--g7:
+
+Bound: 1.0-minority
+The number of images in the val directory: 9.
+
+-------------------------
+warning--divided-highway-ends--g2:
+
+Bound: 1.0-minority
+The number of images in the val directory: 14.
+
+-------------------------
+information--parking--g45:
+
+Bound: 1.0-minority
+The number of images in the val directory: 2.
+
+-------------------------
+regulatory--buses-only--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 10.
+
+-------------------------
+regulatory--one-way-right--g3:
+
+Bound: 1.0-minority
+The number of images in the val directory: 34.
+
+-------------------------
+regulatory--maximum-speed-limit-20--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 27.
+
+-------------------------
+warning--road-narrows--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 15.
+
+-------------------------
+warning--road-narrows-left--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 7.
+
+-------------------------
+complementary--accident-area--g3:
+
+Bound: 1.0-minority
+The number of images in the val directory: 3.
+
+-------------------------
+regulatory--one-way-left--g2:
+
+Bound: 1.0-minority
+The number of images in the val directory: 17.
+
+-------------------------
+warning--road-narrows-left--g2:
+
+Bound: 1.0-minority
+The number of images in the val directory: 15.
+
+-------------------------
+warning--trucks-crossing--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 15.
+
+-------------------------
+regulatory--bicycles-only--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 31.
+
+-------------------------
+complementary--maximum-speed-limit-70--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 6.
+
+-------------------------
+warning--curve-left--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 27.
+
+-------------------------
+warning--domestic-animals--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 5.
+
+-------------------------
+regulatory--maximum-speed-limit-30--g3:
+
+Bound: 1.0-minority
+The number of images in the val directory: 13.
+
+-------------------------
+warning--road-narrows-right--g2:
+
+Bound: 1.0-minority
+The number of images in the val directory: 16.
+
+-------------------------
+regulatory--keep-right--g6:
+
+Bound: 1.0-minority
+The number of images in the val directory: 7.
+
+-------------------------
+information--living-street--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 10.
+
+-------------------------
+complementary--tow-away-zone--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 16.
+
+-------------------------
+regulatory--triple-lanes-turn-left-center-lane--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 5.
+
+-------------------------
+regulatory--maximum-speed-limit-90--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 29.
+
+-------------------------
+complementary--maximum-speed-limit-45--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 19.
+
+-------------------------
+warning--turn-left--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 16.
+
+-------------------------
+regulatory--maximum-speed-limit-80--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 52.
+
+-------------------------
+complementary--maximum-speed-limit-75--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 7.
+
+-------------------------
+regulatory--dual-lanes-go-straight-on-right--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 4.
+
+-------------------------
+regulatory--do-not-block-intersection--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 8.
+
+-------------------------
+regulatory--radar-enforced--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 13.
+
+-------------------------
+warning--traffic-merges-right--g2:
+
+Bound: 1.0-minority
+The number of images in the val directory: 18.
+
+-------------------------
+regulatory--stop--g10:
+
+Bound: 1.0-minority
+The number of images in the val directory: 7.
+
+-------------------------
+regulatory--go-straight-or-turn-left--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 17.
+
+-------------------------
+regulatory--no-straight-through--g2:
+
+Bound: 1.0-minority
+The number of images in the val directory: 7.
+
+-------------------------
+regulatory--end-of-maximum-speed-limit-70--g2:
+
+Bound: 1.0-minority
+The number of images in the val directory: 7.
+
+-------------------------
+regulatory--minimum-safe-distance--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 2.
+
+-------------------------
+regulatory--no-turn-on-red--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 12.
+
+-------------------------
+regulatory--stop-signals--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 5.
+
+-------------------------
+information--gas-station--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 8.
+
+-------------------------
+regulatory--end-of-speed-limit-zone--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 13.
+
+-------------------------
+warning--two-way-traffic--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 8.
+
+-------------------------
+warning--railroad-crossing-without-barriers--g3:
+
+Bound: 1.0-minority
+The number of images in the val directory: 24.
+
+-------------------------
+information--hospital--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 19.
+
+-------------------------
+warning--stop-ahead--g9:
+
+Bound: 1.0-minority
+The number of images in the val directory: 18.
+
+-------------------------
+warning--railroad-crossing--g3:
+
+Bound: 1.0-minority
+The number of images in the val directory: 6.
+
+-------------------------
+information--motorway--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 26.
+
+-------------------------
+information--emergency-facility--g2:
+
+Bound: 1.0-minority
+The number of images in the val directory: 7.
+
+-------------------------
+warning--road-widens--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 7.
+
+-------------------------
+regulatory--road-closed-to-vehicles--g3:
+
+Bound: 1.0-minority
+The number of images in the val directory: 30.
+
+-------------------------
+information--highway-exit--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 12.
+
+-------------------------
+regulatory--no-turn-on-red--g2:
+
+Bound: 1.0-minority
+The number of images in the val directory: 12.
+
+-------------------------
+regulatory--no-pedestrians--g2:
+
+Bound: 1.0-minority
+The number of images in the val directory: 25.
+
+-------------------------
+regulatory--width-limit--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 7.
+
+-------------------------
+warning--hairpin-curve-right--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 7.
+
+-------------------------
+complementary--keep-right--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 11.
+
+-------------------------
+warning--junction-with-a-side-road-perpendicular-left--g4:
+
+Bound: 1.0-minority
+The number of images in the val directory: 3.
+
+-------------------------
+warning--flaggers-in-road--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 12.
+
+-------------------------
+warning--wild-animals--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 9.
+
+-------------------------
+warning--traffic-signals--g4:
+
+Bound: 1.0-minority
+The number of images in the val directory: 3.
+
+-------------------------
+warning--crossroads--g3:
+
+Bound: 1.0-minority
+The number of images in the val directory: 22.
+
+-------------------------
+warning--two-way-traffic--g2:
+
+Bound: 1.0-minority
+The number of images in the val directory: 10.
+
+-------------------------
+warning--traffic-signals--g2:
+
+Bound: 1.0-minority
+The number of images in the val directory: 7.
+
+-------------------------
+regulatory--no-overtaking-by-heavy-goods-vehicles--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 6.
+
+-------------------------
+complementary--distance--g2:
+
+Bound: 1.0-minority
+The number of images in the val directory: 29.
+
+-------------------------
+warning--double-reverse-curve-right--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 6.
+
+-------------------------
+regulatory--one-way-right--g2:
+
+Bound: 1.0-minority
+The number of images in the val directory: 11.
+
+-------------------------
+warning--double-curve-first-left--g2:
+
+Bound: 1.0-minority
+The number of images in the val directory: 12.
+
+-------------------------
+complementary--except-bicycles--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 9.
+
+-------------------------
+warning--traffic-signals--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 24.
+
+-------------------------
+complementary--chevron-left--g5:
+
+Bound: 1.0-minority
+The number of images in the val directory: 17.
+
+-------------------------
+warning--road-widens-right--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 10.
+
+-------------------------
+regulatory--maximum-speed-limit-40--g6:
+
+Bound: 1.0-minority
+The number of images in the val directory: 1.
+
+-------------------------
+warning--horizontal-alignment-left--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 8.
+
+-------------------------
+regulatory--no-bicycles--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 7.
+
+-------------------------
+regulatory--maximum-speed-limit-15--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 5.
+
+-------------------------
+regulatory--no-straight-through--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 8.
+
+-------------------------
+regulatory--parking-restrictions--g2:
+
+Bound: 1.0-minority
+The number of images in the val directory: 5.
+
+-------------------------
+regulatory--no-parking-or-no-stopping--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 19.
+
+-------------------------
+warning--uneven-road--g6:
+
+Bound: 1.0-minority
+The number of images in the val directory: 14.
+
+-------------------------
+complementary--go-right--g2:
+
+Bound: 1.0-minority
+The number of images in the val directory: 11.
+
+-------------------------
+warning--railroad-intersection--g3:
+
+Bound: 1.0-minority
+The number of images in the val directory: 14.
+
+-------------------------
+warning--railroad-crossing--g4:
+
+Bound: 1.0-minority
+The number of images in the val directory: 10.
+
+-------------------------
+information--airport--g2:
+
+Bound: 1.0-minority
+The number of images in the val directory: 9.
+
+-------------------------
+complementary--trucks-turn-right--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 9.
+
+-------------------------
+regulatory--end-of-bicycles-only--g1:
 
 Bound: 1.0-minority
 The number of images in the val directory: 6.
@@ -926,148 +1622,28 @@ The number of images in the val directory: 6.
 warning--road-narrows--g2:
 
 Bound: 1.0-minority
-The number of images in the val directory: 3.
-
--------------------------
-regulatory--no-heavy-goods-vehicles--g4:
-
-Bound: 1.0-minority
-The number of images in the val directory: 4.
-
--------------------------
-complementary--chevron-left--g4:
-
-Bound: 1.0-minority
-The number of images in the val directory: 2.
-
--------------------------
-information--tram-bus-stop--g2:
-
-Bound: 1.0-minority
-The number of images in the val directory: 11.
-
--------------------------
-complementary--distance--g3:
-
-Bound: 1.0-minority
-The number of images in the val directory: 5.
-
--------------------------
-information--end-of-built-up-area--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 5.
-
--------------------------
-information--end-of-living-street--g1:
-
-Bound: 1.0-minority
-The number of images in the train directory: 6.
-
--------------------------
-complementary--buses--g1:
-
-Bound: 1.0-minority
-The number of images in the train directory: 6.
-
--------------------------
-warning--railroad-crossing-without-barriers--g3:
-
-Bound: 1.0-minority
-The number of images in the val directory: 3.
-
--------------------------
-regulatory--priority-over-oncoming-vehicles--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 7.
-
--------------------------
-warning--road-narrows-right--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 2.
-
--------------------------
-regulatory--maximum-speed-limit-40--g3:
-
-Bound: 1.0-minority
-The number of images in the val directory: 2.
-
--------------------------
-information--telephone--g2:
-
-Bound: 1.0-minority
-The number of images in the val directory: 2.
-
--------------------------
-regulatory--road-closed--g2:
-
-Bound: 1.0-minority
-The number of images in the val directory: 2.
-
--------------------------
-regulatory--stop--g2:
-
-Bound: 1.0-minority
-The number of images in the val directory: 2.
-
--------------------------
-regulatory--no-pedestrians--g2:
-
-Bound: 1.0-minority
-The number of images in the val directory: 3.
-
--------------------------
-regulatory--weight-limit--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 2.
-
--------------------------
-regulatory--one-way-left--g3:
-
-Bound: 1.0-minority
-The number of images in the train directory: 29.
-
--------------------------
-warning--slippery-road-surface--g1:
-
-Bound: 1.0-minority
 The number of images in the val directory: 6.
 
 -------------------------
-regulatory--no-u-turn--g1:
+complementary--both-directions--g1:
 
 Bound: 1.0-minority
-The number of images in the val directory: 10.
-
--------------------------
-regulatory--pedestrians-only--g2:
-
-Bound: 1.0-minority
-The number of images in the val directory: 2.
-
--------------------------
-warning--height-restriction--g2:
-
-Bound: 1.0-minority
-The number of images in the train directory: 22.
-
--------------------------
-warning--dip--g2:
-
-Bound: 1.0-minority
-The number of images in the train directory: 13.
+The number of images in the val directory: 13.
 
 -------------------------
 warning--narrow-bridge--g3:
 
 Bound: 1.0-minority
-The number of images in the val directory: 7.
+The number of images in the val directory: 8.
 
 -------------------------
-regulatory--reversible-lanes--g2:
+warning--pedestrians-crossing--g5:
+
+Bound: 1.0-minority
+The number of images in the val directory: 22.
+
+-------------------------
+regulatory--maximum-speed-limit-led-60--g1:
 
 Bound: 1.0-minority
 The number of images in the val directory: 5.
@@ -1076,829 +1652,31 @@ The number of images in the val directory: 5.
 regulatory--no-parking-or-no-stopping--g3:
 
 Bound: 1.0-minority
-The number of images in the val directory: 2.
-
--------------------------
-warning--junction-with-a-side-road-perpendicular-left--g3:
-
-Bound: 1.0-minority
-The number of images in the val directory: 5.
-
--------------------------
-regulatory--mopeds-and-bicycles-only--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 1.
-
--------------------------
-warning--railroad-crossing--g4:
-
-Bound: 1.0-minority
-The number of images in the train directory: 5.
-
--------------------------
-regulatory--no-bicycles--g3:
-
-Bound: 1.0-minority
-The number of images in the train directory: 6.
-
--------------------------
-warning--double-curve-first-left--g2:
-
-Bound: 1.0-minority
-The number of images in the val directory: 7.
-
--------------------------
-regulatory--no-left-turn--g3:
-
-Bound: 1.0-minority
-The number of images in the val directory: 1.
-
--------------------------
-regulatory--go-straight--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 9.
-
--------------------------
-regulatory--turn-right--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 7.
-
--------------------------
-regulatory--maximum-speed-limit-100--g3:
-
-Bound: 1.0-minority
-The number of images in the val directory: 1.
-
--------------------------
-warning--winding-road-first-left--g2:
-
-Bound: 1.0-minority
-The number of images in the val directory: 1.
-
--------------------------
-regulatory--keep-right--g6:
-
-Bound: 1.0-minority
-The number of images in the val directory: 1.
-
--------------------------
-warning--stop-ahead--g9:
-
-Bound: 1.0-minority
-The number of images in the val directory: 2.
-
--------------------------
-regulatory--roundabout--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 4.
-
--------------------------
-complementary--maximum-speed-limit-15--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 4.
-
--------------------------
-regulatory--shared-path-pedestrians-and-bicycles--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 5.
-
--------------------------
-regulatory--pass-on-either-side--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 3.
-
--------------------------
-regulatory--end-of-bicycles-only--g1:
-
-Bound: 1.0-minority
-The number of images in the train directory: 5.
-
--------------------------
-regulatory--maximum-speed-limit-35--g2:
-
-Bound: 1.0-minority
-The number of images in the val directory: 2.
-
--------------------------
-regulatory--maximum-speed-limit-110--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 2.
-
--------------------------
-complementary--chevron-left--g2:
-
-Bound: 1.0-minority
-The number of images in the val directory: 3.
-
--------------------------
-regulatory--no-bicycles--g1:
-
-Bound: 1.0-minority
-The number of images in the train directory: 4.
-
--------------------------
-warning--traffic-signals--g3:
-
-Bound: 1.0-minority
-The number of images in the val directory: 2.
-
--------------------------
-regulatory--go-straight-or-turn-left--g3:
-
-Bound: 1.0-minority
-The number of images in the val directory: 4.
-
--------------------------
-complementary--go-left--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 5.
-
--------------------------
-complementary--go-right--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 3.
-
--------------------------
-regulatory--one-way-right--g3:
-
-Bound: 1.0-minority
-The number of images in the val directory: 4.
-
--------------------------
-regulatory--one-way-straight--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 6.
-
--------------------------
-regulatory--no-overtaking--g2:
-
-Bound: 1.0-minority
 The number of images in the val directory: 12.
 
 -------------------------
-regulatory--go-straight-or-turn-left--g1:
+regulatory--pedestrians-only--g2:
 
 Bound: 1.0-minority
-The number of images in the val directory: 2.
-
--------------------------
-warning--slippery-road-surface--g2:
-
-Bound: 1.0-minority
-The number of images in the val directory: 7.
-
--------------------------
-warning--falling-rocks-or-debris-right--g2:
-
-Bound: 1.0-minority
-The number of images in the val directory: 4.
-
--------------------------
-information--parking--g3:
-
-Bound: 1.0-minority
-The number of images in the val directory: 2.
-
--------------------------
-warning--traffic-signals--g2:
-
-Bound: 1.0-minority
-The number of images in the val directory: 1.
-
--------------------------
-warning--road-bump--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 16.
-
--------------------------
-regulatory--no-left-turn--g2:
-
-Bound: 1.0-minority
-The number of images in the train directory: 9.
-
--------------------------
-regulatory--maximum-speed-limit-led-100--g1:
-
-Bound: 1.0-minority
-The number of images in the train directory: 4.
-
--------------------------
-regulatory--no-overtaking-by-heavy-goods-vehicles--g1:
-
-Bound: 1.0-minority
-The number of images in the train directory: 4.
-
--------------------------
-regulatory--no-motorcycles--g2:
-
-Bound: 1.0-minority
-The number of images in the train directory: 7.
-
--------------------------
-warning--railroad-intersection--g3:
-
-Bound: 1.0-minority
-The number of images in the val directory: 4.
-
--------------------------
-warning--hairpin-curve-right--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 1.
-
--------------------------
-regulatory--maximum-speed-limit-5--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 3.
-
--------------------------
-regulatory--maximum-speed-limit-15--g1:
-
-Bound: 1.0-minority
-The number of images in the train directory: 4.
-
--------------------------
-regulatory--no-motor-vehicle-trailers--g1:
-
-Bound: 1.0-minority
-The number of images in the train directory: 7.
-
--------------------------
-regulatory--no-pedestrians--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 1.
-
--------------------------
-regulatory--keep-left--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 5.
-
--------------------------
-information--no-parking--g3:
-
-Bound: 1.0-minority
-The number of images in the train directory: 6.
-
--------------------------
-information--trailer-camping--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 1.
-
--------------------------
-warning--divided-highway-ends--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 1.
-
--------------------------
-warning--roundabout--g25:
-
-Bound: 1.0-minority
-The number of images in the val directory: 1.
-
--------------------------
-information--highway-exit--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 2.
-
--------------------------
-warning--two-way-traffic--g2:
-
-Bound: 1.0-minority
-The number of images in the val directory: 1.
-
--------------------------
-regulatory--no-bicycles--g2:
-
-Bound: 1.0-minority
-The number of images in the train directory: 4.
-
--------------------------
-information--children--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 1.
-
--------------------------
-warning--t-roads--g2:
-
-Bound: 1.0-minority
-The number of images in the val directory: 4.
-
--------------------------
-information--gas-station--g1:
-
-Bound: 1.0-minority
-The number of images in the train directory: 4.
-
--------------------------
-warning--roadworks--g3:
-
-Bound: 1.0-minority
-The number of images in the val directory: 2.
-
--------------------------
-warning--emergency-vehicles--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 4.
-
--------------------------
-warning--road-narrows-left--g2:
-
-Bound: 1.0-minority
-The number of images in the val directory: 4.
-
--------------------------
-complementary--trucks-turn-right--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 1.
-
--------------------------
-regulatory--no-u-turn--g3:
-
-Bound: 1.0-minority
-The number of images in the val directory: 2.
-
--------------------------
-regulatory--stop-here-on-red-or-flashing-light--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 1.
-
--------------------------
-warning--school-zone--g2:
-
-Bound: 1.0-minority
-The number of images in the val directory: 2.
-
--------------------------
-warning--crossroads-with-priority-to-the-right--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 1.
-
--------------------------
-information--parking--g2:
-
-Bound: 1.0-minority
-The number of images in the train directory: 5.
-
--------------------------
-regulatory--go-straight-or-turn-right--g3:
-
-Bound: 1.0-minority
-The number of images in the val directory: 3.
-
--------------------------
-warning--horizontal-alignment-right--g3:
-
-Bound: 1.0-minority
-The number of images in the train directory: 2.
-
--------------------------
-warning--junction-with-a-side-road-acute-right--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 5.
-
--------------------------
-information--living-street--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 3.
-
--------------------------
-complementary--maximum-speed-limit-25--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 3.
-
--------------------------
-regulatory--road-closed-to-vehicles--g3:
-
-Bound: 1.0-minority
-The number of images in the val directory: 1.
-
--------------------------
-warning--falling-rocks-or-debris-right--g4:
-
-Bound: 1.0-minority
-The number of images in the val directory: 2.
-
--------------------------
-warning--pedestrians-crossing--g11:
-
-Bound: 1.0-minority
-The number of images in the train directory: 6.
-
--------------------------
-regulatory--buses-only--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 3.
-
--------------------------
-regulatory--width-limit--g1:
-
-Bound: 1.0-minority
-The number of images in the train directory: 6.
-
--------------------------
-complementary--both-directions--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 3.
-
--------------------------
-information--motorway--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 1.
-
--------------------------
-regulatory--pass-on-either-side--g2:
-
-Bound: 1.0-minority
-The number of images in the val directory: 1.
-
--------------------------
-complementary--extent-of-prohibition-area-both-direction--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 2.
-
--------------------------
-regulatory--maximum-speed-limit-45--g3:
-
-Bound: 1.0-minority
-The number of images in the val directory: 2.
-
--------------------------
-information--hospital--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 2.
-
--------------------------
-information--bike-route--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 1.
-
--------------------------
-regulatory--go-straight-or-turn-right--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 2.
-
--------------------------
-regulatory--no-stopping--g4:
-
-Bound: 1.0-minority
-The number of images in the val directory: 1.
-
--------------------------
-warning--steep-ascent--g7:
-
-Bound: 1.0-minority
-The number of images in the val directory: 3.
-
--------------------------
-complementary--maximum-speed-limit-50--g1:
-
-Bound: 1.0-minority
-The number of images in the train directory: 3.
-
--------------------------
-information--road-bump--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 4.
-
--------------------------
-information--airport--g2:
-
-Bound: 1.0-minority
-The number of images in the train directory: 3.
-
--------------------------
-warning--wild-animals--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 2.
-
--------------------------
-complementary--turn-right--g2:
-
-Bound: 1.0-minority
-The number of images in the val directory: 3.
-
--------------------------
-warning--railroad-crossing-without-barriers--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 1.
-
--------------------------
-regulatory--u-turn--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 1.
-
--------------------------
-warning--uneven-road--g2:
-
-Bound: 1.0-minority
-The number of images in the val directory: 3.
-
--------------------------
-warning--uneven-roads-ahead--g1:
-
-Bound: 1.0-minority
-The number of images in the train directory: 5.
-
--------------------------
-regulatory--no-right-turn--g2:
-
-Bound: 1.0-minority
-The number of images in the val directory: 2.
-
--------------------------
-regulatory--maximum-speed-limit-100--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 1.
-
--------------------------
-information--bus-stop--g1:
-
-Bound: 1.0-minority
-The number of images in the train directory: 3.
-
--------------------------
-regulatory--turn-left--g3:
-
-Bound: 1.0-minority
-The number of images in the val directory: 1.
-
--------------------------
-warning--railroad-crossing-with-barriers--g2:
-
-Bound: 1.0-minority
-The number of images in the train directory: 7.
-
--------------------------
-regulatory--no-straight-through--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 2.
+The number of images in the val directory: 11.
 
 -------------------------
 warning--slippery-motorcycles--g1:
 
 Bound: 1.0-minority
-The number of images in the val directory: 4.
+The number of images in the val directory: 6.
 
 -------------------------
-regulatory--end-of-maximum-speed-limit-30--g2:
+regulatory--pass-on-either-side--g2:
 
 Bound: 1.0-minority
-The number of images in the train directory: 6.
-
--------------------------
-complementary--obstacle-delineator--g1:
-
-Bound: 1.0-minority
-The number of images in the train directory: 13.
-
--------------------------
-regulatory--one-way-left--g2:
-
-Bound: 1.0-minority
-The number of images in the val directory: 2.
-
--------------------------
-information--parking--g6:
-
-Bound: 1.0-minority
-The number of images in the val directory: 1.
-
--------------------------
-warning--turn-right--g2:
-
-Bound: 1.0-minority
-The number of images in the val directory: 3.
+The number of images in the val directory: 6.
 
 -------------------------
 complementary--one-direction-right--g1:
 
 Bound: 1.0-minority
-The number of images in the val directory: 4.
-
--------------------------
-warning--offset-roads--g3:
-
-Bound: 1.0-minority
-The number of images in the val directory: 2.
-
--------------------------
-warning--roadworks--g2:
-
-Bound: 1.0-minority
-The number of images in the train directory: 7.
-
--------------------------
-complementary--tow-away-zone--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 4.
-
--------------------------
-regulatory--maximum-speed-limit-10--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 3.
-
--------------------------
-warning--playground--g3:
-
-Bound: 1.0-minority
-The number of images in the train directory: 5.
-
--------------------------
-complementary--trucks--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 2.
-
--------------------------
-regulatory--no-buses--g3:
-
-Bound: 1.0-minority
-The number of images in the train directory: 4.
-
--------------------------
-regulatory--left-turn-yield-on-green--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 1.
-
--------------------------
-warning--trail-crossing--g2:
-
-Bound: 1.0-minority
-The number of images in the val directory: 1.
-
--------------------------
-regulatory--dual-path-bicycles-and-pedestrians--g1:
-
-Bound: 1.0-minority
-The number of images in the train directory: 5.
-
--------------------------
-regulatory--roundabout--g2:
-
-Bound: 1.0-minority
-The number of images in the train directory: 2.
-
--------------------------
-warning--railroad-crossing-with-barriers--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 2.
-
--------------------------
-warning--wombat-crossing--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 3.
-
--------------------------
-complementary--priority-route-at-intersection--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 2.
-
--------------------------
-regulatory--maximum-speed-limit-led-80--g1:
-
-Bound: 1.0-minority
-The number of images in the train directory: 5.
-
--------------------------
-information--end-of-limited-access-road--g1:
-
-Bound: 1.0-minority
-The number of images in the train directory: 1.
-
--------------------------
-warning--pass-left-or-right--g1:
-
-Bound: 1.0-minority
-The number of images in the train directory: 3.
-
--------------------------
-warning--railroad-crossing-with-barriers--g4:
-
-Bound: 1.0-minority
-The number of images in the val directory: 2.
-
--------------------------
-regulatory--maximum-speed-limit-45--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 3.
-
--------------------------
-warning--hairpin-curve-left--g3:
-
-Bound: 1.0-minority
-The number of images in the val directory: 2.
-
--------------------------
-regulatory--stop--g10:
-
-Bound: 1.0-minority
-The number of images in the val directory: 1.
-
--------------------------
-regulatory--no-mopeds-or-bicycles--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 1.
-
--------------------------
-warning--bicycles-crossing--g2:
-
-Bound: 1.0-minority
-The number of images in the val directory: 2.
-
--------------------------
-warning--road-narrows-right--g2:
-
-Bound: 1.0-minority
-The number of images in the val directory: 4.
-
--------------------------
-regulatory--road-closed--g1:
-
-Bound: 1.0-minority
-The number of images in the train directory: 3.
-
--------------------------
-information--emergency-facility--g2:
-
-Bound: 1.0-minority
-The number of images in the val directory: 2.
-
--------------------------
-regulatory--maximum-speed-limit-25--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 1.
-
--------------------------
-regulatory--no-motor-vehicles--g4:
-
-Bound: 1.0-minority
-The number of images in the train directory: 1.
-
--------------------------
-complementary--chevron-left--g5:
-
-Bound: 1.0-minority
-The number of images in the val directory: 5.
-
--------------------------
-warning--equestrians-crossing--g2:
-
-Bound: 1.0-minority
-The number of images in the train directory: 10.
-
--------------------------
-warning--other-danger--g3:
-
-Bound: 1.0-minority
-The number of images in the train directory: 7.
+The number of images in the val directory: 12.
 
 -------------------------
 warning--pedestrians-crossing--g9:
@@ -1907,277 +1685,487 @@ Bound: 1.0-minority
 The number of images in the val directory: 1.
 
 -------------------------
-complementary--except-bicycles--g1:
+regulatory--go-straight-or-turn-right--g1:
 
 Bound: 1.0-minority
-The number of images in the train directory: 3.
+The number of images in the val directory: 21.
 
 -------------------------
-regulatory--lane-control--g1:
-
-Bound: 1.0-minority
-The number of images in the train directory: 3.
-
--------------------------
-regulatory--maximum-speed-limit-30--g3:
+information--end-of-living-street--g1:
 
 Bound: 1.0-minority
 The number of images in the val directory: 2.
 
 -------------------------
-regulatory--no-parking-or-no-stopping--g2:
+information--bus-stop--g1:
 
 Bound: 1.0-minority
-The number of images in the val directory: 2.
+The number of images in the val directory: 10.
 
 -------------------------
-regulatory--end-of-priority-road--g1:
+warning--winding-road-first-left--g1:
 
 Bound: 1.0-minority
-The number of images in the train directory: 7.
+The number of images in the val directory: 18.
 
 -------------------------
-regulatory--turn-right-ahead--g1:
+warning--bus-stop-ahead--g3:
 
 Bound: 1.0-minority
-The number of images in the val directory: 2.
+The number of images in the val directory: 4.
 
 -------------------------
-information--dead-end--g1:
+warning--double-turn-first-right--g1:
 
 Bound: 1.0-minority
-The number of images in the val directory: 3.
+The number of images in the val directory: 8.
 
 -------------------------
-warning--trams-crossing--g1:
+warning--winding-road-first-right--g3:
 
 Bound: 1.0-minority
-The number of images in the val directory: 1.
+The number of images in the val directory: 5.
 
 -------------------------
-regulatory--minimum-safe-distance--g1:
+warning--railroad-crossing-with-barriers--g2:
 
 Bound: 1.0-minority
-The number of images in the train directory: 4.
-
--------------------------
-regulatory--no-u-turn--g2:
-
-Bound: 1.0-minority
-The number of images in the val directory: 1.
-
--------------------------
-regulatory--keep-left--g2:
-
-Bound: 1.0-minority
-The number of images in the val directory: 3.
-
--------------------------
-warning--pass-left-or-right--g2:
-
-Bound: 1.0-minority
-The number of images in the train directory: 10.
-
--------------------------
-regulatory--go-straight-or-turn-left--g2:
-
-Bound: 1.0-minority
-The number of images in the train directory: 7.
-
--------------------------
-regulatory--no-vehicles-carrying-dangerous-goods--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 3.
-
--------------------------
-complementary--one-direction-left--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 2.
-
--------------------------
-warning--bicycles-crossing--g3:
-
-Bound: 1.0-minority
-The number of images in the val directory: 1.
-
--------------------------
-regulatory--no-motor-vehicles--g1:
-
-Bound: 1.0-minority
-The number of images in the train directory: 2.
-
--------------------------
-regulatory--no-motorcycles--g1:
-
-Bound: 1.0-minority
-The number of images in the train directory: 6.
-
--------------------------
-regulatory--detour-left--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 1.
-
--------------------------
-regulatory--dual-lanes-go-straight-on-left--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 1.
-
--------------------------
-regulatory--end-of-maximum-speed-limit-70--g1:
-
-Bound: 1.0-minority
-The number of images in the train directory: 3.
-
--------------------------
-regulatory--turn-left--g2:
-
-Bound: 1.0-minority
-The number of images in the train directory: 13.
-
--------------------------
-information--minimum-speed-40--g1:
-
-Bound: 1.0-minority
-The number of images in the train directory: 2.
-
--------------------------
-regulatory--turn-right--g3:
-
-Bound: 1.0-minority
-The number of images in the val directory: 1.
-
--------------------------
-regulatory--no-turn-on-red--g2:
-
-Bound: 1.0-minority
-The number of images in the train directory: 6.
-
--------------------------
-warning--railroad-crossing--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 1.
-
--------------------------
-regulatory--dual-lanes-turn-right-or-straight--g1:
-
-Bound: 1.0-minority
-The number of images in the train directory: 1.
-
--------------------------
-information--end-of-pedestrians-only--g2:
-
-Bound: 1.0-minority
-The number of images in the val directory: 1.
-
--------------------------
-regulatory--maximum-speed-limit-65--g2:
-
-Bound: 1.0-minority
-The number of images in the train directory: 3.
-
--------------------------
-regulatory--turn-left-ahead--g1:
-
-Bound: 1.0-minority
-The number of images in the train directory: 8.
-
--------------------------
-regulatory--no-heavy-goods-vehicles--g5:
-
-Bound: 1.0-minority
-The number of images in the train directory: 2.
+The number of images in the val directory: 4.
 
 -------------------------
 warning--railroad-intersection--g4:
 
 Bound: 1.0-minority
-The number of images in the train directory: 2.
+The number of images in the val directory: 4.
 
 -------------------------
-warning--dual-lanes-right-turn-or-go-straight--g1:
+regulatory--keep-right--g2:
 
 Bound: 1.0-minority
-The number of images in the val directory: 1.
+The number of images in the val directory: 11.
 
 -------------------------
-information--dead-end-except-bicycles--g1:
+warning--bicycles-crossing--g2:
 
 Bound: 1.0-minority
-The number of images in the train directory: 3.
-
--------------------------
-complementary--keep-right--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 3.
-
--------------------------
-warning--railroad-crossing--g3:
-
-Bound: 1.0-minority
-The number of images in the val directory: 2.
-
--------------------------
-regulatory--no-heavy-goods-vehicles-or-buses--g1:
-
-Bound: 1.0-minority
-The number of images in the train directory: 3.
-
--------------------------
-regulatory--maximum-speed-limit-led-60--g1:
-
-Bound: 1.0-minority
-The number of images in the train directory: 4.
-
--------------------------
-warning--y-roads--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 3.
-
--------------------------
-regulatory--one-way-right--g2:
-
-Bound: 1.0-minority
-The number of images in the val directory: 1.
-
--------------------------
-regulatory--no-turn-on-red--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 1.
-
--------------------------
-regulatory--end-of-buses-only--g1:
-
-Bound: 1.0-minority
-The number of images in the train directory: 1.
+The number of images in the val directory: 11.
 
 -------------------------
 regulatory--bicycles-only--g2:
 
 Bound: 1.0-minority
-The number of images in the train directory: 2.
+The number of images in the val directory: 4.
 
 -------------------------
-warning--shared-lane-motorcycles-bicycles--g1:
+regulatory--maximum-speed-limit-led-80--g1:
 
 Bound: 1.0-minority
-The number of images in the train directory: 4.
+The number of images in the val directory: 2.
 
 -------------------------
-regulatory--shared-path-bicycles-and-pedestrians--g1:
+warning--height-restriction--g2:
 
 Bound: 1.0-minority
-The number of images in the train directory: 3.
+The number of images in the val directory: 24.
 
 -------------------------
-regulatory--no-turn-on-red--g3:
+regulatory--maximum-speed-limit-50--g6:
+
+Bound: 1.0-minority
+The number of images in the val directory: 7.
+
+-------------------------
+warning--hairpin-curve-right--g4:
+
+Bound: 1.0-minority
+The number of images in the val directory: 1.
+
+-------------------------
+warning--traffic-signals--g3:
+
+Bound: 1.0-minority
+The number of images in the val directory: 25.
+
+-------------------------
+regulatory--mopeds-and-bicycles-only--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 10.
+
+-------------------------
+regulatory--no-left-turn--g2:
+
+Bound: 1.0-minority
+The number of images in the val directory: 7.
+
+-------------------------
+regulatory--end-of-no-parking--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 6.
+
+-------------------------
+regulatory--end-of-priority-road--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 8.
+
+-------------------------
+regulatory--no-heavy-goods-vehicles-or-buses--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 2.
+
+-------------------------
+warning--uneven-roads-ahead--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 2.
+
+-------------------------
+regulatory--road-closed-to-vehicles--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 4.
+
+-------------------------
+warning--hairpin-curve-left--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 4.
+
+-------------------------
+information--trailer-camping--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 8.
+
+-------------------------
+regulatory--no-stopping--g4:
+
+Bound: 1.0-minority
+The number of images in the val directory: 4.
+
+-------------------------
+regulatory--no-pedestrians-or-bicycles--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 2.
+
+-------------------------
+regulatory--no-heavy-goods-vehicles--g5:
+
+Bound: 1.0-minority
+The number of images in the val directory: 5.
+
+-------------------------
+warning--other-danger--g3:
+
+Bound: 1.0-minority
+The number of images in the val directory: 6.
+
+-------------------------
+warning--falling-rocks-or-debris-right--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 5.
+
+-------------------------
+regulatory--dual-lanes-go-straight-on-left--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 6.
+
+-------------------------
+regulatory--u-turn--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 9.
+
+-------------------------
+complementary--maximum-speed-limit-40--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 8.
+
+-------------------------
+regulatory--stop-here-on-red-or-flashing-light--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 10.
+
+-------------------------
+information--parking--g6:
+
+Bound: 1.0-minority
+The number of images in the val directory: 9.
+
+-------------------------
+regulatory--no-motor-vehicle-trailers--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 7.
+
+-------------------------
+regulatory--no-pedestrians--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 8.
+
+-------------------------
+warning--traffic-merges-left--g2:
+
+Bound: 1.0-minority
+The number of images in the val directory: 1.
+
+-------------------------
+regulatory--text-four-lines--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 4.
+
+-------------------------
+regulatory--dual-path-bicycles-and-pedestrians--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 7.
+
+-------------------------
+regulatory--maximum-speed-limit-40--g3:
+
+Bound: 1.0-minority
+The number of images in the val directory: 11.
+
+-------------------------
+information--parking--g2:
+
+Bound: 1.0-minority
+The number of images in the val directory: 6.
+
+-------------------------
+warning--bicycles-crossing--g3:
+
+Bound: 1.0-minority
+The number of images in the val directory: 3.
+
+-------------------------
+regulatory--no-pedestrians--g3:
+
+Bound: 1.0-minority
+The number of images in the val directory: 1.
+
+-------------------------
+regulatory--pass-on-either-side--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 35.
+
+-------------------------
+regulatory--no-bicycles--g3:
+
+Bound: 1.0-minority
+The number of images in the val directory: 5.
+
+-------------------------
+warning--pass-left-or-right--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 2.
+
+-------------------------
+complementary--chevron-left--g4:
+
+Bound: 1.0-minority
+The number of images in the val directory: 9.
+
+-------------------------
+warning--falling-rocks-or-debris-right--g2:
+
+Bound: 1.0-minority
+The number of images in the val directory: 8.
+
+-------------------------
+regulatory--maximum-speed-limit-led-100--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 4.
+
+-------------------------
+warning--pedestrians-crossing--g12:
+
+Bound: 1.0-minority
+The number of images in the val directory: 2.
+
+-------------------------
+complementary--buses--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 5.
+
+-------------------------
+warning--road-narrows-right--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 7.
+
+-------------------------
+information--highway-interstate-route--g2:
+
+Bound: 1.0-minority
+The number of images in the val directory: 1.
+
+-------------------------
+warning--y-roads--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 7.
+
+-------------------------
+warning--railroad-crossing-without-barriers--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 9.
+
+-------------------------
+information--telephone--g2:
+
+Bound: 1.0-minority
+The number of images in the val directory: 10.
+
+-------------------------
+regulatory--maximum-speed-limit-110--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 13.
+
+-------------------------
+regulatory--no-right-turn--g3:
+
+Bound: 1.0-minority
+The number of images in the train directory: 11.
+
+-------------------------
+regulatory--stop--g2:
+
+Bound: 1.0-minority
+The number of images in the val directory: 8.
+
+-------------------------
+regulatory--left-turn-yield-on-green--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 10.
+
+-------------------------
+warning--dual-lanes-right-turn-or-go-straight--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 7.
+
+-------------------------
+regulatory--dual-path-pedestrians-and-bicycles--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 2.
+
+-------------------------
+regulatory--maximum-speed-limit-100--g3:
+
+Bound: 1.0-minority
+The number of images in the val directory: 12.
+
+-------------------------
+complementary--one-direction-left--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 10.
+
+-------------------------
+regulatory--no-left-turn--g3:
+
+Bound: 1.0-minority
+The number of images in the val directory: 6.
+
+-------------------------
+regulatory--go-straight-or-turn-right--g3:
+
+Bound: 1.0-minority
+The number of images in the val directory: 7.
+
+-------------------------
+warning--dip--g2:
+
+Bound: 1.0-minority
+The number of images in the val directory: 4.
+
+-------------------------
+warning--bicycles-crossing--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 7.
+
+-------------------------
+regulatory--no-motorcycles--g2:
+
+Bound: 1.0-minority
+The number of images in the val directory: 9.
+
+-------------------------
+regulatory--road-closed--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 2.
+
+-------------------------
+warning--winding-road-first-left--g2:
+
+Bound: 1.0-minority
+The number of images in the val directory: 2.
+
+-------------------------
+regulatory--end-of-maximum-speed-limit-30--g2:
+
+Bound: 1.0-minority
+The number of images in the val directory: 2.
+
+-------------------------
+warning--loop-270-degree--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 2.
+
+-------------------------
+complementary--maximum-speed-limit-25--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 11.
+
+-------------------------
+regulatory--maximum-speed-limit-65--g2:
+
+Bound: 1.0-minority
+The number of images in the val directory: 3.
+
+-------------------------
+warning--roundabout--g25:
+
+Bound: 1.0-minority
+The number of images in the val directory: 13.
+
+-------------------------
+warning--trail-crossing--g2:
+
+Bound: 1.0-minority
+The number of images in the val directory: 10.
+
+-------------------------
+regulatory--no-vehicles-carrying-dangerous-goods--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 11.
+
+-------------------------
+information--end-of-limited-access-road--g1:
 
 Bound: 1.0-minority
 The number of images in the val directory: 1.
@@ -2186,46 +2174,16 @@ The number of images in the val directory: 1.
 information--telephone--g1:
 
 Bound: 1.0-minority
-The number of images in the train directory: 5.
+The number of images in the val directory: 8.
 
 -------------------------
-information--food--g2:
+warning--offset-roads--g3:
 
 Bound: 1.0-minority
 The number of images in the val directory: 2.
 
 -------------------------
-information--parking--g45:
-
-Bound: 1.0-minority
-The number of images in the train directory: 1.
-
--------------------------
-regulatory--no-right-turn--g3:
-
-Bound: 1.0-minority
-The number of images in the train directory: 1.
-
--------------------------
-warning--pedestrians-crossing--g12:
-
-Bound: 1.0-minority
-The number of images in the train directory: 1.
-
--------------------------
-regulatory--do-not-stop-on-tracks--g1:
-
-Bound: 1.0-minority
-The number of images in the train directory: 2.
-
--------------------------
-information--lodging--g1:
-
-Bound: 1.0-minority
-The number of images in the train directory: 2.
-
--------------------------
-regulatory--go-straight--g3:
+regulatory--roundabout--g2:
 
 Bound: 1.0-minority
 The number of images in the val directory: 1.
@@ -2234,59 +2192,215 @@ The number of images in the val directory: 1.
 warning--roadworks--g6:
 
 Bound: 1.0-minority
-The number of images in the train directory: 2.
+The number of images in the val directory: 2.
 
 -------------------------
-regulatory--bicycles-only--g3:
+information--no-parking--g3:
 
 Bound: 1.0-minority
-The number of images in the train directory: 1.
-
--------------------------
-warning--hairpin-curve-right--g4:
-
-Bound: 1.0-minority
-The number of images in the train directory: 1.
-
--------------------------
-complementary--go-right--g2:
-
-Bound: 1.0-minority
-The number of images in the val directory: 1.
-
--------------------------
-regulatory--no-turns--g1:
-
-Bound: 1.0-minority
-The number of images in the train directory: 1.
-
--------------------------
-regulatory--truck-speed-limit-60--g1:
-
-Bound: 1.0-minority
-The number of images in the train directory: 3.
-
--------------------------
-regulatory--dual-path-pedestrians-and-bicycles--g1:
-
-Bound: 1.0-minority
-The number of images in the train directory: 2.
-
--------------------------
-warning--bicycles-crossing--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 1.
-
--------------------------
-regulatory--do-not-block-intersection--g1:
-
-Bound: 1.0-minority
-The number of images in the val directory: 1.
+The number of images in the train directory: 14.
 
 -------------------------
 information--gas-station--g3:
 
 Bound: 1.0-minority
+The number of images in the val directory: 5.
+
+-------------------------
+regulatory--dual-lanes-turn-right-or-straight--g1:
+
+Bound: 1.0-minority
+The number of images in the train directory: 12.
+
+-------------------------
+regulatory--maximum-speed-limit-25--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 8.
+
+-------------------------
+regulatory--no-bicycles--g2:
+
+Bound: 1.0-minority
+The number of images in the val directory: 10.
+
+-------------------------
+regulatory--dual-lanes-turn-left-or-straight--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 2.
+
+-------------------------
+regulatory--no-mopeds-or-bicycles--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 4.
+
+-------------------------
+warning--crossroads-with-priority-to-the-right--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 7.
+
+-------------------------
+warning--horizontal-alignment-right--g3:
+
+Bound: 1.0-minority
+The number of images in the val directory: 2.
+
+-------------------------
+information--camp--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 2.
+
+-------------------------
+warning--falling-rocks-or-debris-right--g4:
+
+Bound: 1.0-minority
+The number of images in the val directory: 3.
+
+-------------------------
+warning--pedestrians-crossing--g11:
+
+Bound: 1.0-minority
 The number of images in the val directory: 1.
+
+-------------------------
+regulatory--no-motor-vehicles--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 5.
+
+-------------------------
+warning--shared-lane-motorcycles-bicycles--g1:
+
+Bound: 1.0-minority
+The number of images in the train directory: 17.
+
+-------------------------
+information--minimum-speed-40--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 5.
+
+-------------------------
+regulatory--do-not-stop-on-tracks--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 3.
+
+-------------------------
+warning--turn-right--g2:
+
+Bound: 1.0-minority
+The number of images in the val directory: 6.
+
+-------------------------
+warning--trams-crossing--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 4.
+
+-------------------------
+warning--railroad-crossing-with-barriers--g4:
+
+Bound: 1.0-minority
+The number of images in the val directory: 3.
+
+-------------------------
+warning--restricted-zone--g1:
+
+Bound: 1.0-minority
+The number of images in the train directory: 7.
+
+-------------------------
+regulatory--end-of-maximum-speed-limit-70--g1:
+
+Bound: 1.0-minority
+The number of images in the train directory: 5.
+
+-------------------------
+regulatory--turning-vehicles-yield-to-pedestrians--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 1.
+
+-------------------------
+warning--playground--g3:
+
+Bound: 1.0-minority
+The number of images in the val directory: 1.
+
+-------------------------
+regulatory--bicycles-only--g3:
+
+Bound: 1.0-minority
+The number of images in the val directory: 4.
+
+-------------------------
+warning--hairpin-curve-left--g3:
+
+Bound: 1.0-minority
+The number of images in the val directory: 4.
+
+-------------------------
+regulatory--end-of-buses-only--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 2.
+
+-------------------------
+regulatory--dual-lanes-turn-left-no-u-turn--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 2.
+
+-------------------------
+regulatory--shared-path-bicycles-and-pedestrians--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 2.
+
+-------------------------
+warning--equestrians-crossing--g2:
+
+Bound: 1.0-minority
+The number of images in the val directory: 1.
+
+-------------------------
+information--central-lane--g1:
+
+Bound: 1.0-minority
+The number of images in the train directory: 10.
+
+-------------------------
+regulatory--truck-speed-limit-60--g1:
+
+Bound: 1.0-minority
+The number of images in the train directory: 9.
+
+-------------------------
+regulatory--weight-limit-with-trucks--g1:
+
+Bound: 1.0-minority
+The number of images in the train directory: 11.
+
+-------------------------
+regulatory--detour-left--g1:
+
+Bound: 1.0-minority
+The number of images in the val directory: 1.
+
+-------------------------
+information--end-of-pedestrians-only--g2:
+
+Bound: 1.0-minority
+The number of images in the val directory: 2.
+
+-------------------------
+information--dead-end-except-bicycles--g1:
+
+Bound: 1.0-minority
+The number of images in the train directory: 2.
 

@@ -6,7 +6,7 @@ from math import floor, ceil
 import cv2
 from os import makedirs
 from os.path import exists
-from random import sample
+from random import shuffle
 from multiprocessing import Pool, cpu_count, Manager
 from tqdm import tqdm
 import albumentations as A
@@ -14,6 +14,8 @@ import albumentations as A
 PATH_DIRECTORY = "mtsd_v2_fully_annotated"
 DATASET_DIRECTORY = "mapillary_dataset"
 SAVE_DIRECTORY = "balanced_mapillary_dataset"
+DATASET_INFO_JSON_FILE = "synthetic_dataset/rare_class_info.json"
+DESIRED_TYPE = "1.0-minority"
 MAX_AMOUNT = 200
 TRAIN_FRAC = 0.8
 class_amount = Counter()
@@ -142,12 +144,12 @@ def parse_file(args) -> None:
 def parse_files(directory: str, times_till_last_update_bound: int) -> None:
     amount = MAX_AMOUNT / NUM_AUGMENTATIONS
     amount = amount * 0.8 if directory == "train" else amount * 0.2
-
     amount = ceil(amount)
 
     with open(f"{PATH_DIRECTORY}/splits/{directory}.txt") as f:
         paths = f.read().splitlines()
-    paths = sample(paths, k=len(paths))
+    
+    shuffle(paths)
 
     with Manager() as manager:
         directory_class_amount = manager.dict()
@@ -163,6 +165,37 @@ def make_dataset() -> None:
         makedirs(f"{SAVE_DIRECTORY}/{directory}/images", exist_ok=True)
         makedirs(f"{SAVE_DIRECTORY}/{directory}/labels", exist_ok=True)
 
+def make_classes_equal(directory: str) -> None:
+    with open(f"{DATASET_INFO_JSON_FILE}") as f:
+        data = load(f)
+    
+    for traffic_sign_class, info in data.items():
+        if class_amount.get(traffic_sign_class, 0) >= MAX_AMOUNT:
+            continue
+
+        paths = info[DESIRED_TYPE].get(directory, None)
+
+        # Only skips classes when creating the val directory
+        if paths is None:
+            continue
+        
+        # Randomize the list
+        shuffle(paths)
+
+        amount = (MAX_AMOUNT - class_amount[traffic_sign_class]) // NUM_AUGMENTATIONS
+        amount = amount * 0.8 if directory == "train" else amount * 0.2
+        amount = ceil(amount)
+        
+        print(f"Equalizing {traffic_sign_class} by adding {amount} images.")
+        with Manager() as manager:
+            directory_class_amount = manager.dict()
+
+            args_list = [(directory, path, amount, 1, directory_class_amount) for path in paths]
+            with Pool(processes=cpu_count()) as pool:
+                list(tqdm(pool.imap(parse_file, args_list, chunksize=4), total=len(args_list)))
+            
+            class_amount.update(dict(directory_class_amount))
+
 def main() -> None:
     make_dataset()
     print("Created the directories.")
@@ -174,6 +207,21 @@ def main() -> None:
 
     parse_files("val", 1)
     print("Finished creating the val subdirectory.")
+
+    print("Making all classes have the same amount of images...\n")
+    times_till_last_update.set_val(0)
+
+    make_classes_equal("train")
+    print("Finished equalizing the train directory.\n")
+
+    times_till_last_update.set_val(0)
+
+    make_classes_equal("val")
+    print("Finished equalizing the val directory.\n")
+
+    pp(class_amount)
+
+    print("Finished creating the dataset.")
 
 if __name__ == "__main__":
     main()
