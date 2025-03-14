@@ -75,14 +75,13 @@ def parse_file(args) -> None:
     (directory, path, amount, times_till_last_update_bound, directory_class_amount) = args
 
     if times_till_last_update.value >= times_till_last_update_bound:
-        print(f"bound: {path}")
         return
     
     with open(f"{PATH_DIRECTORY}/annotations/{path}.json") as f:
         annotations = load(f)
 
     """
-    Ignore panoramas, they cause model performance drops (I believe).
+    This code ignore panoramas as they cause model performance drops (I believe).
     Also ignore background images, but also add them to a set to insert them into the dataset later.
     """
     if annotations["ispano"]:
@@ -119,7 +118,6 @@ def parse_file(args) -> None:
             image[y_min:y_max, x_min:x_max] = 0
     
     if len(new_labels) == 0:
-        print(f"label: {path}")
         times_till_last_update.change(1)
         return
     
@@ -144,8 +142,10 @@ def parse_file(args) -> None:
             f.write(updated_labels)
 
 def parse_files(directory: str, times_till_last_update_bound: int) -> None:
+    global class_amount
+
     amount = MAX_AMOUNT / NUM_AUGMENTATIONS
-    amount = amount * 0.8 if directory == "train" else amount * 0.2
+    amount = amount * 0.8 if directory == "train" else amount
     amount = ceil(amount)
 
     with open(f"{PATH_DIRECTORY}/splits/{directory}.txt") as f:
@@ -155,6 +155,7 @@ def parse_files(directory: str, times_till_last_update_bound: int) -> None:
 
     with Manager() as manager:
         directory_class_amount = manager.dict()
+        directory_class_amount.update(class_amount)
 
         args_list = [(directory, path, amount, times_till_last_update_bound, directory_class_amount) for path in paths]
         with Pool(processes=cpu_count()) as pool:
@@ -167,7 +168,9 @@ def make_dataset() -> None:
         makedirs(f"{SAVE_DIRECTORY}/{directory}/images", exist_ok=True)
         makedirs(f"{SAVE_DIRECTORY}/{directory}/labels", exist_ok=True)
 
-def make_classes_equal(directory: str) -> None:
+def make_train_classes_equal() -> None:
+    global class_amount
+
     with open(f"{DATASET_INFO_JSON_FILE}") as f:
         data = load(f)
     
@@ -175,51 +178,46 @@ def make_classes_equal(directory: str) -> None:
         if class_amount.get(traffic_sign_class, 0) >= MAX_AMOUNT:
             continue
 
-        paths = info[DESIRED_TYPE].get(directory, None)
+        paths = info[DESIRED_TYPE].get("train", None)
 
-        # Only skips classes when creating the val directory
+        # This if statement only skips classes when creating the val directory.
         if paths is None:
             continue
         
         # Randomize the list
         shuffle(paths)
 
-        amount = (MAX_AMOUNT - class_amount[traffic_sign_class]) / NUM_AUGMENTATIONS
-        amount = amount * 0.8 if directory == "train" else amount * 0.2
+        amount = MAX_AMOUNT / NUM_AUGMENTATIONS
         amount = ceil(amount)
         
-        print(f"Equalizing {traffic_sign_class} by adding {amount} images.")
+        print(f"Equalizing {traffic_sign_class}.")
         with Manager() as manager:
             directory_class_amount = manager.dict()
+            directory_class_amount.update(class_amount)
 
-            args_list = [(directory, path, amount, 1, directory_class_amount) for path in paths]
+            args_list = [("train", path, amount, 1e5, directory_class_amount) for path in paths]
             with Pool(processes=cpu_count()) as pool:
                 list(tqdm(pool.imap(parse_file, args_list, chunksize=2), total=len(args_list)))
             
-            class_amount.update(dict(directory_class_amount))
+            class_amount = dict(directory_class_amount)
 
 def main() -> None:
     make_dataset()
     print("Created the directories.")
 
-    parse_files("train", 1)
+    parse_files("train", 200)
     print("Finished creating the train subdirectory.")
 
     times_till_last_update.set_val(0)
 
-    parse_files("val", 1)
+    parse_files("val", 25)
     print("Finished creating the val subdirectory.")
 
     print("Making all classes have the same amount of images...\n")
     times_till_last_update.set_val(0)
 
-    make_classes_equal("train")
-    print("Finished equalizing the train directory.\n")
-
-    times_till_last_update.set_val(0)
-
-    make_classes_equal("val")
-    print("Finished equalizing the val directory.\n")
+    make_train_classes_equal()
+    print("Finished equalizing the dataset.\n")
 
     pp(class_amount)
 

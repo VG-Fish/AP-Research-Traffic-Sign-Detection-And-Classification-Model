@@ -14,4 +14,4 @@ class ProcessSafeCounter:
     
     @property
     def value(self):
-        return self._count.value()
+        return self._count.value
