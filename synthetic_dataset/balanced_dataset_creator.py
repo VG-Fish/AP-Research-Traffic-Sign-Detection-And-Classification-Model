@@ -14,7 +14,7 @@ import albumentations as A
 PATH_DIRECTORY = "mtsd_v2_fully_annotated"
 DATASET_DIRECTORY = "mapillary_dataset"
 SAVE_DIRECTORY = "balanced_mapillary_dataset"
-MAX_AMOUNT = 100
+MAX_AMOUNT = 200
 TRAIN_FRAC = 0.8
 class_amount = Counter()
 times_till_last_update = ThreadSafeCounter()
@@ -130,8 +130,9 @@ def parse_file(args) -> None:
         return
     
     image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+    augmented = image.copy()
     for i in range(NUM_AUGMENTATIONS):
-        augmented = IMAGE_TRANSFORM(image=image)['image']
+        augmented = IMAGE_TRANSFORM(image=augmented)['image']
         augmented = cv2.cvtColor(augmented, cv2.COLOR_RGB2BGR)
 
         cv2.imwrite(f"{SAVE_DIRECTORY}/{directory}/images/augmented_{i+1}-{path}.jpg", augmented)
@@ -139,7 +140,8 @@ def parse_file(args) -> None:
             f.write(updated_labels)
 
 def parse_files(directory: str, times_till_last_update_bound: int) -> None:
-    amount = MAX_AMOUNT * 0.8 if directory == "train" else MAX_AMOUNT * 0.2
+    amount = MAX_AMOUNT / NUM_AUGMENTATIONS
+    amount = amount * 0.8 if directory == "train" else amount * 0.2
 
     amount = ceil(amount)
 
