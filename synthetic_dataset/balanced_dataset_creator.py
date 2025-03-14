@@ -6,7 +6,7 @@ from math import floor, ceil
 import cv2
 from os import makedirs
 from os.path import exists
-from random import shuffle
+from random import shuffle, choices
 from multiprocessing import Pool, cpu_count, Manager
 from tqdm import tqdm
 import albumentations as A
@@ -16,7 +16,7 @@ DATASET_DIRECTORY = "mapillary_dataset"
 SAVE_DIRECTORY = "balanced_mapillary_dataset"
 DATASET_INFO_JSON_FILE = "synthetic_dataset/rare_class_info.json"
 DESIRED_TYPE = "1.0-minority"
-MAX_AMOUNT = 200
+MAX_AMOUNT = 175
 TRAIN_FRAC = 0.8
 class_amount = Counter()
 times_till_last_update = ProcessSafeCounter()
@@ -161,7 +161,7 @@ def parse_files(directory: str, times_till_last_update_bound: int) -> None:
         with Pool(processes=cpu_count()) as pool:
             list(tqdm(pool.imap(parse_file, args_list, chunksize=4), total=len(args_list)))
         
-        class_amount.update(dict(directory_class_amount))
+        class_amount = dict(directory_class_amount)
         
 def make_dataset() -> None:
     for directory in ["train", "val"]:
@@ -181,15 +181,15 @@ def make_train_classes_equal() -> None:
         paths = info[DESIRED_TYPE].get("train", None)
 
         # This if statement only skips classes when creating the val directory.
-        if paths is None:
+        if paths is None or len(paths) == 0:
             continue
         
-        # Randomize the list
-        shuffle(paths)
-
         amount = MAX_AMOUNT / NUM_AUGMENTATIONS
         amount = ceil(amount)
         
+        # Randomize the list
+        paths = choices(paths, k=amount)
+
         print(f"Equalizing {traffic_sign_class}.")
         with Manager() as manager:
             directory_class_amount = manager.dict()
@@ -205,7 +205,7 @@ def main() -> None:
     make_dataset()
     print("Created the directories.")
 
-    parse_files("train", 200)
+    parse_files("train", 175)
     print("Finished creating the train subdirectory.")
 
     times_till_last_update.set_val(0)
