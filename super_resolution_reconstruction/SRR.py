@@ -1,22 +1,31 @@
-import requests
-from PIL import Image
-from io import BytesIO
 from diffusers import LDMSuperResolutionPipeline
+from cv2 import resize, imread, cvtColor, COLOR_BGR2RGB, INTER_CUBIC
 
-device = "mps"
-model_id = "CompVis/ldm-super-resolution-4x-openimages"
+def resize_image(image, *, width, height, interpolation):
+    (h, w) = image.shape[:2]
 
-# load model and scheduler
-pipeline = LDMSuperResolutionPipeline.from_pretrained(model_id)
-pipeline = pipeline.to(device)
+    if width is None and height is None:
+        return image
 
-# let's download an  image
-url = "https://user-images.githubusercontent.com/38061659/199705896-b48e17b8-b231-47cd-a270-4ffa5a93fa3e.png"
-response = requests.get(url)
-low_res_img = Image.open(BytesIO(response.content)).convert("RGB")
-low_res_img = low_res_img.resize((128, 128))
+    if width is None:
+        ratio = height / float(h)
+        dim = (int(w * ratio), height)
+    else:
+        ratio = width / float(w)
+        dim = (width, int(h * ratio))
 
-# run pipeline in inference (sample random noise and denoise)
-upscaled_image = pipeline(low_res_img, num_inference_steps=100, eta=1).images[0]
-# save image
-upscaled_image.save("ldm_generated_image.png")
+    resized = resize(image, dim, interpolation=interpolation)
+    return resized
+
+def create_image(path: str) -> None:
+    device = "mps"
+    model_id = "CompVis/ldm-super-resolution-4x-openimages"
+
+    pipeline = LDMSuperResolutionPipeline.from_pretrained(model_id)
+    pipeline = pipeline.to(device)
+
+    low_res_img = cvtColor(imread(path), COLOR_BGR2RGB)
+    low_res_img = resize(low_res_img, width=128, height=128, interpolation=INTER_CUBIC)
+
+    upscaled_image = pipeline(low_res_img, num_inference_steps=100, eta=1).images[0]
+    upscaled_image.save("ldm_generated_image.png")
