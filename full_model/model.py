@@ -7,8 +7,8 @@ import cv2
 base_model = YOLO("train/rare_balanced_augmented_640-4/weights/best.pt")
 
 IMAGE_DIRECTORY = "balanced_mapillary_dataset/val/images"
-CROPPED_DIRECTORY = "cropped_dataset/images"
-AMOUNT = 0
+CROPPED_DIRECTORY = "cropped_dataset"
+AMOUNT = 25
 
 images = sample(listdir(IMAGE_DIRECTORY), k=AMOUNT)
 
@@ -17,14 +17,17 @@ for image in images:
 
     results = base_model.predict(
         source=img,
+        imgsz=640,
         batch=48,
         max_det=73,
         plots=True,
+        save=True,
         save_json=True,
-        name="base_model",
         project="train",
+        name="base_enhanced_model",
         exist_ok=True,
         device="mps",
+        save_conf=True
     )
 
     for result in results:
@@ -49,7 +52,7 @@ for enhanced_image in list(filter(lambda x: x.startswith("enhanced_"), listdir(C
         save=True,
         save_json=True,
         project="train",
-        name="base_enhanced_model",
+        name="base_enhanced_augmented_model",
         exist_ok=True,
         device="mps",
         save_conf=True
