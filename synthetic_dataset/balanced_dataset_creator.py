@@ -53,7 +53,7 @@ IMAGE_TRANSFORM = A.Compose([
         A.ChannelShuffle(),
     ], p=0.075),
 ])
-NUM_AUGMENTATIONS = 4
+NUM_AUGMENTATIONS = 3
 
 def resize_image(image, *, width, height, interpolation):
     (h, w) = image.shape[:2]

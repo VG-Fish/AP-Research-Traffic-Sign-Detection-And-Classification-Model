@@ -1,11 +1,7 @@
 from ultralytics import YOLO
 import torch
 
-pose_model = YOLO("models/yolo11n-pose.pt")
-
-# Converting pose model to detect
-model = YOLO("models/yolo11n.pt").load(pose_model.model)
-model.ckpt = {"model": model.model}
+model = YOLO("models/yolo11n.pt")
 
 # Clearing memory 
 def clear_cache(_):
@@ -19,7 +15,7 @@ results = model.train(
     data="synthetic_dataset/synthetic.yaml",
     project="train",
     name=f"synthetic",
-    epochs=1,
+    epochs=10,
     device="mps",
     patience=15,
     batch=48,

@@ -25,8 +25,8 @@ def remove_stat_with_threshold(fd, stat, threshold):
 
 def main():
     fd = fastdup.create(
-        input_dir="rare_balanced_augmented_mapillary_dataset",
-        work_dir="rare_balanced_dataset_analysis",
+        input_dir="balanced_mapillary_dataset",
+        work_dir="balanced_dataset_analysis",
     )
 
     fd.run()
@@ -52,7 +52,7 @@ def main():
 
     fd.summary()
 
-    fd.explore()
+    # fd.explore()
 
 if __name__ == '__main__':
     freeze_support()
