@@ -29,5 +29,5 @@ def create_image(image: str, output_path: str) -> None:
     low_res_img = resize_image(image, width=128, height=128, interpolation=INTER_CUBIC)
     low_res_img = Image.fromarray(low_res_img)
 
-    upscaled_image = pipeline(low_res_img, num_inference_steps=10, eta=1).images[0]
+    upscaled_image = pipeline(low_res_img, num_inference_steps=25, eta=1).images[0]
     upscaled_image.save(output_path)

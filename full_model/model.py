@@ -8,7 +8,7 @@ base_model = YOLO("train/rare_balanced_augmented_640-4/weights/best.pt")
 
 IMAGE_DIRECTORY = "balanced_mapillary_dataset/val/images"
 CROPPED_DIRECTORY = "cropped_dataset"
-AMOUNT = 25
+AMOUNT = 50
 
 images = sample(listdir(IMAGE_DIRECTORY), k=AMOUNT)
 
@@ -35,6 +35,7 @@ for image in images:
             x1, y1, x2, y2 = map(int, box[:4])
             cropped_img = img[y1:y2, x1:x2]
             cv2.imwrite(f"{CROPPED_DIRECTORY}/{i}-{image}", cropped_img)
+            cv2.imwrite(f"train/base_enhanced_model/cropped_{i}-{image}", cropped_img)
 
             create_image(
                 f"{CROPPED_DIRECTORY}/{i}-{image}", 
