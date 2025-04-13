@@ -16,11 +16,10 @@ DATASET_DIRECTORY = "mapillary_dataset"
 SAVE_DIRECTORY = "balanced_mapillary_dataset"
 DATASET_INFO_JSON_FILE = "synthetic_dataset/rare_class_info.json"
 DESIRED_TYPE = "1.0-minority"
-MAX_AMOUNT = 175
+MAX_AMOUNT = 200
 TRAIN_FRAC = 0.8
 class_amount = Counter()
 times_till_last_update = ProcessSafeCounter()
-AMOUNT_OF_CLASSES = 401
 
 IMAGE_TRANSFORM = A.Compose([
     A.MotionBlur(p=0.01), # Simulating realistic camera conditions while driving
